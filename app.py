@@ -20,7 +20,7 @@ from bindu.domain.models import ExerciseType
 APP_DIR = Path(__file__).parent
 LOGO_ICON = APP_DIR / "assets" / "bindu_favicon.png"
 LOGO_FULL = APP_DIR / "assets" / "bindu_logo_full.png"
-SPEAKER_ICON = APP_DIR / "assets" / "speaker_icon.png"
+SPEAKER_ICON = APP_DIR / "assets" / "speakerrrr.png"
 
 st.set_page_config(
     page_title="BINDU",
@@ -29,9 +29,12 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-NEPAL_CRIMSON = "#E4264C"
-NEPAL_BLUE = "#296DDB"
-UNIT_COLORS = ["#4678DB", "#D3534C", "#29AF6E", "#B8860B", "#7A288A"]
+BINDU_PRIMARY = "#C2703D"   # warm terracotta — the app's one accent color
+BINDU_PRIMARY_DARK = "#AD5F30"
+# Kept for the few spots that still reference the old flag-red/blue names.
+NEPAL_CRIMSON = BINDU_PRIMARY
+NEPAL_BLUE = "#E0A458"
+UNIT_COLORS = ["#C2703D", "#2F6F73", "#A14E68", "#B08968", "#3D6B8C"]
 
 
 LESSON_HEARTS = gamification.MAX_HEARTS
@@ -96,53 +99,169 @@ html, body, [class*="css"] { font-family: 'Nunito', 'Source Sans Pro', sans-seri
     }
 }
 
-/* App-style buttons: pill-shaped, bold, a little lift */
-.stButton > button {
-    border-radius: 12px;
-    font-weight: 600;
-    padding: 0.6rem 1rem;
-    box-shadow: 0 2px 0 rgba(0,0,0,0.08);
-    transition: transform 0.05s ease-in-out;
-    border: none;
+/* App-style buttons: pill-shaped, bold, a little lift. Applied via the
+   `button` element itself (not `.stButton > button`) so it also covers
+   form-submit buttons, which Streamlit renders under a different wrapper
+   (stFormSubmitButton) than regular buttons (stButton). */
+div[data-testid="stButton"] button,
+div[data-testid="stFormSubmitButton"] button {
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    padding: 0.6rem 1rem !important;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.08) !important;
+    transition: transform 0.05s ease-in-out !important;
+    border: none !important;
 }
-.stButton > button:active { transform: translateY(1px); box-shadow: none; }
+div[data-testid="stButton"] button:active,
+div[data-testid="stFormSubmitButton"] button:active {
+    transform: translateY(1px) !important; box-shadow: none !important;
+}
+
+/* Settings (⚙️) button that opens the settings dialog — a small round
+   icon button with a soft filled background so it's obviously clickable
+   at rest, distinct from the app's full-width pill CTAs. */
+.st-key-settings_open div[data-testid="stButton"] button {
+    border-radius: 50% !important;
+    width: 40px !important; height: 40px !important;
+    padding: 0 !important;
+    background: #F3F1EC !important;
+    border: 1px solid #E7E3DA !important;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.06) !important;
+}
+.st-key-settings_open div[data-testid="stButton"] button:hover { background: #EAE6DC !important; }
+.st-key-settings_open div[data-testid="stButton"] button:active {
+    transform: translateY(1px) !important; box-shadow: none !important;
+}
+
+/* Primary buttons (main CTAs like "Log in" / "Create account" / "Check")
+   in the app's own accent color, with a bit of lift so they read as the
+   one thing to tap. Every button inside a <form> in this app IS the
+   single primary CTA for that form, so form-submit buttons are styled
+   directly — no dependency on guessing the exact `kind` attribute
+   Streamlit gives them, which differs from a plain st.button's
+   "primary"/"secondary". */
+div[data-testid="stFormSubmitButton"] button,
+button[kind="primary"] {
+    background: #C2703D !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 3px 0 rgba(150, 84, 40, 0.45) !important;
+}
+div[data-testid="stFormSubmitButton"] button:hover,
+button[kind="primary"]:hover {
+    background: #AD5F30 !important;
+}
+div[data-testid="stFormSubmitButton"] button:active,
+button[kind="primary"]:active {
+    box-shadow: 0 1px 0 rgba(150, 84, 40, 0.45) !important;
+}
 
 /* Exercise answer options (multiple-choice) — selecting one used to turn
-   it the same glossy crimson as the app's primary CTA buttons, which read
+   it the same glossy accent as the app's primary CTA buttons, which read
    as more "look at me" than a simple selected-state should. A flat, calm
-   blue instead: clearly marks the pick without competing for attention. */
-div[class*="st-key-mcopt_"] .stButton > button[kind="primary"] {
-    background: #2C5F8A !important;
+   slate instead: clearly marks the pick without competing for attention.
+   Placed after the primary-button rule above so it wins on plain source
+   order for any tab with equal specificity. */
+div[class*="st-key-mcopt_"] button[kind="primary"] {
+    background: #4B5B6B !important;
     color: #ffffff !important;
     box-shadow: none !important;
     border: none !important;
 }
 
-/* Segmented-control look for the "Go to" nav radio inside the settings popover */
-.stPopover .stRadio > div {
+/* Segmented-control look for the "Go to" nav radio inside the settings dialog */
+[data-testid="stDialog"] .stRadio > div {
     flex-direction: row;
     gap: 6px;
-    background: #F0F2F6;
+    background: #F3F1EC;
     padding: 4px;
     border-radius: 12px;
 }
-.stPopover .stRadio label {
+[data-testid="stDialog"] .stRadio label {
     flex: 1;
     text-align: center;
     border-radius: 9px;
     padding: 6px 0;
     margin: 0;
 }
-.stPopover .stRadio label[data-checked="true"] { background: #ffffff; }
+[data-testid="stDialog"] .stRadio label[data-checked="true"] { background: #ffffff; }
 
-/* Tabs (login/signup) as app-style pill toggle instead of underlined web tabs */
-.stTabs [data-baseweb="tab-list"] {
-    gap: 4px; background: #F0F2F6; padding: 4px; border-radius: 12px;
+/* Tabs (login/signup) as an app-style pill toggle instead of the default
+   underlined web tabs. This Streamlit build renders tabs via react-aria
+   (no more `data-baseweb` attributes at all), so the container is
+   targeted by its ARIA role="tablist" and each tab by the app's own
+   `data-testid="stTab"` — both stable regardless of the underlying
+   library's internal (emotion-hashed) class names. */
+[data-testid="stTabs"] [role="tablist"] {
+    gap: 4px !important;
+    background: #F3F1EC !important;
+    padding: 4px !important;
+    border-radius: 12px !important;
+    border: none !important;
 }
-.stTabs [data-baseweb="tab"] {
-    border-radius: 9px; padding: 8px 0; font-weight: 600;
+[data-testid="stTab"] {
+    border-radius: 9px !important;
+    padding: 8px 0 !important;
+    font-weight: 600 !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+    flex: 1 !important;
 }
-.stTabs [aria-selected="true"] { background: #ffffff; }
+[data-testid="stTab"][aria-selected="true"] {
+    background: #ffffff !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+}
+/* Kill the underline React Aria draws beneath the active tab — it's a
+   real child element (.react-aria-SelectionIndicator), not a border or
+   pseudo-element, so it has to be hidden directly. */
+[data-testid="stTab"] .react-aria-SelectionIndicator {
+    display: none !important;
+}
+
+/* Auth form card: real breathing room and a soft shadow (not just a flat
+   border) so it reads as one deliberate panel, not bare inputs floating
+   on the page. */
+[data-testid="stForm"] {
+    border-radius: 18px !important;
+    padding: 22px 20px 18px 20px !important;
+    border: 1px solid #ECEDF2 !important;
+    box-shadow: 0 6px 20px rgba(20, 20, 30, 0.05) !important;
+}
+
+/* Auth field labels: quieter, tighter, more "designed" than raw bold
+   default text. */
+[data-testid="stForm"] [data-testid="stWidgetLabel"] p {
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    color: #6b7280 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 2px !important;
+}
+
+/* Auth text inputs: comfortable padding, a calm border, and a proper
+   focus ring in the app's own accent color instead of the browser
+   default blue outline — the single detail that reads as "someone
+   actually designed this" the most.
+
+   The visible box (border/background/radius) is drawn by the WRAPPER
+   div Streamlit renders around the field, `stTextInputRootElement` —
+   the `<input>` itself (`stTextInputField`) is intentionally border-
+   less/transparent by design, so that's the element that has to be
+   targeted for the border to actually show. */
+[data-testid="stForm"] [data-testid="stTextInputRootElement"] {
+    border-radius: 11px !important;
+    border: 1.5px solid #D8B9A0 !important;
+    box-shadow: none !important;
+    transition: border-color 0.12s ease-in-out, box-shadow 0.12s ease-in-out !important;
+}
+[data-testid="stForm"] [data-testid="stTextInputRootElement"]:focus-within {
+    border-color: #C2703D !important;
+    box-shadow: 0 0 0 3px rgba(194, 112, 61, 0.15) !important;
+}
+[data-testid="stForm"] [data-testid="stTextInputField"] {
+    padding: 0.6rem 0.85rem !important;
+}
 
 /* Metrics as rounded cards instead of plain website-style stat blocks */
 [data-testid="stMetric"] {
@@ -209,7 +328,7 @@ DARK_THEME_CSS = f"""
     border: 1px solid {DARK_BORDER} !important;
 }}
 .stApp button[kind="primary"], .stButton > button[kind="primary"], [data-testid="baseButton-primary"] {{
-    background: {NEPAL_CRIMSON} !important;
+    background: #C2703D !important;
     color: #ffffff !important;
     border: none !important;
 }}
@@ -228,16 +347,16 @@ input::placeholder, textarea::placeholder {{ color: #8a8f9c !important; }}
 [data-testid="stAlert"] {{ background: {DARK_SURFACE} !important; }}
 [data-testid="stAlert"] * {{ color: {DARK_TEXT} !important; }}
 
-/* Popover / expander / tab panels */
-[data-testid="stPopoverBody"], [data-testid="stExpander"] {{
+/* Dialog / expander / tab panels */
+[data-testid="stDialog"], [data-testid="stExpander"] {{
     background: {DARK_SURFACE} !important;
     color: {DARK_TEXT} !important;
     border-color: {DARK_BORDER} !important;
 }}
-[data-testid="stMetric"], .stTabs [data-baseweb="tab-list"], .stPopover .stRadio > div {{
+[data-testid="stMetric"], [data-testid="stTabs"] [role="tablist"], [data-testid="stDialog"] .stRadio > div {{
     background: {DARK_SURFACE_2} !important;
 }}
-.stTabs [aria-selected="true"], .stPopover .stRadio label[data-checked="true"] {{
+[data-testid="stTab"][aria-selected="true"], [data-testid="stDialog"] .stRadio label[data-checked="true"] {{
     background: {DARK_BORDER} !important;
 }}
 
@@ -291,7 +410,7 @@ LIGHT_THEME_CSS = f"""
     border: 1px solid {LIGHT_BORDER} !important;
 }}
 .stApp button[kind="primary"], .stButton > button[kind="primary"], [data-testid="baseButton-primary"] {{
-    background: {NEPAL_CRIMSON} !important;
+    background: #C2703D !important;
     color: #ffffff !important;
     border: none !important;
 }}
@@ -308,15 +427,15 @@ input::placeholder, textarea::placeholder {{ color: #888888 !important; }}
 [data-testid="stAlert"] {{ background: {LIGHT_SURFACE_2} !important; }}
 [data-testid="stAlert"] * {{ color: {LIGHT_TEXT} !important; }}
 
-[data-testid="stPopoverBody"], [data-testid="stExpander"] {{
+[data-testid="stDialog"], [data-testid="stExpander"] {{
     background: {LIGHT_SURFACE} !important;
     color: {LIGHT_TEXT} !important;
     border-color: {LIGHT_BORDER} !important;
 }}
-[data-testid="stMetric"], .stTabs [data-baseweb="tab-list"], .stPopover .stRadio > div {{
+[data-testid="stMetric"], [data-testid="stTabs"] [role="tablist"], [data-testid="stDialog"] .stRadio > div {{
     background: {LIGHT_SURFACE_2} !important;
 }}
-.stTabs [aria-selected="true"], .stPopover .stRadio label[data-checked="true"] {{
+[data-testid="stTab"][aria-selected="true"], [data-testid="stDialog"] .stRadio label[data-checked="true"] {{
     background: #ffffff !important;
 }}
 
@@ -388,13 +507,6 @@ def render_streak_result(streak_extended: bool, streak: int) -> None:
         )
 
 
-# ---------------------------------------------------------------------------
-# Text-to-speech: every answer option carries its own "hidden" voice. We
-# don't need pre-recorded audio for this — the options are already real
-# Nepali script (see content/units.final.yaml), so the browser's built-in
-# Web Speech API can pronounce them on demand, for free, the instant an
-# option is tapped.
-# ---------------------------------------------------------------------------
 
 def speak_nepali(text: str, nonce: int = 0) -> None:
     """Speaks `text` aloud in the user's browser using the Web Speech API.
@@ -622,8 +734,8 @@ def render_auth_gate() -> None:
     st.markdown(
         f"""<div style="text-align:center;padding:18px 0 6px 0;">
                 {logo_tag}
-                <div style="font-size:1.5rem;font-weight:700;">नमस्ते! Welcome to BINDU</div>
-                <div style="opacity:0.75;font-size:0.95rem;">Sign in to save your streak, hearts and XP.</div>
+                <div style="font-size:1.5rem;font-weight:700;">नमस्कार! Welcome to BINDU</div>
+                <div style="opacity:0.75;font-size:0.95rem;">Sign in or login with your credentials.</div>
             </div>""",
         unsafe_allow_html=True,
     )
@@ -693,7 +805,7 @@ def render_top_bar() -> None:
         st.markdown(
             f"""<div style="display:flex;align-items:center;gap:8px;">
                     <div style="width:34px;height:34px;border-radius:50%;flex-shrink:0;
-                                background:linear-gradient(135deg,{NEPAL_CRIMSON},{NEPAL_BLUE});
+                                background:linear-gradient(135deg,#C2703D,#E0A458);
                                 color:white;display:flex;align-items:center;justify-content:center;
                                 font-weight:800;">{initial}</div>
                     <div style="line-height:1.15;">
@@ -725,8 +837,9 @@ def render_top_bar() -> None:
             unsafe_allow_html=True,
         )
     with col_settings:
-        with st.popover("⚙️"):
-            st.markdown(f"**🙏 {display_name}**")
+        @st.dialog("Settings")
+        def _settings_dialog() -> None:
+            st.markdown(f"**{display_name}**")
             st.caption(f"Level {level} · {stats.xp} XP · streak {stats.streak}🔥")
             st.divider()
             st.radio(
@@ -752,6 +865,9 @@ def render_top_bar() -> None:
                     st.session_state.pop(k, None)
                 st.rerun()
 
+        if st.button("⚙️", key="settings_open"):
+            _settings_dialog()
+
     with col_logo:
         logo_tag = _logo_img_tag(LOGO_ICON, 34)
         if logo_tag:
@@ -762,8 +878,6 @@ def render_top_bar() -> None:
 
     st.markdown("<div style='margin-top:6px;'></div>", unsafe_allow_html=True)
 
-
-#path map
 
 def render_path_map() -> None:
     st.markdown(NODE_STYLE, unsafe_allow_html=True)
@@ -794,14 +908,12 @@ def render_path_map() -> None:
 
     completed_count = sum(1 for p in progress.values() if p["completed"])
     total_count = len(all_lessons)
-    st.header("Your path")
+    
     st.progress(
         completed_count / total_count if total_count else 0,
         text=f"{completed_count}/{total_count} lessons cleared",
     )
     
-   
-
     for u_idx, unit in enumerate(units):
         color = unit.color_theme or UNIT_COLORS[u_idx % len(UNIT_COLORS)]
         unit_done = sum(1 for l in unit.lessons if progress.get(l.id, {}).get("completed"))
@@ -823,7 +935,7 @@ def render_path_map() -> None:
 
                 node_class, emoji = "node-done", "🌼"
             elif is_current:
-                node_class, emoji = "node-current", "🪔"
+                node_class, emoji = "node-current", "▶️"
             else:
                 node_class, emoji = "node-locked", "🔒"
 
@@ -868,7 +980,10 @@ def render_lesson_screen(lesson_id: int) -> None:
     top_left, top_right = st.columns([1, 6])
     with top_left:
         if st.button("❌", key="exit_lesson", help="Exit lesson"):
-            for k in (f"exercise_index_{lesson_id}", f"correct_count_{lesson_id}", f"lesson_hearts_{lesson_id}"):
+            for k in (
+                f"queue_{lesson_id}", f"queue_pos_{lesson_id}", f"correct_set_{lesson_id}",
+                f"attempts_{lesson_id}", f"lesson_hearts_{lesson_id}",
+            ):
                 st.session_state.pop(k, None)
             st.session_state.active_lesson_id = None
             st.rerun()
@@ -889,28 +1004,35 @@ def render_lesson(lesson_id: int) -> None:
         st.warning("This lesson has no exercises yet.")
         return
 
-    key = f"exercise_index_{lesson_id}"
-    correct_key = f"correct_count_{lesson_id}"
+    total = len(exercises)
+
+
+    queue_key = f"queue_{lesson_id}"
+    pos_key = f"queue_pos_{lesson_id}"
+    correct_set_key = f"correct_set_{lesson_id}"
+    attempts_key = f"attempts_{lesson_id}"
     hearts_key = f"lesson_hearts_{lesson_id}"
-    st.session_state.setdefault(key, 0)
-    st.session_state.setdefault(correct_key, 0)
+    st.session_state.setdefault(queue_key, list(range(total)))
+    st.session_state.setdefault(pos_key, 0)
+    st.session_state.setdefault(correct_set_key, set())
+    st.session_state.setdefault(attempts_key, {})
     st.session_state.setdefault(hearts_key, LESSON_HEARTS)
 
     def _reset_attempt() -> None:
-        for k in (key, correct_key, hearts_key):
+        for k in (queue_key, pos_key, correct_set_key, attempts_key, hearts_key):
             st.session_state.pop(k, None)
 
     lesson_hearts = st.session_state[hearts_key]
-    total = len(exercises)
+    queue = st.session_state[queue_key]
+    pos = st.sessio
+    feedback_key = f"feedback_{lesson_id}_{pos}" if pos < len(queue) else None
+    pending_feedback = st.session_state.get(feedback_key) if feedback_key else None
 
-    # Out of hearts for THIS lesson attempt: 5 wrong answers ends it right
-    # there, whether or not every question has been shown yet. Nothing is saved and the
-    # lesson stays locked/incomplete until retried.
-    if lesson_hearts <= 0:
+    if pending_feedback is None and lesson_hearts <= 0:
         st.markdown(f"<div style='font-size:2rem;text-align:center;'>{DAL_BHAT_EMPTY * LESSON_HEARTS}</div>",
                      unsafe_allow_html=True)
         st.error(
-            f"Out of hearts — {st.session_state[correct_key]}/{total} correct before you ran out. "
+            f"Out of hearts — {len(st.session_state[correct_set_key])}/{total} correct before you ran out. "
             "यो पाठ पूरा भएन। This lesson isn't complete yet."
         )
         if st.button("Retry lesson", key=f"retry_{lesson_id}"):
@@ -918,13 +1040,9 @@ def render_lesson(lesson_id: int) -> None:
             st.rerun()
         return
 
-    idx = st.session_state[key]
-    if idx >= len(exercises):
-        correct_count = st.session_state[correct_key]
-        # Reaching the last question with hearts still left (checked above)
-        # means the attempt passed — progress is saved, XP is awarded, and
-        # the next lesson unlocks. Stars reward accuracy without gating
-        # completion on it.
+    if pending_feedback is None and pos >= len(queue):
+        correct_count = len(st.session_state[correct_set_key])
+
         stars = round(3 * correct_count / total)
 
         stats_before = progress_repo.get_or_create_stats(user_id)
@@ -935,9 +1053,7 @@ def render_lesson(lesson_id: int) -> None:
         xp_earned = 10 * correct_count
         progress_repo.mark_lesson_complete(user_id, lesson_id, stars)
         stats_after = progress_repo.add_xp(user_id, amount=xp_earned)
-        # XP is credited for every lesson regardless, but the streak itself
-        # only advances once per calendar day — record_activity_and_update_streak
-        # already enforces that (same-day calls leave it unchanged).
+
         streak_stats = progress_repo.record_activity_and_update_streak(user_id)
         level_after = gamification.level_for_xp(stats_after.xp)
 
@@ -952,10 +1068,10 @@ def render_lesson(lesson_id: int) -> None:
                     <div style="font-size:2.6rem;line-height:1;">🏵️</div>
                     <div style="font-weight:800;font-size:1.25rem;margin-top:6px;
                         color:{colors['body_text']};">
-                        well done!
+                        well done! 
                     </div>
                     <div style="font-size:0.9rem;color:{colors['muted_text']};margin-top:2px;">
-                        Well done — {correct_count}/{total} correct
+                        Well done! {correct_count}/{total} correct
                     </div>
                     <div style="display:flex;justify-content:center;gap:22px;margin-top:16px;">
                         <div>
@@ -995,26 +1111,50 @@ def render_lesson(lesson_id: int) -> None:
         unsafe_allow_html=True,
     )
 
-    exercise = exercises[idx]
-    st.subheader(f"Lesson · Question {idx + 1} of {len(exercises)}")
-    st.progress(idx / len(exercises))
-    render_question(exercise.prompt, exercise.audio_url, key=f"{lesson_id}_{idx}")
+    exercise_idx = queue[pos]
+    exercise = exercises[exercise_idx]
+    # `locked` = this question was just answered and is showing feedback.
+    # Everything below (hearts, subheader, progress bar, the question, and
+    # the options/tiles themselves) renders exactly the same whether locked
+    # or not — only a feedback banner and a relabeled action button are
+    # added on top. Nothing swaps to a different screen, so the feedback
+    # appears in place instead of feeling like a separate, redundant step.
+    locked = pending_feedback is not None
+    st.subheader(f"Lesson · Question {pos + 1} of {len(queue)}")
+    if not locked and st.session_state[attempts_key].get(exercise_idx, 0) > 0:
+        st.caption("🔁 Let's try that one again")
+    st.progress(len(st.session_state[correct_set_key]) / total)
+    render_question(exercise.prompt, exercise.audio_url, key=f"{lesson_id}_{exercise_idx}_{pos}")
 
     correct = False
     submitted = False
+    result: dict | None = None
 
     if exercise.type == ExerciseType.MULTIPLE_CHOICE:
         st.caption("Tap an option to hear it pronounced and select it as your answer:")
-        choice_key = f"mc_choice_{lesson_id}_{idx}"
-        nonce_key = f"mc_speak_nonce_{lesson_id}_{idx}"
+        choice_key = f"mc_choice_{lesson_id}_{pos}"
+        nonce_key = f"mc_speak_nonce_{lesson_id}_{pos}"
         st.session_state.setdefault(choice_key, None)
         st.session_state.setdefault(nonce_key, 0)
 
+        selected_option = pending_feedback["selected"] if locked else st.session_state[choice_key]
+
         for opt_idx, option in enumerate(exercise.options):
-            is_selected = st.session_state[choice_key] == option
-            label = f"{option}" if is_selected else option
-            if st.button(
-                label, key=f"mcopt_{lesson_id}_{idx}_{opt_idx}",
+            is_selected = selected_option == option
+            label = option
+            if locked and is_selected:
+                label = f"{'✅' if pending_feedback['correct'] else '❌'} {option}"
+            elif locked and not pending_feedback["correct"] and option == pending_feedback["answer_text"]:
+                label = f"✅ {option}"
+            if locked:
+                st.button(
+                    label, key=f"mcopt_{lesson_id}_{pos}_{opt_idx}",
+                    use_container_width=True,
+                    type="primary" if is_selected else "secondary",
+                    disabled=True,
+                )
+            elif st.button(
+                label, key=f"mcopt_{lesson_id}_{pos}_{opt_idx}",
                 use_container_width=True,
                 type="primary" if is_selected else "secondary",
             ):
@@ -1022,16 +1162,16 @@ def render_lesson(lesson_id: int) -> None:
                 st.session_state[nonce_key] += 1
                 st.rerun()
 
-        choice = st.session_state[choice_key]
         # Re-speak the currently selected option every time it (or the nonce)
         # changes — this is the "voice hidden inside the answer" behavior.
-        if choice:
-            speak_nepali(choice, nonce=st.session_state[nonce_key])
+        if not locked and selected_option:
+            speak_nepali(selected_option, nonce=st.session_state[nonce_key])
 
-        if st.button("Check", key=f"check_{lesson_id}_{idx}", disabled=choice is None):
+        if not locked and st.button("Check", key=f"check_{lesson_id}_{pos}", disabled=selected_option is None):
             from bindu.domain.exercise_validator import check_multiple_choice
-            correct = check_multiple_choice(choice, exercise.answer)
+            correct = check_multiple_choice(selected_option, exercise.answer)
             submitted = True
+            result = {"selected": selected_option}
             # Selection state is per-exercise-instance; clear it so the next
             # question (or a retry) starts with nothing pre-selected.
             st.session_state.pop(choice_key, None)
@@ -1039,9 +1179,9 @@ def render_lesson(lesson_id: int) -> None:
 
     elif exercise.type == ExerciseType.WORD_BANK:
         st.caption("Tap the tokens below in the correct order (each tap also speaks it):")
-        order_key = f"wb_order_{lesson_id}_{idx}"
-        tok_nonce_key = f"wb_speak_nonce_{lesson_id}_{idx}"
-        tok_last_key = f"wb_speak_last_{lesson_id}_{idx}"
+        order_key = f"wb_order_{lesson_id}_{pos}"
+        tok_nonce_key = f"wb_speak_nonce_{lesson_id}_{pos}"
+        tok_last_key = f"wb_speak_last_{lesson_id}_{pos}"
         st.session_state.setdefault(order_key, [])
         st.session_state.setdefault(tok_nonce_key, 0)
         # order_key stores the *indices* chosen so far (into exercise.tokens),
@@ -1051,17 +1191,13 @@ def render_lesson(lesson_id: int) -> None:
         # shared one st.button key (StreamlitDuplicateElementKey crash), and
         # tapping one occurrence removed *all* copies from the remaining
         # bank (value-based membership, not position-based).
-        chosen_indices = st.session_state[order_key]
+        # While locked, use the indices captured in the feedback record
+        # rather than live widget state, which is cleared right after submit.
+        chosen_indices = pending_feedback["selected_indices"] if locked else st.session_state[order_key]
 
-        # Fixed-height answer preview: reserved space stays the same
-        # whether 0 words or all of them are chosen, so this line never
-        # pushes the tiles/buttons below it up or down as you build the
-        # sentence.
+
         chosen_text = " ".join(exercise.tokens[i] for i in chosen_indices)
-        # The placeholder markup is built as a plain variable, not inline
-        # inside the f-string below — an f-string's {expression} part can't
-        # contain a backslash-escaped quote on Python versions before 3.12
-        # (PEP 701), and this app needs to run on older Python too.
+
         placeholder_html = '<span style="opacity:0.5;">tap tokens below…</span>'
         st.markdown(
             f"<div style='min-height:2.4em;font-size:1.05rem;'>"
@@ -1070,19 +1206,21 @@ def render_lesson(lesson_id: int) -> None:
             unsafe_allow_html=True,
         )
 
-        # Always lay out ALL tiles in their original positions (not just the
-        # remaining ones) and just disable the ones already used. Removing
-        # tiles from the grid shrank st.columns(...) as you picked words,
-        # which changed this row's height and made Check/Reset drift up or
-        # down below it — keeping every slot present keeps the row (and
-        # everything under it) a fixed height throughout the question.
+ 
         token_cols = st.columns(len(exercise.tokens))
         for tok_idx, col in enumerate(token_cols):
             with col:
                 used = tok_idx in chosen_indices
-                if st.button(
+                if locked:
+                    st.button(
+                        exercise.tokens[tok_idx],
+                        key=f"tok_{lesson_id}_{pos}_{tok_idx}",
+                        disabled=True,
+                        use_container_width=True,
+                    )
+                elif st.button(
                     exercise.tokens[tok_idx],
-                    key=f"tok_{lesson_id}_{idx}_{tok_idx}",
+                    key=f"tok_{lesson_id}_{pos}_{tok_idx}",
                     disabled=used,
                     use_container_width=True,
                 ):
@@ -1092,42 +1230,65 @@ def render_lesson(lesson_id: int) -> None:
                     st.rerun()
 
         # Speak whichever token was tapped most recently.
-        if st.session_state.get(tok_last_key):
+        if not locked and st.session_state.get(tok_last_key):
             speak_nepali(st.session_state[tok_last_key], nonce=st.session_state[tok_nonce_key])
 
-        col_a, col_b = st.columns(2)
-        with col_a:
-            if st.button("Reset order", key=f"reset_{lesson_id}_{idx}"):
-                st.session_state[order_key] = []
-                st.session_state.pop(tok_last_key, None)
-                st.rerun()
-        with col_b:
-            if st.button("Check", key=f"check_{lesson_id}_{idx}",
-                         disabled=len(st.session_state[order_key]) != len(exercise.tokens)):
-                from bindu.domain.exercise_validator import check_word_bank
-                ordered_tokens = [exercise.tokens[i] for i in st.session_state[order_key]]
-                correct = check_word_bank(ordered_tokens, exercise.answer)
-                submitted = True
-                st.session_state.pop(tok_last_key, None)
-                st.session_state.pop(tok_nonce_key, None)
+        if not locked:
+            col_a, col_b = st.columns(2)
+            with col_a:
+                if st.button("Reset order", key=f"reset_{lesson_id}_{pos}"):
+                    st.session_state[order_key] = []
+                    st.session_state.pop(tok_last_key, None)
+                    st.rerun()
+            with col_b:
+                if st.button("Check", key=f"check_{lesson_id}_{pos}",
+                             disabled=len(st.session_state[order_key]) != len(exercise.tokens)):
+                    from bindu.domain.exercise_validator import check_word_bank
+                    ordered_tokens = [exercise.tokens[i] for i in st.session_state[order_key]]
+                    correct = check_word_bank(ordered_tokens, exercise.answer)
+                    submitted = True
+                    result = {"selected_indices": list(st.session_state[order_key])}
+                    st.session_state.pop(order_key, None)
+                    st.session_state.pop(tok_last_key, None)
+                    st.session_state.pop(tok_nonce_key, None)
 
     if submitted:
+        st.session_state[attempts_key][exercise_idx] = st.session_state[attempts_key].get(exercise_idx, 0) + 1
         if correct:
-            st.success("Correct!")
-            st.session_state[correct_key] += 1
+            st.session_state[correct_set_key].add(exercise_idx)
         else:
-            st.error(f"Not quite — correct answer: {' '.join(exercise.answer)}")
             st.session_state[hearts_key] -= 1
             # Also deducts from the slower-refilling, account-wide heart pool
             # shown in the sidebar (separate from this lesson's 5 lives).
             progress_repo.deduct_heart(user_id)
-        st.session_state[key] += 1
+            # Send it to the back of the queue so it comes back for another
+            # try later in the lesson, Duolingo-style, instead of vanishing.
+            queue.append(exercise_idx)
+        # Don't advance yet — just record the result, including exactly what
+        # was picked so the locked re-render above can echo it. The very
+        # next rerun shows the feedback banner right under these same
+        # options/tiles, in place, instead of jumping to another screen.
+        st.session_state[feedback_key] = {
+            "correct": correct,
+            "answer_text": " ".join(exercise.answer),
+            **result,
+        }
         st.rerun()
 
+    # Feedback banner + the single action button that advances the lesson —
+    # rendered directly beneath the (now-locked) options above, on this same
+    # screen, instead of a separate confirmation page.
+    if locked:
+        if pending_feedback["correct"]:
+            st.success("Correct! ")
+        else:
+            st.error(f"Not quite — correct answer: {pending_feedback['answer_text']}")
+        if st.button("Continue", key=f"continue_q_{lesson_id}_{pos}", type="primary", use_container_width=True):
+            st.session_state.pop(feedback_key, None)
+            st.session_state[pos_key] += 1
+            st.rerun()
 
-# ---------------------------------------------------------------------------
-# Profile page
-# ---------------------------------------------------------------------------
+
 
 def render_profile() -> None:
     st.header("🙏 Profile")
@@ -1147,7 +1308,7 @@ def render_profile() -> None:
     st.write(f"**Last active:** {stats.last_active or 'never'}")
 
 
-# ---------------------------------------------------------------------------
+
 
 def main() -> None:
     inject_app_chrome()
@@ -1160,14 +1321,6 @@ def main() -> None:
     section = st.session_state.get("section", "Path map")
     active_lesson_id = st.session_state.get("active_lesson_id")
 
-    # While a lesson is open, the top bar (streak/XP/settings) is hidden
-    # rather than skipped entirely. The nav radio and theme radio inside it
-    # are keyed widgets — if the whole function is skipped some runs (in
-    # a lesson) and called on others (on the path map), Streamlit tears
-    # down and recreates their session state every time a lesson opens or
-    # closes, which is a good way to hit odd mid-session errors. Keeping
-    # it mounted every run and just hiding it with CSS avoids that churn
-    # while still giving the lesson the whole screen visually.
     if active_lesson_id:
         st.markdown(
             '<style>div[class*="st-key-top_bar_wrap"] { display: none; }</style>',
@@ -1211,7 +1364,6 @@ if __name__ == "__main__":
     try:
         main()
     except Exception:
-        # Full traceback goes to the server-side log for debugging — never
-        # to the person's browser.
+
         logging.getLogger("bindu").exception("Unhandled error in BINDU")
         render_fatal_error()
