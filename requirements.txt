@@ -1,0 +1,14 @@
+# --- Streamlit app ---
+streamlit>=1.42.0
+supabase>=2.6.0
+python-dotenv>=1.0.1
+
+# --- Offline content-authoring pipeline (content/, scripts/) ---
+deep-translator>=1.11.4
+gTTS>=2.5.1
+sentence-transformers>=3.0.0
+pyyaml>=6.0.1
+soundfile>=0.12.1
+
+# --- Testing ---
+pytest>=8.0.0

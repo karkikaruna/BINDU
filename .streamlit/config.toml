@@ -1,0 +1,14 @@
+# App-like chrome: hides the "Deploy" button and most of the browser-y
+# menu clutter so BINDU feels like an installed app instead of a website
+# wrapped around a Streamlit script.
+[client]
+toolbarMode = "minimal"
+showErrorDetails = false
+
+[theme]
+base = "light"
+primaryColor = "#DC143C"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F6F7FB"
+textColor = "#262730"
+font = "sans serif"

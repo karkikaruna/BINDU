@@ -1,0 +1,736 @@
+units:
+- order_index: 1
+  name: Greetings
+  color_theme: '#0038A8'
+  lessons:
+  - order_index: 1
+    name: Hello & Goodbye
+    exercises:
+    - order_index: 1
+      type: multiple_choice
+      english_prompt: How do you say 'Hello' in Nepali?
+      english_options:
+      - Hello
+      - Thank you
+      - Excuse me
+      - How are you
+      english_answer:
+      - Hello
+    - order_index: 2
+      type: word_bank
+      english_prompt: 'Arrange the words: ''How are you?'''
+      english_tokens:
+      - You (formal)
+      - how
+      - is/are
+      english_answer:
+      - You (formal)
+      - how
+      - is/are
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: Which word means 'Goodbye' (see you again)?
+      english_options:
+      - Goodbye
+      - Hello
+      - Thank you
+      - Please
+      english_answer:
+      - Goodbye
+    - order_index: 4
+      type: multiple_choice
+      english_prompt: Which greeting means 'Good morning'?
+      english_options:
+      - Good morning
+      - Good night
+      - Goodbye
+      - Excuse me
+      english_answer:
+      - Good morning
+    - order_index: 5
+      type: multiple_choice
+      english_prompt: '''Namaste'' can be used for both ___'
+      english_options:
+      - Hello and Goodbye
+      - Yes and No
+      - Please and Sorry
+      - Big and Small
+      english_answer:
+      - Hello and Goodbye
+    - order_index: 6
+      type: word_bank
+      english_prompt: 'Arrange: ''Nice to meet you'''
+      english_tokens:
+      - Nice
+      - to
+      - meet
+      - you
+      english_answer:
+      - Nice
+      - to
+      - meet
+      - you
+    - order_index: 7
+      type: multiple_choice
+      english_prompt: How do you informally ask a friend 'how are you'?
+      english_options:
+      - तिमीलाई कस्तो छ?
+      - तपाईंलाई कस्तो छ?
+      - धन्यवाद
+      - नमस्ते
+      english_answer:
+      - तिमीलाई कस्तो छ?
+  - order_index: 2
+    name: Please & Thank You
+    exercises:
+    - order_index: 1
+      type: multiple_choice
+      english_prompt: Which word means 'Thank you'?
+      english_options:
+      - Thank you
+      - Hello
+      - Excuse me
+      - Good / nice
+      english_answer:
+      - Thank you
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: Which word means 'Please'?
+      english_options:
+      - Please
+      - Sorry
+      - Welcome
+      - Goodbye
+      english_answer:
+      - Please
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: How do you say 'You're welcome'?
+      english_options:
+      - You're welcome
+      - Thank you
+      - Please
+      - Sorry
+      english_answer:
+      - You're welcome
+    - order_index: 4
+      type: multiple_choice
+      english_prompt: Which phrase means 'Excuse me / Sorry'?
+      english_options:
+      - Excuse me
+      - Thank you
+      - Please
+      - Welcome
+      english_answer:
+      - Excuse me
+    - order_index: 5
+      type: word_bank
+      english_prompt: 'Arrange: ''Please give me water'''
+      english_tokens:
+      - Please
+      - give
+      - me
+      - water
+      english_answer:
+      - Please
+      - give
+      - me
+      - water
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: Which phrase means 'No, thank you'?
+      english_options:
+      - No, thank you
+      - Yes please
+      - Thank you very much
+      - Excuse me
+      english_answer:
+      - No, thank you
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''Thank you very much'''
+      english_tokens:
+      - Thank
+      - you
+      - very
+      - much
+      english_answer:
+      - Thank
+      - you
+      - very
+      - much
+  - order_index: 3
+    name: Introducing Yourself
+    exercises:
+    - order_index: 1
+      type: word_bank
+      english_prompt: 'Arrange: ''My name is max'''
+      english_tokens:
+      - My
+      - name
+      - max
+      - is
+      english_answer:
+      - My
+      - name
+      - max
+      - is
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: How do you ask 'What is your name?'
+      english_options:
+      - what is your name?
+      - tell me your age
+      - where are you from
+      - how are you
+      english_answer:
+      - what is your name?
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: Which sentence means 'I am from Nepal'?
+      english_options:
+      - I live in Nepal
+      - I am from Nepal
+      - I have visited Nepal
+      - I want to visit Nepal
+      english_answer:
+      - I am from Nepal
+    - order_index: 4
+      type: word_bank
+      english_prompt: 'Arrange: ''I am a student'''
+      english_tokens:
+      - I
+      - am
+      - a
+      - student
+      english_answer:
+      - I
+      - am
+      - a
+      - student
+    - order_index: 5
+      type: multiple_choice
+      english_prompt: Which phrase means 'Nice to meet you'?
+      english_options:
+      - Nice to meet you
+      - See you tomorrow
+      - How much is it
+      - I am hungry
+      english_answer:
+      - Nice to meet you
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: 'Fill in: ''I am 25 years old'''
+      english_options:
+      - I am feeling tired
+      - I am 25 years old
+      - Hello
+      - Excuse me
+      english_answer:
+      - I am 25 years old
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''Where are you from?'''
+      english_tokens:
+      - Where
+      - are
+      - you
+      - from
+      english_answer:
+      - Where
+      - are
+      - you
+      - from
+- order_index: 2
+  name: Numbers & Shopping
+  color_theme: '#FFD700'
+  lessons:
+  - order_index: 1
+    name: Numbers 1-10
+    exercises:
+    - order_index: 1
+      type: multiple_choice
+      english_prompt: '''five''?'
+      english_options:
+      - Five
+      - Four
+      - Six
+      - Three
+      english_answer:
+      - Five
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: '''one''?'
+      english_options:
+      - One
+      - Two
+      - Three
+      - Four
+      english_answer:
+      - One
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: '''two''?'
+      english_options:
+      - Two
+      - One
+      - Six
+      - Ten
+      english_answer:
+      - Two
+    - order_index: 4
+      type: multiple_choice
+      english_prompt: '''three''?'
+      english_options:
+      - Three
+      - Two
+      - Seven
+      - Nine
+      english_answer:
+      - Three
+    - order_index: 5
+      type: multiple_choice
+      english_prompt: '''six''?'
+      english_options:
+      - Six
+      - Five
+      - Eight
+      - One
+      english_answer:
+      - Six
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: '''ten''?'
+      english_options:
+      - Ten
+      - Nine
+      - Four
+      - Two
+      english_answer:
+      - Ten
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''one, two, three'''
+      english_tokens:
+      - One
+      - two
+      - three
+      english_answer:
+      - One
+      - two
+      - three
+  - order_index: 2
+    name: Asking Prices
+    exercises:
+    - order_index: 1
+      type: word_bank
+      english_prompt: 'Arrange: ''How much does it cost?'''
+      english_tokens:
+      - How
+      - much
+      - does
+      - itcost
+      english_answer:
+      - How
+      - much
+      - does
+      - itcost
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: Which phrase means 'How much?'
+      english_options:
+      - thank you
+      - How much
+      - excuse me
+      - I am sorry
+      english_answer:
+      - कति पर्छ?
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: Which word means 'this one'?
+      english_options:
+      - this one
+      - which one
+      - that one
+      - this one
+      english_answer:
+      - this one
+    - order_index: 4
+      type: multiple_choice
+      english_prompt: Which word means 'cheap'?
+      english_options:
+      - Cheap
+      - Expensive
+      - Big
+      - Small
+      english_answer:
+      - Cheap
+    - order_index: 5
+      type: word_bank
+      english_prompt: 'Arrange: ''Please give a discount'''
+      english_tokens:
+      - Please
+      - give
+      - a
+      - discount
+      english_answer:
+      - Please
+      - give
+      - a
+      - discount
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: Which word means 'money'?
+      english_options:
+      - Money
+      - Food
+      - Water
+      - Road
+      english_answer:
+      - Money
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''What is the price of this?'''
+      english_tokens:
+      - What
+      - is
+      - the
+      - price
+      - of
+      - this
+      english_answer:
+      - What
+      - is
+      - the
+      - price
+      - of
+      - this
+  - order_index: 3
+    name: Bargaining Basics
+    exercises:
+    - order_index: 1
+      type: multiple_choice
+      english_prompt: Which phrase means 'too expensive'?
+      english_options:
+      - Too expensive
+      - Cheap
+      - Good / nice
+      - Big
+      english_answer:
+      - Too expensive
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: Which word means 'cheap'?
+      english_options:
+      - Cheap
+      - Expensive
+      - Nice
+      - Big
+      english_answer:
+      - Cheap
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: Which phrase means 'a little less'?
+      english_options:
+      - a little less
+      - Thank you
+      - Excuse me
+      - what time is it
+      english_answer:
+      - a little less
+    - order_index: 4
+      type: multiple_choice
+      english_prompt: Which phrase means 'final price'?
+      english_options:
+      - Final price
+      - Good price
+      - No price
+      - Old price
+      english_answer:
+      - Final price
+    - order_index: 5
+      type: word_bank
+      english_prompt: 'Arrange: ''Can you reduce the price?'''
+      english_tokens:
+      - Can
+      - you
+      - reduce
+      - the
+      - price
+      english_answer:
+      - Can
+      - you
+      - reduce
+      - the
+      - price
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: Which phrase means 'I will buy it'?
+      english_options:
+      - I will buy
+      - I will eat
+      - I will sleep
+      - I am going
+      english_answer:
+      - I will buy
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''It is too expensive'''
+      english_tokens:
+      - It
+      - is
+      - too
+      - expensive
+      english_answer:
+      - It
+      - is
+      - too
+      - expensive
+- order_index: 3
+  name: Food & Directions
+  color_theme: '#046A38'
+  lessons:
+  - order_index: 1
+    name: Ordering Food
+    exercises:
+    - order_index: 1
+      type: multiple_choice
+      english_prompt: How do you ask for water?
+      english_options:
+      - Please give water
+      - Eat rice
+      - Where is home
+      - Thank you
+      english_answer:
+      - Please give water
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: Which word means 'rice'?
+      english_options:
+      - Rice
+      - Water
+      - Bread
+      - Tea
+      english_answer:
+      - Rice
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: Which word means 'delicious'?
+      english_options:
+      - Delicious
+      - Spicy
+      - Cold
+      - Hot
+      english_answer:
+      - Delicious
+    - order_index: 4
+      type: word_bank
+      english_prompt: 'Arrange: ''I want tea'''
+      english_tokens:
+      - I
+      - want
+      - tea
+      english_answer:
+      - I
+      - want
+      - tea
+    - order_index: 5
+      type: multiple_choice
+      english_prompt: Which sentence means 'I am hungry'?
+      english_options:
+      - I am hungry
+      - I am thirsty
+      - I am tired
+      - I am feeling sleepy
+      english_answer:
+      - I am hungry
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: Which word means 'menu'?
+      english_options:
+      - Menu
+      - Bill
+      - Table
+      - Spoon
+      english_answer:
+      - Menu
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''Give me the bill please'''
+      english_tokens:
+      - Give
+      - me
+      - the
+      - bill
+      - please
+      english_answer:
+      - Give
+      - me
+      - the
+      - bill
+      - please
+  - order_index: 2
+    name: Asking for Directions
+    exercises:
+    - order_index: 1
+      type: word_bank
+      english_prompt: 'Arrange: ''Where is the hotel?'''
+      english_tokens:
+      - Hotel
+      - where
+      - is
+      english_answer:
+      - Hotel
+      - where
+      - is
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: Which word means 'left'?
+      english_options:
+      - Left
+      - Right
+      - Straight
+      - Back
+      english_answer:
+      - Left
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: Which word means 'right'?
+      english_options:
+      - Right
+      - Left
+      - Near
+      - Far
+      english_answer:
+      - Right
+    - order_index: 4
+      type: multiple_choice
+      english_prompt: Which word means 'straight'?
+      english_options:
+      - Straight
+      - Left
+      - Right
+      - Near
+      english_answer:
+      - Straight
+    - order_index: 5
+      type: word_bank
+      english_prompt: 'Arrange: ''Where is the bus station?'''
+      english_tokens:
+      - Where
+      - is
+      - the
+      - bus
+      - station
+      english_answer:
+      - Where
+      - is
+      - the
+      - bus
+      - station
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: Which word means 'near'?
+      english_options:
+      - Near
+      - Far
+      - Left
+      - Right
+      english_answer:
+      - Near
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''Turn left from here'''
+      english_tokens:
+      - Turn
+      - left
+      - from
+      - here
+      english_answer:
+      - Turn
+      - left
+      - from
+      - here
+  - order_index: 3
+    name: Common Phrases for Trekking
+    exercises:
+    - order_index: 1
+      type: multiple_choice
+      english_prompt: Which phrase means 'How far is it?'
+      english_options:
+      - How far is it
+      - What time is it
+      - Where to go
+      - What to do
+      english_answer:
+      - How far is it
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: Which word means 'mountain'?
+      english_options:
+      - Mountain
+      - River
+      - Village
+      - Forest
+      english_answer:
+      - Mountain
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: Which word means 'trail / path'?
+      english_options:
+      - Path
+      - Bridge
+      - House
+      - Sky
+      english_answer:
+      - Path
+    - order_index: 4
+      type: word_bank
+      english_prompt: 'Arrange: ''How many hours to the top?'''
+      english_tokens:
+      - How
+      - many
+      - hours
+      - to
+      - the
+      - top
+      english_answer:
+      - How
+      - many
+      - hours
+      - to
+      - the
+      - top
+    - order_index: 5
+      type: multiple_choice
+      english_prompt: Which word means 'tired'?
+      english_options:
+      - Tired
+      - Happy
+      - Hungry
+      - Cold
+      english_answer:
+      - Tired
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: Which phrase means 'Be careful'?
+      english_options:
+      - Be careful
+      - Go straight
+      - Come here
+      - Sit down
+      english_answer:
+      - Be careful
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''The view is beautiful'''
+      english_tokens:
+      - The
+      - view
+      - is
+      - beautiful
+      english_answer:
+      - The
+      - view
+      - is
+      - beautiful

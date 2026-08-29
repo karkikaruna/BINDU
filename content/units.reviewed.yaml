@@ -1,0 +1,1298 @@
+units:
+- order_index: 1
+  name: Greetings
+  color_theme: '#0038A8'
+  lessons:
+  - order_index: 1
+    name: Hello & Goodbye
+    exercises:
+    - order_index: 1
+      type: multiple_choice
+      english_prompt: How do you say 'Hello' in Nepali?
+      english_options:
+      - Hello
+      - Thank you
+      - Excuse me
+      - How are you
+      english_answer:
+      - Hello
+      nepali_prompt: तपाईं नेपालीमा 'Hello' कसरी भन्नुहुन्छ?
+      nepali_options:
+      - नमस्ते
+      - धन्यवाद
+      - माफ गर्नुहोस्
+      - तपाईंलाई कस्तो छ?
+      nepali_answer:
+      - नमस्ते
+    - order_index: 2
+      type: word_bank
+      english_prompt: 'Arrange the words: ''How are you?'''
+      english_tokens:
+      - You (formal)
+      - how
+      - is/are
+      english_answer:
+      - You (formal)
+      - how
+      - is/are
+      nepali_prompt: 'शब्दहरू मिलाउनुहोस्: ''तपाईंलाई कस्तो छ?'''
+      nepali_tokens:
+      - तपाईंलाई
+      - कस्तो
+      - छ
+      nepali_answer:
+      - तपाईंलाई
+      - कस्तो
+      - छ
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: Which word means 'Goodbye' (see you again)?
+      english_options:
+      - Goodbye
+      - Hello
+      - Thank you
+      - Please
+      english_answer:
+      - Goodbye
+      nepali_prompt: कुन शब्दको अर्थ 'अलविदा' (फेरि भेटौँला) हो?
+      nepali_options:
+      - अलविदा
+      - नमस्ते
+      - धन्यवाद
+      - कृपया
+      nepali_answer:
+      - अलविदा
+    - order_index: 4
+      type: multiple_choice
+      english_prompt: Which greeting means 'Good morning'?
+      english_options:
+      - Good morning
+      - Good night
+      - Goodbye
+      - Excuse me
+      english_answer:
+      - Good morning
+      nepali_prompt: '''शुभ प्रभात'' को अर्थ कुन हो?'
+      nepali_options:
+      - शुभ प्रभात
+      - शुभ रात्री
+      - अलविदा
+      - माफ गर्नुहोस्
+      nepali_answer:
+      - शुभ प्रभात
+    - order_index: 5
+      type: multiple_choice
+      english_prompt: '''Namaste'' can be used for both ___'
+      english_options:
+      - Hello and Goodbye
+      - Yes and No
+      - Please and Sorry
+      - Big and Small
+      english_answer:
+      - Hello and Goodbye
+      nepali_prompt: '''नमस्ते'' दुबैका लागि प्रयोग गर्न सकिन्छ ___'
+      nepali_options:
+      - नमस्ते र अलविदा
+      - हो र होइन
+      - कृपया र माफ गर्नुहोस्
+      - ठूलो र सानो
+      nepali_answer:
+      - नमस्ते र अलविदा
+    - order_index: 6
+      type: word_bank
+      english_prompt: 'Arrange: ''Nice to meet you'''
+      english_tokens:
+      - Nice
+      - to
+      - meet
+      - you
+      english_answer:
+      - Nice
+      - to
+      - meet
+      - you
+      nepali_prompt: 'मिलाउनुहोस्: ''तपाईंलाई भेटेर खुशी लाग्यो'''
+      nepali_tokens:
+      - तपाईंलाई
+      - भेटेर
+      - खुशी
+      - लाग्यो
+      nepali_answer:
+      - तपाईंलाई
+      - भेटेर
+      - खुशी
+      - लाग्यो
+    - order_index: 7
+      type: multiple_choice
+      english_prompt: How do you informally ask a friend 'how are you'?
+      english_options:
+      - तिमीलाई कस्तो छ?
+      - तपाईंलाई कस्तो छ?
+      - धन्यवाद
+      - नमस्ते
+      english_answer:
+      - तिमीलाई कस्तो छ?
+      nepali_prompt: कसरी अनौपचारिक रूपमा साथीलाई 'तिमी कस्तो छौ' भनेर सोध्ने?
+      nepali_options:
+      - तिमीलाई कस्तो छ?
+      - तपाईंलाई कस्तो छ?
+      - धन्यवाद
+      - नमस्ते
+      nepali_answer:
+      - तिमीलाई कस्तो छ?
+  - order_index: 2
+    name: Please & Thank You
+    exercises:
+    - order_index: 1
+      type: multiple_choice
+      english_prompt: Which word means 'Thank you'?
+      english_options:
+      - Thank you
+      - Hello
+      - Excuse me
+      - Good / nice
+      english_answer:
+      - Thank you
+      nepali_prompt: कुन शब्दको अर्थ 'धन्यवाद' हो?
+      nepali_options:
+      - धन्यवाद
+      - नमस्ते
+      - माफ गर्नुहोस्
+      - राम्रो
+      nepali_answer:
+      - धन्यवाद
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: Which word means 'Please'?
+      english_options:
+      - Please
+      - Sorry
+      - Welcome
+      - Goodbye
+      english_answer:
+      - Please
+      nepali_prompt: कुन शब्दको अर्थ 'कृपया' हो?
+      nepali_options:
+      - कृपया
+      - माफ गर्नुहोस्
+      - स्वागत छ
+      - अलविदा
+      nepali_answer:
+      - कृपया
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: How do you say 'You're welcome'?
+      english_options:
+      - You're welcome
+      - Thank you
+      - Please
+      - Sorry
+      english_answer:
+      - You're welcome
+      nepali_prompt: तपाईं कसरी भन्नुहुन्छ 'तपाईंलाई स्वागत छ'?
+      nepali_options:
+      - तपाईंलाई स्वागत छ
+      - धन्यवाद
+      - कृपया
+      - माफ गर्नुहोस्
+      nepali_answer:
+      - तपाईंलाई स्वागत छ
+    - order_index: 4
+      type: multiple_choice
+      english_prompt: Which phrase means 'Excuse me / Sorry'?
+      english_options:
+      - Excuse me
+      - Thank you
+      - Please
+      - Welcome
+      english_answer:
+      - Excuse me
+      nepali_prompt: कुन वाक्यांशको अर्थ 'माफ गर्नुहोस्' हो?
+      nepali_options:
+      - माफ गर्नुहोस्
+      - धन्यवाद
+      - कृपया
+      - स्वागत छ
+      nepali_answer:
+      - माफ गर्नुहोस्
+    - order_index: 5
+      type: word_bank
+      english_prompt: 'Arrange: ''Please give me water'''
+      english_tokens:
+      - Please
+      - give
+      - me
+      - water
+      english_answer:
+      - Please
+      - give
+      - me
+      - water
+      nepali_prompt: 'मिलाउनुहोस्: ''कृपया मलाई पानी दिनुहोस्'''
+      nepali_tokens:
+      - कृपया
+      - मलाई
+      - पानी
+      - दिनुहोस्
+      nepali_answer:
+      - कृपया
+      - मलाई
+      - पानी
+      - दिनुहोस्
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: Which phrase means 'No, thank you'?
+      english_options:
+      - No, thank you
+      - Yes please
+      - Thank you very much
+      - Excuse me
+      english_answer:
+      - No, thank you
+      nepali_prompt: कुन वाक्यांशको अर्थ 'होइन, धन्यवाद' हो?
+      nepali_options:
+      - होइन, धन्यवाद
+      - हुन्छ, कृपया
+      - धेरै धेरै धन्यवाद
+      - माफ गर्नुहोस्
+      nepali_answer:
+      - होइन, धन्यवाद
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''Thank you very much'''
+      english_tokens:
+      - Thank
+      - you
+      - very
+      - much
+      english_answer:
+      - Thank
+      - you
+      - very
+      - much
+      nepali_prompt: 'व्यवस्थित गर्नुहोस्: ''तपाईंलाई धेरै धेरै धन्यवाद'''
+      nepali_tokens:
+      - तपाईंलाई
+      - धेरै
+      - धेरै
+      - धन्यवाद
+      nepali_answer:
+      - तपाईंलाई
+      - धेरै
+      - धेरै
+      - धन्यवाद
+  - order_index: 3
+    name: Introducing Yourself
+    exercises:
+    - order_index: 1
+      type: word_bank
+      english_prompt: 'Arrange: ''My name is Max'''
+      english_tokens:
+      - My
+      - name
+      - max
+      - is
+      english_answer:
+      - My
+      - name
+      - max
+      - is
+      nepali_prompt: 'व्यवस्थित गर्नुहोस्: ''मेरो नाम मैक्स हो'''
+      nepali_tokens:
+      - मेरो
+      - नाम
+      - मैक्स
+      - हो
+      nepali_answer:
+      - मेरो
+      - नाम
+      - मैक्स
+      - हो
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: How do you ask 'What is your name?'
+      english_options:
+      - what is your name?
+      - tell me your age
+      - where are you from
+      - how are you
+      english_answer:
+      - what is your name?
+      nepali_prompt: कसरी सोध्ने 'तपाईंको नाम के हो?'
+      nepali_options:
+      - तपाईंको नाम के हो?
+      - मलाई तपाईंको उमेर भन्नुहोस्
+      - तपाईं कहाँबाट हुनुहुन्छ?
+      - तपाईंलाई कस्तो छ?
+      nepali_answer:
+      - तपाईंको नाम के हो?
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: Which sentence means 'I am from Nepal'?
+      english_options:
+      - I live in Nepal
+      - I am from Nepal
+      - I have visited Nepal
+      - I want to visit Nepal
+      english_answer:
+      - I am from Nepal
+      nepali_prompt: '''म नेपालबाट हुँ'' भन्ने वाक्य कुन हो?'
+      nepali_options:
+      - म नेपालमा बस्छु
+      - म नेपालबाट हुँ
+      - मैले नेपाल भ्रमण गरेको छु
+      - म नेपाल घुम्न चाहन्छु
+      nepali_answer:
+      - म नेपालबाट हुँ
+    - order_index: 4
+      type: word_bank
+      english_prompt: 'Arrange: ''I am a student'''
+      english_tokens:
+      - I
+      - am
+      - a
+      - student
+      english_answer:
+      - I
+      - am
+      - a
+      - student
+      nepali_prompt: 'व्यवस्थित गर्नुहोस्: ''म एक विद्यार्थी हुँ'''
+      nepali_tokens:
+      - म
+      - एक
+      - विद्यार्थी
+      - हुँ
+      nepali_answer:
+      - म
+      - एक
+      - विद्यार्थी
+      - हुँ
+    - order_index: 5
+      type: multiple_choice
+      english_prompt: Which phrase means 'Nice to meet you'?
+      english_options:
+      - Nice to meet you
+      - See you tomorrow
+      - How much is it
+      - I am hungry
+      english_answer:
+      - Nice to meet you
+      nepali_prompt: कुन वाक्यांशको अर्थ 'तपाईंलाई भेटेर खुशी लाग्यो' हो?
+      nepali_options:
+      - तपाईंलाई भेटेर खुशी लाग्यो
+      - भोलि भेटौंला
+      - यो कति हो
+      - मलाई भोक लागेको छ
+      nepali_answer:
+      - तपाईंलाई भेटेर खुशी लाग्यो
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: 'Fill in: ''I am 25 years old'''
+      english_options:
+      - I am feeling tired
+      - I am 25 years old
+      - Hello
+      - Excuse me
+      english_answer:
+      - I am 25 years old
+      nepali_prompt: 'भर्नुहोस्: ''म २५ वर्षको छु'''
+      nepali_options:
+      - मलाई थकाइ लागेको छ
+      - म २५ वर्षको छु
+      - नमस्ते
+      - माफ गर्नुहोस्
+      nepali_answer:
+      - म २५ वर्षको छु
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''Where are you from?'''
+      english_tokens:
+      - Where
+      - are
+      - you
+      - from
+      english_answer:
+      - Where
+      - are
+      - you
+      - from
+      nepali_prompt: 'व्यवस्थित गर्नुहोस्: ''तपाईं कहाँबाट हुनुहुन्छ?'''
+      nepali_tokens:
+      - तपाईं
+      - कहाँ
+      - बाट
+      - हुनुहुन्छ
+      nepali_answer:
+      - तपाईं
+      - कहाँ
+      - बाट
+      - हुनुहुन्छ
+- order_index: 2
+  name: Numbers & Shopping
+  color_theme: '#FFD700'
+  lessons:
+  - order_index: 1
+    name: Numbers 1-10
+    exercises:
+    - order_index: 1
+      type: multiple_choice
+      english_prompt: '''five''?'
+      english_options:
+      - Five
+      - Four
+      - Six
+      - Three
+      english_answer:
+      - Five
+      nepali_prompt: '''पाँच''?'
+      nepali_options:
+      - पाँच
+      - चार
+      - छ
+      - तीन
+      nepali_answer:
+      - पाँच
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: '''one''?'
+      english_options:
+      - One
+      - Two
+      - Three
+      - Four
+      english_answer:
+      - One
+      nepali_prompt: '''एक''?'
+      nepali_options:
+      - एक
+      - दुई
+      - तीन
+      - चार
+      nepali_answer:
+      - एक
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: '''two''?'
+      english_options:
+      - Two
+      - One
+      - Six
+      - Ten
+      english_answer:
+      - Two
+      nepali_prompt: '''दुई''?'
+      nepali_options:
+      - दुई
+      - एक
+      - छ
+      - दस
+      nepali_answer:
+      - दुई
+    - order_index: 4
+      type: multiple_choice
+      english_prompt: '''three''?'
+      english_options:
+      - Three
+      - Two
+      - Seven
+      - Nine
+      english_answer:
+      - Three
+      nepali_prompt: '''तीन''?'
+      nepali_options:
+      - तीन
+      - दुई
+      - सात
+      - नौ
+      nepali_answer:
+      - तीन
+    - order_index: 5
+      type: multiple_choice
+      english_prompt: '''six''?'
+      english_options:
+      - Six
+      - Five
+      - Eight
+      - One
+      english_answer:
+      - Six
+      nepali_prompt: '''छ''?'
+      nepali_options:
+      - छ
+      - पाँच
+      - आठ
+      - एक
+      nepali_answer:
+      - छ
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: '''ten''?'
+      english_options:
+      - Ten
+      - Nine
+      - Four
+      - Two
+      english_answer:
+      - Ten
+      nepali_prompt: '''दस''?'
+      nepali_options:
+      - दस
+      - नौ
+      - चार
+      - दुई
+      nepali_answer:
+      - दस
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''one, two, three'''
+      english_tokens:
+      - One
+      - two
+      - three
+      english_answer:
+      - One
+      - two
+      - three
+      nepali_prompt: 'व्यवस्थित गर्नुहोस्: ''एक, दुई, तीन'''
+      nepali_tokens:
+      - एक
+      - दुई
+      - तीन
+      nepali_answer:
+      - एक
+      - दुई
+      - तीन
+  - order_index: 2
+    name: Asking Prices
+    exercises:
+    - order_index: 1
+      type: word_bank
+      english_prompt: 'Arrange: ''How much does it cost?'''
+      english_tokens:
+      - How
+      - much
+      - does
+      - itcost
+      english_answer:
+      - How
+      - much
+      - does
+      - itcost
+      nepali_prompt: 'व्यवस्थित गर्नुहोस्: ''यसको मूल्य कति हो?'''
+      nepali_tokens:
+      - यसको
+      - मूल्य
+      - कति
+      - हो
+      nepali_answer:
+      - यसको
+      - मूल्य
+      - कति
+      - हो
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: Which phrase means 'How much?'
+      english_options:
+      - thank you
+      - How much
+      - excuse me
+      - I am sorry
+      english_answer:
+      - How much
+      nepali_prompt: कुन वाक्यांशको अर्थ 'कति पर्छ?' हो?
+      nepali_options:
+      - धन्यवाद
+      - कति पर्छ?
+      - माफ गर्नुहोस्
+      - मलाई माफ गर्नुहोस्
+      nepali_answer:
+      - कति पर्छ?
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: Which word means 'this one'?
+      english_options:
+      - this one
+      - which one
+      - that one
+      - those ones
+      english_answer:
+      - this one
+      nepali_prompt: कुन शब्दको अर्थ 'यो' हो?
+      nepali_options:
+      - यो
+      - कुन
+      - त्यो
+      - ती
+      nepali_answer:
+      - यो
+    - order_index: 4
+      type: multiple_choice
+      english_prompt: Which word means 'cheap'?
+      english_options:
+      - Cheap
+      - Expensive
+      - Big
+      - Small
+      english_answer:
+      - Cheap
+      nepali_prompt: '''सस्तो'' भनेको कुन शब्द हो?'
+      nepali_options:
+      - सस्तो
+      - महँगो
+      - ठूलो
+      - सानो
+      nepali_answer:
+      - सस्तो
+    - order_index: 5
+      type: word_bank
+      english_prompt: 'Arrange: ''Please give a discount'''
+      english_tokens:
+      - Please
+      - give
+      - a
+      - discount
+      english_answer:
+      - Please
+      - give
+      - a
+      - discount
+      nepali_prompt: 'व्यवस्थित गर्नुहोस्: ''कृपया केही छुट दिनुहोस्'''
+      nepali_tokens:
+      - कृपया
+      - केही
+      - छुट
+      - दिनुहोस्
+      nepali_answer:
+      - कृपया
+      - केही
+      - छुट
+      - दिनुहोस्
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: Which word means 'money'?
+      english_options:
+      - Money
+      - Food
+      - Water
+      - Road
+      english_answer:
+      - Money
+      nepali_prompt: '''पैसा'' भनेको कुन शब्द हो?'
+      nepali_options:
+      - पैसा
+      - खाना
+      - पानी
+      - सडक
+      nepali_answer:
+      - पैसा
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''What is the price of this?'''
+      english_tokens:
+      - What
+      - is
+      - the
+      - price
+      - of
+      - this
+      english_answer:
+      - What
+      - is
+      - the
+      - price
+      - of
+      - this
+      nepali_prompt: 'व्यवस्थित गर्नुहोस्: ''यसको मूल्य कति हो?'''
+      nepali_tokens:
+      - यस
+      - को
+      - मूल्य
+      - कति
+      - हो
+      nepali_answer:
+      - यस
+      - को
+      - मूल्य
+      - कति
+      - हो
+  - order_index: 3
+    name: Bargaining Basics
+    exercises:
+    - order_index: 1
+      type: multiple_choice
+      english_prompt: Which phrase means 'too expensive'?
+      english_options:
+      - Too expensive
+      - Cheap
+      - Good / nice
+      - Big
+      english_answer:
+      - Too expensive
+      nepali_prompt: कुन वाक्यांशको अर्थ 'धेरै महँगो' हो?
+      nepali_options:
+      - धेरै महँगो
+      - सस्तो
+      - राम्रो
+      - ठूलो
+      nepali_answer:
+      - धेरै महँगो
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: Which word means 'cheap'?
+      english_options:
+      - Cheap
+      - Expensive
+      - Nice
+      - Big
+      english_answer:
+      - Cheap
+      nepali_prompt: '''सस्तो'' भनेको कुन शब्द हो?'
+      nepali_options:
+      - सस्तो
+      - महँगो
+      - राम्रो
+      - ठूलो
+      nepali_answer:
+      - सस्तो
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: Which phrase means 'a little less'?
+      english_options:
+      - a little less
+      - Thank you
+      - Excuse me
+      - what time is it
+      english_answer:
+      - a little less
+      nepali_prompt: कुन वाक्यांशको अर्थ 'अलि कम' हो?
+      nepali_options:
+      - अलि कम
+      - धन्यवाद
+      - माफ गर्नुहोस्
+      - कति बज्यो
+      nepali_answer:
+      - अलि कम
+    - order_index: 4
+      type: multiple_choice
+      english_prompt: Which phrase means 'final price'?
+      english_options:
+      - Final price
+      - Good price
+      - No price
+      - Old price
+      english_answer:
+      - Final price
+      nepali_prompt: कुन वाक्यांशको अर्थ 'अन्तिम मूल्य' हो?
+      nepali_options:
+      - अन्तिम मूल्य
+      - राम्रो मूल्य
+      - मूल्य छैन
+      - पुरानो मूल्य
+      nepali_answer:
+      - अन्तिम मूल्य
+    - order_index: 5
+      type: word_bank
+      english_prompt: 'Arrange: ''Can you reduce the price?'''
+      english_tokens:
+      - Can
+      - you
+      - reduce
+      - the
+      - price
+      english_answer:
+      - Can
+      - you
+      - reduce
+      - the
+      - price
+      nepali_prompt: 'व्यवस्थित गर्नुहोस्: ''के तपाईं मूल्य घटाउन सक्नुहुन्छ?'''
+      nepali_tokens:
+      - के
+      - तपाईं
+      - मूल्य
+      - घटाउन
+      - सक्नुहुन्छ
+      nepali_answer:
+      - के
+      - तपाईं
+      - मूल्य
+      - घटाउन
+      - सक्नुहुन्छ
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: Which phrase means 'I will buy it'?
+      english_options:
+      - I will buy
+      - I will eat
+      - I will sleep
+      - I am going
+      english_answer:
+      - I will buy
+      nepali_prompt: कुन वाक्यांशको अर्थ 'म किन्छु' हो?
+      nepali_options:
+      - म किन्छु
+      - म खान्छु
+      - म सुत्छु
+      - म जान्छु
+      nepali_answer:
+      - म किन्छु
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''It is too expensive'''
+      english_tokens:
+      - It
+      - is
+      - too
+      - expensive
+      english_answer:
+      - It
+      - is
+      - too
+      - expensive
+      nepali_prompt: 'व्यवस्थित गर्नुहोस्: ''यो धेरै महँगो छ'''
+      nepali_tokens:
+      - यो
+      - धेरै
+      - महँगो
+      - छ
+      nepali_answer:
+      - यो
+      - धेरै
+      - महँगो
+      - छ
+- order_index: 3
+  name: Food & Directions
+  color_theme: '#046A38'
+  lessons:
+  - order_index: 1
+    name: Ordering Food
+    exercises:
+    - order_index: 1
+      type: multiple_choice
+      english_prompt: How do you ask for water?
+      english_options:
+      - Please give water
+      - Eat rice
+      - Where is home
+      - Thank you
+      english_answer:
+      - Please give water
+      nepali_prompt: पानी कसरी माग्ने?
+      nepali_options:
+      - कृपया पानी दिनुहोस्
+      - भात खानुहोस्
+      - घर कहाँ छ
+      - धन्यवाद
+      nepali_answer:
+      - कृपया पानी दिनुहोस्
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: Which word means 'rice'?
+      english_options:
+      - Rice
+      - Water
+      - Bread
+      - Tea
+      english_answer:
+      - Rice
+      nepali_prompt: कुन शब्दको अर्थ 'भात' हो?
+      nepali_options:
+      - भात
+      - पानी
+      - रोटी
+      - चिया
+      nepali_answer:
+      - भात
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: Which word means 'delicious'?
+      english_options:
+      - Delicious
+      - Spicy
+      - Cold
+      - Hot
+      english_answer:
+      - Delicious
+      nepali_prompt: '''स्वादिष्ट'' को अर्थ कुन हो?'
+      nepali_options:
+      - स्वादिष्ट
+      - मसलेदार
+      - चिसो
+      - तातो
+      nepali_answer:
+      - स्वादिष्ट
+    - order_index: 4
+      type: word_bank
+      english_prompt: 'Arrange: ''I want tea'''
+      english_tokens:
+      - I
+      - want
+      - tea
+      english_answer:
+      - I
+      - want
+      - tea
+      nepali_prompt: 'मिलाउनुहोस्: ''मलाई चिया चाहिन्छ'''
+      nepali_tokens:
+      - मलाई
+      - चिया
+      - चाहिन्छ
+      nepali_answer:
+      - मलाई
+      - चिया
+      - चाहिन्छ
+    - order_index: 5
+      type: multiple_choice
+      english_prompt: Which sentence means 'I am hungry'?
+      english_options:
+      - I am hungry
+      - I am thirsty
+      - I am tired
+      - I am feeling sleepy
+      english_answer:
+      - I am hungry
+      nepali_prompt: '''मलाई भोक लागेको छ'' भन्ने वाक्य कुन हो?'
+      nepali_options:
+      - मलाई भोक लागेको छ
+      - मलाई तिर्खा लागेको छ
+      - म थाकेको छु
+      - मलाई निद्रा लागेको छ
+      nepali_answer:
+      - मलाई भोक लागेको छ
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: Which word means 'menu'?
+      english_options:
+      - Menu
+      - Bill
+      - Table
+      - Spoon
+      english_answer:
+      - Menu
+      nepali_prompt: कुन शब्दको अर्थ 'मेनु' हो?
+      nepali_options:
+      - मेनु
+      - बिल
+      - टेबल
+      - चम्चा
+      nepali_answer:
+      - मेनु
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''Give me the bill please'''
+      english_tokens:
+      - Give
+      - me
+      - the
+      - bill
+      - please
+      english_answer:
+      - Give
+      - me
+      - the
+      - bill
+      - please
+      nepali_prompt: 'मिलाउनुहोस्: ''कृपया मलाई बिल दिनुहोस्'''
+      nepali_tokens:
+      - कृपया
+      - मलाई
+      - बिल
+      - दिनुहोस्
+      nepali_answer:
+      - कृपया
+      - मलाई
+      - बिल
+      - दिनुहोस्
+  - order_index: 2
+    name: Asking for Directions
+    exercises:
+    - order_index: 1
+      type: word_bank
+      english_prompt: 'Arrange: ''Where is the hotel?'''
+      english_tokens:
+      - Hotel
+      - where
+      - is
+      english_answer:
+      - Hotel
+      - where
+      - is
+      nepali_prompt: 'मिलाउनुहोस्: ''होटल कहाँ छ?'''
+      nepali_tokens:
+      - होटल
+      - कहाँ
+      - छ
+      nepali_answer:
+      - होटल
+      - कहाँ
+      - छ
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: Which word means 'left'?
+      english_options:
+      - Left
+      - Right
+      - Straight
+      - Back
+      english_answer:
+      - Left
+      nepali_prompt: '''बायाँ'' को अर्थ कुन हो?'
+      nepali_options:
+      - बायाँ
+      - दायाँ
+      - सीधा
+      - पछाडि
+      nepali_answer:
+      - बायाँ
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: Which word means 'right'?
+      english_options:
+      - Right
+      - Left
+      - Near
+      - Far
+      english_answer:
+      - Right
+      nepali_prompt: कुन शब्दको अर्थ 'दायाँ' हो?
+      nepali_options:
+      - दायाँ
+      - बायाँ
+      - नजिकै
+      - टाढा
+      nepali_answer:
+      - दायाँ
+    - order_index: 4
+      type: multiple_choice
+      english_prompt: Which word means 'straight'?
+      english_options:
+      - Straight
+      - Left
+      - Right
+      - Near
+      english_answer:
+      - Straight
+      nepali_prompt: कुन शब्दको अर्थ 'सीधा' हो?
+      nepali_options:
+      - सीधा
+      - बायाँ
+      - दायाँ
+      - नजिकै
+      nepali_answer:
+      - सीधा
+    - order_index: 5
+      type: word_bank
+      english_prompt: 'Arrange: ''Where is the bus station?'''
+      english_tokens:
+      - Where
+      - is
+      - the
+      - bus
+      - station
+      english_answer:
+      - Where
+      - is
+      - the
+      - bus
+      - station
+      nepali_prompt: 'व्यवस्थित गर्नुहोस्: ''बस स्टेशन कहाँ छ?'''
+      nepali_tokens:
+      - बस
+      - स्टेशन
+      - कहाँ
+      - छ
+      nepali_answer:
+      - बस
+      - स्टेशन
+      - कहाँ
+      - छ
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: Which word means 'near'?
+      english_options:
+      - Near
+      - Far
+      - Left
+      - Right
+      english_answer:
+      - Near
+      nepali_prompt: कुन शब्दको अर्थ 'नजिक' हो?
+      nepali_options:
+      - नजिकै
+      - टाढा
+      - बायाँ
+      - दायाँ
+      nepali_answer:
+      - नजिकै
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''Turn left from here'''
+      english_tokens:
+      - Turn
+      - left
+      - from
+      - here
+      english_answer:
+      - Turn
+      - left
+      - from
+      - here
+      nepali_prompt: 'व्यवस्थित गर्नुहोस्: ''यहाँबाट बायाँ घुम्नुहोस्'''
+      nepali_tokens:
+      - यहाँ
+      - बाट
+      - बायाँ
+      - घुम्नुहोस्
+      nepali_answer:
+      - यहाँ
+      - बाट
+      - बायाँ
+      - घुम्नुहोस्
+  - order_index: 3
+    name: Common Phrases for Trekking
+    exercises:
+    - order_index: 1
+      type: multiple_choice
+      english_prompt: Which phrase means 'How far is it?'
+      english_options:
+      - How far is it
+      - What time is it
+      - Where to go
+      - What to do
+      english_answer:
+      - How far is it
+      nepali_prompt: कुन वाक्यांशको अर्थ 'कति टाढा छ?' हो?
+      nepali_options:
+      - कति टाढा छ?
+      - कति बज्यो?
+      - कहाँ जाने?
+      - के गर्ने?
+      nepali_answer:
+      - कति टाढा छ?
+    - order_index: 2
+      type: multiple_choice
+      english_prompt: Which word means 'mountain'?
+      english_options:
+      - Mountain
+      - River
+      - Village
+      - Forest
+      english_answer:
+      - Mountain
+      nepali_prompt: '''पहाड'' भनेको कुन शब्द हो?'
+      nepali_options:
+      - पहाड
+      - नदी
+      - गाउँ
+      - वन
+      nepali_answer:
+      - पहाड
+    - order_index: 3
+      type: multiple_choice
+      english_prompt: Which word means 'trail / path'?
+      english_options:
+      - Path
+      - Bridge
+      - House
+      - Sky
+      english_answer:
+      - Path
+      nepali_prompt: कुन शब्दको अर्थ 'बाटो' हो?
+      nepali_options:
+      - बाटो
+      - पुल
+      - घर
+      - आकाश
+      nepali_answer:
+      - बाटो
+    - order_index: 4
+      type: word_bank
+      english_prompt: 'Arrange: ''How many hours to the top?'''
+      english_tokens:
+      - How
+      - many
+      - hours
+      - to
+      - the
+      - top
+      english_answer:
+      - How
+      - many
+      - hours
+      - to
+      - the
+      - top
+      nepali_prompt: 'व्यवस्थित गर्नुहोस्: ''टुप्पोसम्म कति घण्टा लाग्छ?'''
+      nepali_tokens:
+      - टुप्पो
+      - सम्म
+      - कति
+      - घण्टा
+      - लाग्छ
+      nepali_answer:
+      - टुप्पो
+      - सम्म
+      - कति
+      - घण्टा
+      - लाग्छ
+    - order_index: 5
+      type: multiple_choice
+      english_prompt: Which word means 'tired'?
+      english_options:
+      - Tired
+      - Happy
+      - Hungry
+      - Cold
+      english_answer:
+      - Tired
+      nepali_prompt: '''थकित'' भनेको कुन शब्द हो?'
+      nepali_options:
+      - थकित
+      - खुसी
+      - भोको
+      - चिसो
+      nepali_answer:
+      - थकित
+    - order_index: 6
+      type: multiple_choice
+      english_prompt: Which phrase means 'Be careful'?
+      english_options:
+      - Be careful
+      - Go straight
+      - Come here
+      - Sit down
+      english_answer:
+      - Be careful
+      nepali_prompt: '''सावधान रहनुहोस्'' भन्ने वाक्यांश कुन हो?'
+      nepali_options:
+      - सावधान रहनुहोस्
+      - सीधा जानुहोस्
+      - यहाँ आउनुहोस्
+      - बस्नुहोस्
+      nepali_answer:
+      - सावधान रहनुहोस्
+    - order_index: 7
+      type: word_bank
+      english_prompt: 'Arrange: ''The view is beautiful'''
+      english_tokens:
+      - The
+      - view
+      - is
+      - beautiful
+      english_answer:
+      - The
+      - view
+      - is
+      - beautiful
+      nepali_prompt: 'व्यवस्थित गर्नुहोस्: ''यो दृश्य सुन्दर छ'''
+      nepali_tokens:
+      - यो
+      - दृश्य
+      - सुन्दर
+      - छ
+      nepali_answer:
+      - यो
+      - दृश्य
+      - सुन्दर
+      - छ
