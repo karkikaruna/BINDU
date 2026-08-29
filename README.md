@@ -1,72 +1,88 @@
+BINDU: Learn Nepali, one point at a time
 
-# BINDU-Learn Nepali one point at a time
-
-BINDU is a lightweight,-learning app for **Nepali**, built with [Streamlit]. It walks learners through bite-sized lessons, multiple-choice and word-bank exercises, organized into themed units (Greetings, Numbers & Shopping, Food & Directions, and more), with hearts, XP, levels, and streaks to keep practice fun.
-
+BINDU is a lightweight, Duolingo-style language-learning app for **Nepali**, built with [Streamlit](https://streamlit.io). It walks learners through short, focused lessons (multiple-choice and word-bank exercises) organized into themed units (Greetings, Numbers & Shopping, Food & Directions, and more), with hearts, XP, levels, and streaks to keep practice going.
 
 ## Features
 
--**Structured lessons**:units made of short, focused lessons you unlock in order
--**Two exercise types**: multiple choice and word-bank (tap-the-tiles) translation
--**Hearts**: you have 5 hearts per session; get an answer wrong and you lose one, then they slowly refill
--**XP & levels**: earn XP as you complete lessons and level up over time
--**Streaks**come:  back daily to keep your streak alive
--**Audio support** for pronunciation where available
--**Works fully offline**: accounts and progress are stored in a local SQLite database out of the box; no cloud account needed
+- **Structured lessons**: units made of short lessons you unlock in order
+- **Two exercise types**: multiple choice and word-bank (tap-the-tiles) translation
+- **Hearts**: 5 hearts per session; a wrong answer costs one, and they refill over time
+- **XP & levels**: earn XP as you complete lessons and level up
+- **Streaks**: practice daily to keep your streak alive
+- **Audio support** for pronunciation where available
+- **Works fully offline**: accounts and progress are stored in a local SQLite database out of the box; no cloud account needed
 
+## Requirements
 
+- Python 3.10+ (tested on 3.12)
+- pip, or conda/miniconda
 
 ## Installation
 
-1. **Unzip and enter the project folder**
+### 1. Clone the repository
 
-   ```bash
-   unzip bindu.zip
-   cd bindu/bindu
-   ```
+```bash
+git clone https://github.com/<your-org>/bindu.git
+cd bindu/bindu
+```
 
-2. **(Recommended) Create a virtual environment**
+If you're working from a zip file instead:
 
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate      # Windows: .venv\Scripts\activate
-   ```
+```bash
+unzip bindu.zip
+cd bindu/bindu
+```
 
-3. **Install dependencies**
+### 2. Create an environment
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+Choose either venv or conda.
 
+**Option A: venv**
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate      # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+**Option B: conda**
+
+```bash
+conda create -n bindu python=3.12 -y
+conda activate bindu
+pip install -r requirements.txt
+```
+
+BINDU ships with a local SQLite database (`bindu_local.db`) and works right away, no further setup needed.
 
 ## Running the app
 
-From the `bindu/bindu` folder (the one containing `app.py`), run:
+From the `bindu/bindu` folder (the one containing `app.py`):
 
 ```bash
 streamlit run app.py
 ```
 
-Streamlit will start a local server and open BINDU in your browser, typically at **http://localhost:8501**.
+Streamlit starts a local server and opens BINDU in your browser, typically at **http://localhost:8501**.
 
 ## Using BINDU
 
-1. **Create an account**: on first launch, sign up with a username (3–32 characters: letters, numbers, `.`, `_`, or `-`) and a password (4+ characters). Accounts are stored locally, so no email or internet connection is required.
+1. **Create an account**: sign up with a username (3–32 characters: letters, numbers, `.`, `_`, or `-`) and a password (4+ characters). Accounts are stored locally, so no email or internet connection is required.
 2. **Pick a unit**: units appear on the home path in order; complete one to unlock the next.
 3. **Work through lessons**: each lesson is a short sequence of exercises:
    - **Multiple choice**: pick the correct translation from a few options
    - **Word bank**: tap word tiles in the right order to build the translation
-4. **Watch your hearts**: a wrong answer costs a heart. Run out and you'll need to wait for hearts to refill before continuing that lesson.
+4. **Watch your hearts**: a wrong answer costs a heart; run out and you'll need to wait for hearts to refill before continuing that lesson.
 5. **Earn XP and level up**: finishing lessons earns XP; every 100 XP is a new level.
 6. **Keep your streak**: practicing daily keeps your streak counter climbing.
-7. **Check your profile**: the  Profile page shows your XP, level, hearts, and streak at a glance.
+7. **Check your profile**: the Profile page shows your XP, level, hearts, and streak at a glance.
 
-## cloud sync with Supabase
+## Optional: cloud sync with Supabase
 
-
+By default, BINDU stores everything locally. To use a shared [Supabase](https://supabase.com) backend instead:
 
 1. Create a free project at [supabase.com](https://supabase.com).
-2. Run the schema in `supabase/schema.sql` against your project (SQL Editor in the Supabase dashboard works well).
+2. Run the schema in `supabase/schema.sql` against your project (the Supabase dashboard's SQL Editor works well).
 3. Copy the example config and fill in your project's credentials:
 
    ```bash
@@ -82,7 +98,7 @@ Streamlit will start a local server and open BINDU in your browser, typically at
 
    (Alternatively, copy `.env.example` to `.env` and set the same values if you're not using Streamlit secrets.)
 
-4. Re-run `streamlit run app.py`: BINDU will pick up the credentials automatically.
+4. Re-run `streamlit run app.py`; BINDU picks up the credentials automatically.
 
 ## Project structure
 
@@ -100,3 +116,15 @@ bindu/
 ├── requirements.txt
 └── .streamlit/                # Streamlit theme + secrets template
 ```
+
+## Running tests
+
+```bash
+pytest
+```
+
+## Troubleshooting
+
+- **"SUPABASE_URL and SUPABASE_ANON_KEY must be set"**: only appears if a code path tries to reach Supabase without credentials configured. If you're not using cloud sync, remove any partial values from `.env` or `secrets.toml`.
+- **Port already in use**: run `streamlit run app.py --server.port 8502` (or any free port).
+- **Reset local progress**: stop the app and delete `bindu_local.db`; a fresh one is created on next launch.
