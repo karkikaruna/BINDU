@@ -13,8 +13,7 @@ import streamlit.components.v1 as components
 from bindu.data.auth_repository import AuthRepository
 from bindu.data.local_cache import LocalCache
 from bindu.data.lesson_repository import LessonRepository
-from bindu.data.progress_reposit# Copy to .env for local dev (loaded via python-dotenv), or mirror these
-# into .streamlit/secrets.toml when running via `streamlit run`.ory import ProgressRepository
+from bindu.data.progress_repository import ProgressRepository
 from bindu.data.supabase_client import load_env_from_streamlit_secrets
 from bindu.domain import gamification
 from bindu.domain.models import ExerciseType
@@ -426,7 +425,7 @@ def render_streak_result(streak_extended: bool, streak: int) -> None:
                     </div>
                     <div style="font-size:0.85rem;opacity:0.9;">Come back tomorrow to keep it alive.</div>
                 </div>
-                <style>also remove that ai looking text make this app as humanly as possible also what would you do if you were a famous engineer , if i became a famous egineer i would do whatever i could do
+                <style>
                 @keyframes flame-pop {{
                     0% {{ transform: scale(0.4); opacity: 0; }}
                     60% {{ transform: scale(1.15); opacity: 1; }}
@@ -454,6 +453,7 @@ def render_streak_result(streak_extended: bool, streak: int) -> None:
 # option is tapped.
 # ---------------------------------------------------------------------------
 
+def speak_nepali(text: str, nonce: int = 0) -> None:
     """Speaks `text` aloud in the user's browser using the Web Speech API.
 
     Rendered as an invisible components.html snippet. `nonce` should change
@@ -1200,6 +1200,7 @@ def render_profile() -> None:
 
 
 # ---------------------------------------------------------------------------
+
 def main() -> None:
     inject_app_chrome()
     init_backend()
@@ -1211,11 +1212,20 @@ def main() -> None:
     section = st.session_state.get("section", "Path map")
     active_lesson_id = st.session_state.get("active_lesson_id")
 
-    # While a lesson is open it gets the whole screen — no top bar (streak/
-    # XP/settings) above it. That row is home-screen chrome; showing it
-    # above the lesson invites tapping away mid-exercise and undercuts the
-    # "focused, distraction-free" lesson mode the screen is meant to be.
-    if not active_lesson_id:
+    # While a lesson is open, the top bar (streak/XP/settings) is hidden
+    # rather than skipped entirely. The nav radio and theme radio inside it
+    # are keyed widgets — if the whole function is skipped some runs (in
+    # a lesson) and called on others (on the path map), Streamlit tears
+    # down and recreates their session state every time a lesson opens or
+    # closes, which is a good way to hit odd mid-session errors. Keeping
+    # it mounted every run and just hiding it with CSS avoids that churn
+    # while still giving the lesson the whole screen visually.
+    if active_lesson_id:
+        st.markdown(
+            '<style>div[class*="st-key-top_bar_wrap"] { display: none; }</style>',
+            unsafe_allow_html=True,
+        )
+    with st.container(key="top_bar_wrap"):
         render_top_bar()
 
     if section == "Profile":
@@ -1224,6 +1234,7 @@ def main() -> None:
         render_lesson_screen(active_lesson_id)
     else:
         render_path_map()
+
 
 def render_fatal_error() -> None:
     """Shown instead of Streamlit's own error UI when something unexpected
