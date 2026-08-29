@@ -1,4 +1,3 @@
-
 from __future__ import annotations
 
 import base64
@@ -21,42 +20,24 @@ from bindu.domain.models import ExerciseType
 APP_DIR = Path(__file__).parent
 LOGO_ICON = APP_DIR / "assets" / "bindu_favicon.png"
 LOGO_FULL = APP_DIR / "assets" / "bindu_logo_full.png"
+SPEAKER_ICON = APP_DIR / "assets" / "speaker_icon.png"
 
 st.set_page_config(
-    page_title="BINDU - learn Nepali",
-    page_icon=str(LOGO_ICON) if LOGO_ICON.exists() else "🏔️",
+    page_title="BINDU",
+    page_icon=str(LOGO_ICON)  ,
     layout="centered",
     initial_sidebar_state="collapsed",
 )
 
-# Nepali flag colors (crimson + blue) — used throughout for a consistent
-# "bindu" (journey) look instead of generic app colors.
-NEPAL_CRIMSON = "#DC143C"
-NEPAL_BLUE = "#003893"
-UNIT_COLORS = ["#0038A8", "#DA251D", "#046A38", "#B8860B", "#7A288A"]
+NEPAL_CRIMSON = "#E4264C"
+NEPAL_BLUE = "#296DDB"
+UNIT_COLORS = ["#4678DB", "#D3534C", "#29AF6E", "#B8860B", "#7A288A"]
 
-# A learner gets this many "lives" per lesson *attempt* (independent of the
-# slower-refilling account-wide hearts shown in the sidebar). Miss this many
-# questions in one lesson and the attempt ends right there as failed — the
-# rest of the questions aren't shown, nothing is saved, and the lesson stays
-# locked/incomplete until retried. This only works out to a fair rule when
-# every lesson actually has hearts+2 questions, so content/units.final.yaml
-# is padded to exactly 7 exercises per lesson.
+
 LESSON_HEARTS = gamification.MAX_HEARTS
 
-# Lesson "lives" are shown as plates of dal bhat instead of hearts — a full
-# plate for a life you still have, an empty plate for one you've used up.
 DAL_BHAT_FULL = "🍛"
 DAL_BHAT_EMPTY = "🍽️"
-
-# A handful of Nepali sayings shown around the app for a bit of local
-# flavor — rotates based on the lesson/unit index so it isn't static.
-NEPALI_PROVERBS = [
-    ("बाटो हिँडेरै बन्छ।", "The path is made by walking it."),
-    ("सिकाइको कुनै अन्त्य हुँदैन।", "Learning never ends."),
-    ("एक थोपा पानीले भाँडो भर्छ।", "A pot fills one drop at a time — small steps add up."),
-    ("जहाँ चाहना छ, त्यहाँ बाटो छ।", "Where there's a will, there's a way."),
-]
 
 NODE_STYLE = """
 <style>
@@ -69,13 +50,8 @@ NODE_STYLE = """
     border: 3px solid rgba(0,0,0,0.08);
 }
 .node-done { background: #E8A33D; }
-.node-current { background: #ffd23f; animation: pulse 1.6s infinite; }
+.node-current { background: #ffd23f; box-shadow: 0 4px 0 rgba(0,0,0,0.15), 0 0 0 4px rgba(255,210,63,0.35); }
 .node-locked { background: #d9d9d9; box-shadow: none; }
-@keyframes pulse {
-    0% { box-shadow: 0 4px 0 rgba(0,0,0,0.15), 0 0 0 0 rgba(255,210,63,0.6); }
-    70% { box-shadow: 0 4px 0 rgba(0,0,0,0.15), 0 0 0 14px rgba(255,210,63,0); }
-    100% { box-shadow: 0 4px 0 rgba(0,0,0,0.15), 0 0 0 0 rgba(255,210,63,0); }
-}
 .node-label { text-align: center; font-size: 12px; margin-top: 2px; color: #666; }
 .you-are-here {
     text-align: center; font-size: 11px; font-weight: 700;
@@ -90,21 +66,8 @@ NODE_STYLE = """
 </style>
 """
 
-# ---------------------------------------------------------------------------
-# App chrome — makes the page read as a native app screen instead of a
-# website built on Streamlit. Injected once, on every screen (including the
-# auth gate), before anything else renders.
-#
-# What this buys us:
-#   - The browser-y bits (hamburger menu, "Deploy" button, footer credit,
-#     the thin colored "loading" bar) are hidden — `client.toolbarMode =
-#     "minimal"` in config.toml does most of this already; the CSS here is
-#     a belt-and-braces fallback for older Streamlit versions/embeds.
-#   - Content is capped to a phone-width column and centered, with a
-#     subtle card/shadow around it on wide screens, like a phone mockup.
-#   - Buttons, inputs and metrics get rounder corners, bolder weight and
-#     a bit of shadow/lift instead of Streamlit's flat default widgets.
-# ---------------------------------------------------------------------------
+# for app like structure
+
 APP_CHROME_CSS = """
 <style>
 #MainMenu, footer, [data-testid="stToolbar"], [data-testid="stDecoration"] {
@@ -135,14 +98,14 @@ html, body, [class*="css"] { font-family: 'Nunito', 'Source Sans Pro', sans-seri
 
 /* App-style buttons: pill-shaped, bold, a little lift */
 .stButton > button {
-    border-radius: 14px;
-    font-weight: 700;
+    border-radius: 12px;
+    font-weight: 600;
     padding: 0.6rem 1rem;
-    box-shadow: 0 3px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.08);
     transition: transform 0.05s ease-in-out;
     border: none;
 }
-.stButton > button:active { transform: translateY(2px); box-shadow: none; }
+.stButton > button:active { transform: translateY(1px); box-shadow: none; }
 
 /* Exercise answer options (multiple-choice) — selecting one used to turn
    it the same glossy crimson as the app's primary CTA buttons, which read
@@ -177,7 +140,7 @@ div[class*="st-key-mcopt_"] .stButton > button[kind="primary"] {
     gap: 4px; background: #F0F2F6; padding: 4px; border-radius: 12px;
 }
 .stTabs [data-baseweb="tab"] {
-    border-radius: 9px; padding: 8px 0; font-weight: 700;
+    border-radius: 9px; padding: 8px 0; font-weight: 600;
 }
 .stTabs [aria-selected="true"] { background: #ffffff; }
 
@@ -190,15 +153,7 @@ div[class*="st-key-mcopt_"] .stButton > button[kind="primary"] {
 </style>
 """
 
-# Extra CSS layered on top of APP_CHROME_CSS when the user picks "Dark" in
-# Settings. Streamlit's own widgets (buttons, inputs, alerts, popovers,
-# tabs...) are compiled against its *config-level* light theme, so they
-# don't automatically follow a CSS variable we set after the fact — that's
-# why an earlier version of this only recolored a few surfaces and left
-# things like button backgrounds dark with their original dark text
-# (dark-on-dark = invisible). This version explicitly repaints every
-# surface AND its text together, in the same rule, so nothing is left
-# dark-on-dark or light-on-light.
+#for dark
 DARK_BG = "#0e1117"
 DARK_SURFACE = "#1c1f26"
 DARK_SURFACE_2 = "#262730"
@@ -294,15 +249,6 @@ input::placeholder, textarea::placeholder {{ color: #8a8f9c !important; }}
 </style>
 """
 
-# Mirror of DARK_THEME_CSS, applied when the user picks "Light" in Settings.
-# Needed because .streamlit/config.toml now compiles Streamlit's *native*
-# widgets (buttons, inputs, popovers, tabs, metrics...) against a dark base
-# theme by default — so "Light" can no longer just mean "don't add the dark
-# overrides". Without this, picking Light left native widgets rendered with
-# their dark-theme colors while our custom markdown cards flipped back to
-# light (theme_colors()), producing the exact light/dark mismatch this is
-# meant to avoid. This explicitly repaints every surface back to light,
-# the same surface-and-text-together way DARK_THEME_CSS does for dark.
 LIGHT_BG = "#FFFFFF"
 LIGHT_SURFACE = "#FFFFFF"
 LIGHT_SURFACE_2 = "#F6F7FB"
@@ -397,10 +343,7 @@ def theme_colors() -> dict:
 
 
 def inject_app_chrome() -> None:
-    # Streamlit's native widgets are compiled against the light base theme
-    # in .streamlit/config.toml, but both branches still get an explicit
-    # repaint here so switching to "Dark" in Settings doesn't leave any
-    # widget on its light-mode colors.
+
     css = APP_CHROME_CSS + (DARK_THEME_CSS if get_theme() == "dark" else LIGHT_THEME_CSS)
     st.markdown(css, unsafe_allow_html=True)
 
@@ -439,7 +382,7 @@ def render_streak_result(streak_extended: bool, streak: int) -> None:
         st.markdown(
             f"""<div style="text-align:center;padding:8px 10px;margin:10px 0;
                         border-radius:14px;background:{colors['card_bg']};color:{colors['muted_text']};">
-                    🔥 Streak already secured today — day {streak}
+                    🔥 Streak already secured today-day {streak}
                 </div>""",
             unsafe_allow_html=True,
         )
@@ -534,14 +477,15 @@ def render_question(prompt: str, audio_url: str | None, key: str) -> None:
         )
         return
     safe_url = audio_url.replace('"', "&quot;")
+    speaker_icon = _speaker_img_tag(22)
     components.html(
         f"""
         <div style="{card_style}">
-            <span>🏔️</span>
             <span>{safe_prompt}</span>
             <button id="replay-{key}" title="Replay audio" style="
-                    background:none;border:none;cursor:pointer;font-size:1.25rem;
-                    line-height:1;padding:0;margin-left:auto;flex-shrink:0;color:#ffffff;">🔊</button>
+                    background:none;border:none;cursor:pointer;
+                    line-height:1;padding:0;margin-left:auto;flex-shrink:0;
+                    display:flex;align-items:center;">{speaker_icon}</button>
         </div>
         <audio id="audio-{key}" src="{safe_url}" autoplay></audio>
         <script>
@@ -559,9 +503,6 @@ def render_question(prompt: str, audio_url: str | None, key: str) -> None:
     )
 
 
-# ---------------------------------------------------------------------------
-# Wiring: cached resources + a stand-in for auth (a text-entered user id).
-# ---------------------------------------------------------------------------
 
 @st.cache_resource
 def get_cache() -> LocalCache:
@@ -650,6 +591,19 @@ def _logo_img_tag(path: Path, height_px: int) -> str:
     return img
 
 
+def _speaker_img_tag(size_px: int) -> str:
+    """An <img> tag for the blue speaker icon, used anywhere audio playback
+    is indicated. Falls back to the 🔊 emoji if the asset is missing."""
+    if not SPEAKER_ICON.exists():
+        return "🔊"
+    b64 = _logo_b64(SPEAKER_ICON)
+    return (
+        f'<img src="data:image/png;base64,{b64}" '
+        f'style="width:{size_px}px;height:{size_px}px;vertical-align:middle;" '
+        f'alt="Speaker"/>'
+    )
+
+
 # ---------------------------------------------------------------------------
 # Auth gate — a real (if simple) username/password login, so progress, XP,
 # hearts and streaks are tied to an account instead of a free-typed name
@@ -657,6 +611,13 @@ def _logo_img_tag(path: Path, height_px: int) -> str:
 # ---------------------------------------------------------------------------
 
 def render_auth_gate() -> None:
+    """Log in / Sign up screen shown before anything else.
+
+    Signing up logs the new account in immediately: on a successful
+    "Create account" submit, auth_user/auth_display_name are set and the
+    app reruns straight into the app home — there's no separate "now log
+    in with the account you just created" step.
+    """
     logo_tag = _logo_img_tag(LOGO_FULL, 96) or '<div style="font-size:2.4rem;">🙏🏔️</div>'
     st.markdown(
         f"""<div style="text-align:center;padding:18px 0 6px 0;">
@@ -667,8 +628,6 @@ def render_auth_gate() -> None:
         unsafe_allow_html=True,
     )
 
-    st.caption("Log in with your username and password")
-
     auth_repo = get_auth_repo()
     login_tab, signup_tab = st.tabs(["Log in", "Sign up"])
 
@@ -676,7 +635,7 @@ def render_auth_gate() -> None:
         with st.form("login_form"):
             username = st.text_input("Username", key="login_username")
             password = st.text_input("Password", type="password", key="login_password")
-            submitted = st.form_submit_button("Log in", use_container_width=True)
+            submitted = st.form_submit_button("Log in", use_container_width=True, type="primary")
         if submitted:
             result = auth_repo.log_in(username, password)
             if result.ok:
@@ -692,16 +651,19 @@ def render_auth_gate() -> None:
             new_display_name = st.text_input("Display name (optional)", key="signup_display_name")
             new_password = st.text_input("Choose a password", type="password", key="signup_password")
             confirm_password = st.text_input("Confirm password", type="password", key="signup_confirm")
-            submitted = st.form_submit_button("Create account", use_container_width=True)
+            submitted = st.form_submit_button("Create account", use_container_width=True, type="primary")
         if submitted:
             if new_password != confirm_password:
                 st.error("Passwords don't match.")
             else:
                 result = auth_repo.sign_up(new_username, new_password, new_display_name)
                 if result.ok:
+                    # Sign-up logs the user straight in — no separate login
+                    # step. Set the session and rerun immediately; main()
+                    # sees auth_user is set and renders the app home instead
+                    # of this gate on the very next run.
                     st.session_state.auth_user = result.username
                     st.session_state.auth_display_name = result.display_name
-                    st.success(f"Account created — स्वागत छ, {result.display_name}! 🎉")
                     st.rerun()
                 else:
                     st.error(result.error)
@@ -801,9 +763,7 @@ def render_top_bar() -> None:
     st.markdown("<div style='margin-top:6px;'></div>", unsafe_allow_html=True)
 
 
-# ---------------------------------------------------------------------------
-# Path map page — a winding, level-by-level game path (Duolingo-style)
-# ---------------------------------------------------------------------------
+#path map
 
 def render_path_map() -> None:
     st.markdown(NODE_STYLE, unsafe_allow_html=True)
@@ -839,8 +799,8 @@ def render_path_map() -> None:
         completed_count / total_count if total_count else 0,
         text=f"{completed_count}/{total_count} lessons cleared",
     )
-    nepali, english = NEPALI_PROVERBS[completed_count % len(NEPALI_PROVERBS)]
-    st.caption(f"🇳🇵 *{nepali}* — “{english}”")
+    
+   
 
     for u_idx, unit in enumerate(units):
         color = unit.color_theme or UNIT_COLORS[u_idx % len(UNIT_COLORS)]
@@ -860,13 +820,10 @@ def render_path_map() -> None:
             is_current = lesson.id == current_lesson_id
 
             if state["completed"]:
-                # A marigold rosette instead of a plain checkmark — sayapatri
-                # (marigold) garlands and tika are how completed effort is
-                # marked in Nepal, so "done" reads as a small blessing/award
-                # rather than a generic UI tick.
-                node_class, emoji = "node-done", "🏵️"
+
+                node_class, emoji = "node-done", "🌼"
             elif is_current:
-                node_class, emoji = "node-current", "🔊"
+                node_class, emoji = "node-current", "🪔"
             else:
                 node_class, emoji = "node-locked", "🔒"
 
@@ -880,19 +837,15 @@ def render_path_map() -> None:
                 )
                 if is_current:
                     st.markdown('<div class="you-are-here">YOU ARE HERE</div>', unsafe_allow_html=True)
-                button_label = "Start 🔊" if is_current else ("Review" if state["completed"] else "Locked 🔒")
+                button_label = "Start" if is_current else ("Review" if state["completed"] else "Locked 🔒")
                 if st.button(
                     button_label, key=f"lesson-{lesson.id}", use_container_width=True,
                     disabled=lesson.locked,
                 ):
                     st.session_state.active_lesson_id = lesson.id
+                    st.rerun()
 
 
-# ---------------------------------------------------------------------------
-# Lesson runner — its own full screen, not tacked onto the bottom of the
-# path map. Clicking "Start" should feel like opening into a new view, the
-# way a real lesson app snaps you into a focused, distraction-free mode.
-# ---------------------------------------------------------------------------
 
 def render_lesson_screen(lesson_id: int) -> None:
     lesson_repo = get_lesson_repo()
@@ -951,8 +904,7 @@ def render_lesson(lesson_id: int) -> None:
     total = len(exercises)
 
     # Out of hearts for THIS lesson attempt: 5 wrong answers ends it right
-    # there, whether or not every question has been shown yet — mirrors how
-    # hearts work in the reference Duolingo UX. Nothing is saved and the
+    # there, whether or not every question has been shown yet. Nothing is saved and the
     # lesson stays locked/incomplete until retried.
     if lesson_hearts <= 0:
         st.markdown(f"<div style='font-size:2rem;text-align:center;'>{DAL_BHAT_EMPTY * LESSON_HEARTS}</div>",
@@ -992,12 +944,7 @@ def render_lesson(lesson_id: int) -> None:
         accuracy = round(100 * correct_count / total)
         st.balloons()
 
-        # A small summary card instead of one plain success line — accuracy,
-        # XP and stars laid out the way Duolingo's end-of-lesson recap does,
-        # topped with the same marigold rosette used for a "done" node on
-        # the path map and a Nepali line of congratulations, so finishing a
-        # lesson reads as a small, specific accomplishment rather than a
-        # generic "you passed" banner.
+
         colors = theme_colors()
         st.markdown(
             f"""<div style="background:{colors['card_bg']};border-radius:18px;
@@ -1005,7 +952,7 @@ def render_lesson(lesson_id: int) -> None:
                     <div style="font-size:2.6rem;line-height:1;">🏵️</div>
                     <div style="font-weight:800;font-size:1.25rem;margin-top:6px;
                         color:{colors['body_text']};">
-                        साबास! Lesson complete!
+                        well done!
                     </div>
                     <div style="font-size:0.9rem;color:{colors['muted_text']};margin-top:2px;">
                         Well done — {correct_count}/{total} correct
@@ -1035,7 +982,7 @@ def render_lesson(lesson_id: int) -> None:
         )
         render_streak_result(streak_extended=not already_active_today, streak=streak_stats.streak)
         if level_after > level_before:
-            st.success(f"🎉 LEVEL UP! You've reached Level {level_after}!")
+            st.success(f"LEVEL UP! You've reached Level {level_after}!")
 
         if st.button("Continue", key=f"continue_{lesson_id}"):
             _reset_attempt()
@@ -1065,7 +1012,7 @@ def render_lesson(lesson_id: int) -> None:
 
         for opt_idx, option in enumerate(exercise.options):
             is_selected = st.session_state[choice_key] == option
-            label = f"✅  {option}" if is_selected else option
+            label = f"{option}" if is_selected else option
             if st.button(
                 label, key=f"mcopt_{lesson_id}_{idx}_{opt_idx}",
                 use_container_width=True,
@@ -1073,6 +1020,7 @@ def render_lesson(lesson_id: int) -> None:
             ):
                 st.session_state[choice_key] = option
                 st.session_state[nonce_key] += 1
+                st.rerun()
 
         choice = st.session_state[choice_key]
         # Re-speak the currently selected option every time it (or the nonce)
@@ -1165,7 +1113,7 @@ def render_lesson(lesson_id: int) -> None:
 
     if submitted:
         if correct:
-            st.success("Correct! 🎉 राम्रो!")
+            st.success("Correct!")
             st.session_state[correct_key] += 1
         else:
             st.error(f"Not quite — correct answer: {' '.join(exercise.answer)}")
