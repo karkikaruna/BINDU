@@ -56,11 +56,7 @@ _failed: list[str] = []
 
 
 def _translate_with_retries(text: str) -> tuple[str, bool]:
-    """Try to translate one string, retrying transient failures with backoff.
 
-    Returns (result, ok) -- ok is False if every attempt failed, in which
-    case result is just the original English text as a placeholder.
-    """
     delay = RETRY_BACKOFF
     last_exc = None
     for attempt in range(1, MAX_RETRIES + 1):

@@ -225,7 +225,6 @@ div[class*="st-key-mcopt_"] button[kind="primary"] {
     padding: 0.6rem 0.85rem !important;
 }
 
-/* Metrics as rounded cards instead of plain website-style stat blocks */
 [data-testid="stMetric"] {
     background: #F6F7FB;
     border-radius: 14px;
@@ -398,15 +397,12 @@ input::placeholder, textarea::placeholder {{ color: #888888 !important; }}
 
 
 def get_theme() -> str:
-    """The user's chosen theme ("light" or "dark"), set from the Settings
-    popover in render_top_bar and persisted for the session. Defaults to
-    light — BINDU ships light-mode-first."""
+
     return st.session_state.get("theme", "light")
 
 
 def theme_colors() -> dict:
-    """A few hand-picked colors this app's custom (non-Streamlit-native)
-    cards use, so they don't end up light-mode-only when dark is picked."""
+
     if get_theme() == "dark":
         return {"card_bg": DARK_SURFACE_2, "muted_text": "#a9adba", "body_text": DARK_TEXT}
     return {"card_bg": "#F6F7FB", "muted_text": "#888888", "body_text": "#262730"}
@@ -419,14 +415,7 @@ def inject_app_chrome() -> None:
 
 
 def render_streak_result(streak_extended: bool, streak: int) -> None:
-    """Shows the streak outcome after a lesson, the way a real app makes the
-    streak feel like something you *maintained* today — not just a number
-    that ticks up. Only fires the "new day" celebration once per calendar
-    day (streak_extended is only True the first time today, since
-    record_activity_and_update_streak leaves the streak untouched on any
-    later completion the same day); every other completion still earns XP,
-    it just quietly confirms the streak is already safe for today.
-    """
+
     if streak_extended:
         st.markdown(
             f"""<div style="text-align:center;padding:14px 10px;margin:10px 0;
@@ -460,17 +449,10 @@ def render_streak_result(streak_extended: bool, streak: int) -> None:
 
 
 def speak_nepali(text: str, nonce: int = 0) -> None:
-    """Speaks `text` aloud in the user's browser using the Web Speech API.
 
-    Rendered as an invisible components.html snippet. `nonce` should change
-    every time the same text needs to be re-spoken (e.g. tapping the same
-    option twice) — Streamlit skips re-running a component's <script> when
-    the HTML it renders is byte-for-byte identical to last time, so we bake
-    the nonce into the markup purely to force a fresh execution.
-    """
     if not text:
         return
-    # Escape for safe embedding inside a JS template literal.
+  
     safe_text = (
         text.replace("\\", "\\\\").replace("`", "\\`").replace("</", "<\\/")
     )
@@ -496,8 +478,7 @@ def speak_nepali(text: str, nonce: int = 0) -> None:
 
 
 def _escape_html_text(text: str) -> str:
-    """Minimal escaping for placing plain text inside HTML markup (not an
-    attribute, not a JS string — see speak_nepali's escaping for that)."""
+ 
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
@@ -512,7 +493,7 @@ def render_question(prompt: str, audio_url: str | None, key: str, autoplay: bool
     )
     if not audio_url:
         components.html(
-            f"""<div style="{card_style}"><span>🏔️</span><span>{safe_prompt}</span></div>""",
+            f"""<div style="{card_style}"><span>{safe_prompt}</span></div>""",
             height=54,
         )
         return
@@ -618,8 +599,7 @@ def _logo_img_tag(path: Path, height_px: int) -> str:
 
 
 def _speaker_img_tag(size_px: int) -> str:
-    """An <img> tag for the blue speaker icon, used anywhere audio playback
-    is indicated. Falls back to the 🔊 emoji if the asset is missing."""
+   
     if not SPEAKER_ICON.exists():
         return "🔊"
     b64 = _logo_b64(SPEAKER_ICON)
@@ -632,13 +612,7 @@ def _speaker_img_tag(size_px: int) -> str:
 
 
 def render_auth_gate() -> None:
-    """Log in / Sign up screen shown before anything else.
 
-    Signing up logs the new account in immediately: on a successful
-    "Create account" submit, auth_user/auth_display_name are set and the
-    app reruns straight into the app home — there's no separate "now log
-    in with the account you just created" step.
-    """
     logo_tag = _logo_img_tag(LOGO_FULL, 96) or '<div style="font-size:2.4rem;">🙏🏔️</div>'
     st.markdown(
         f"""<div style="text-align:center;padding:18px 0 6px 0;">
@@ -1259,4 +1233,4 @@ if __name__ == "__main__":
     except Exception:
 
         logging.getLogger("bindu").exception("Unhandled error in BINDU")
-        render_fatal_error()       
+        render_fatal_error()      

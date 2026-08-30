@@ -16,8 +16,7 @@ DB_PATH = ROOT / "bindu_local.db"
 
 
 def load_rows():
-    """Flattens units.final.yaml into (units, lessons, exercises) row lists,
-    assigning our own sequential ids so foreign keys line up."""
+
     with open(CONTENT_PATH, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
 
@@ -123,8 +122,6 @@ def rebuild_supabase(units, lessons, exercises) -> None:
     from supabase import create_client
     supabase = create_client(url, key)
 
-    # Clear old (possibly Nepali-only-prompt) rows before re-inserting so we
-    # don't end up with duplicates.
     supabase.table("exercises").delete().neq("id", 0).execute()
     supabase.table("lessons").delete().neq("id", 0).execute()
     supabase.table("units").delete().neq("id", 0).execute()
