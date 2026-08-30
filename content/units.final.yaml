@@ -1,6 +1,7 @@
 units:
 - order_index: 1
   name: Greetings
+  color_theme: '#0038A8'
   lessons:
   - order_index: 1
     name: Hello & Goodbye
@@ -23,7 +24,7 @@ units:
       - तपाईंलाई कस्तो छ?
       nepali_answer:
       - नमस्ते
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/0c615ca638e340ac90ab87a6db88480a.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/ac05f8af7411436785a550bf44f2ca02.mp3
     - order_index: 2
       type: word_bank
       english_prompt: 'Arrange the words: ''How are you?'''
@@ -44,7 +45,7 @@ units:
       - तपाईंलाई
       - कस्तो
       - छ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/7b94168c573f40cfb5f316315cb5ff94.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/583ea16633bf42e1aa6054cb1d7949b7.mp3
     - order_index: 3
       type: multiple_choice
       english_prompt: Which word means 'Goodbye' (see you again)?
@@ -63,7 +64,7 @@ units:
       - कृपया
       nepali_answer:
       - अलविदा
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/8b0110b164ee4af996da0bc6909c75e4.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/df6bf9bc9b974ad2a3dc0df8899a65bd.mp3
     - order_index: 4
       type: multiple_choice
       english_prompt: Which greeting means 'Good morning'?
@@ -82,7 +83,7 @@ units:
       - माफ गर्नुहोस्
       nepali_answer:
       - शुभ प्रभात
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/40e0b884bc74408fb43548a4e28aac05.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/58d2f7badcbe4ed394e1c36741d99c20.mp3
     - order_index: 5
       type: multiple_choice
       english_prompt: '''Namaste'' can be used for both ___'
@@ -101,7 +102,7 @@ units:
       - ठूलो र सानो
       nepali_answer:
       - नमस्ते र अलविदा
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/b33c875935b5486286ff8a250e39ee4e.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/6c2bc211e94341e8aee8c25dbafed0a1.mp3
     - order_index: 6
       type: word_bank
       english_prompt: 'Arrange: ''Nice to meet you'''
@@ -126,7 +127,7 @@ units:
       - भेटेर
       - खुशी
       - लाग्यो
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/e06345b4e66d449680c26e132c8de015.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/de5467efc02b484ea424c49da783b372.mp3
     - order_index: 7
       type: multiple_choice
       english_prompt: How do you informally ask a friend 'how are you'?
@@ -145,7 +146,7 @@ units:
       - नमस्ते
       nepali_answer:
       - तिमीलाई कस्तो छ?
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/13026bfe10dc4b07b5f0ac2faa341542.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/26ad61ac729c4e1688e79a6ad0396470.mp3
   - order_index: 2
     name: Please & Thank You
     exercises:
@@ -167,7 +168,7 @@ units:
       - राम्रो
       nepali_answer:
       - धन्यवाद
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/0c5847b8b0f54a6b82b0259966e04e67.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/6774c599b2a547f097e52cfcb3a5698c.mp3
     - order_index: 2
       type: multiple_choice
       english_prompt: Which word means 'Please'?
@@ -186,7 +187,7 @@ units:
       - अलविदा
       nepali_answer:
       - कृपया
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/220dc2be60cd432797b6d6dbc75b2c69.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/82e9fa056ab54907839b7310f91b7ad4.mp3
     - order_index: 3
       type: multiple_choice
       english_prompt: How do you say 'You're welcome'?
@@ -205,7 +206,7 @@ units:
       - माफ गर्नुहोस्
       nepali_answer:
       - तपाईंलाई स्वागत छ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/551fab31e1c44226ae526b18f1802640.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/fcb81abbd9fd41079c29c20c69faedee.mp3
     - order_index: 4
       type: multiple_choice
       english_prompt: Which phrase means 'Excuse me / Sorry'?
@@ -224,7 +225,7 @@ units:
       - स्वागत छ
       nepali_answer:
       - माफ गर्नुहोस्
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/bcaf4bc38ece4ec2839285c38c1a82ea.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/5c0710823ed64080ac31db8537d82cc0.mp3
     - order_index: 5
       type: word_bank
       english_prompt: 'Arrange: ''Please give me water'''
@@ -249,7 +250,7 @@ units:
       - मलाई
       - पानी
       - दिनुहोस्
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/860c8d157bc746cf934a397390be9cd0.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/28e25c1e2ca04b3a8c1d5cfcf6d9fa2e.mp3
     - order_index: 6
       type: multiple_choice
       english_prompt: Which phrase means 'No, thank you'?
@@ -268,7 +269,7 @@ units:
       - माफ गर्नुहोस्
       nepali_answer:
       - होइन, धन्यवाद
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/34d3bc3e169b4d389c120a20c72d4c8a.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/36941c581c924f6b860c464d28987ed3.mp3
     - order_index: 7
       type: word_bank
       english_prompt: 'Arrange: ''Thank you very much'''
@@ -293,7 +294,7 @@ units:
       - धेरै
       - धेरै
       - धन्यवाद
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/e19b562116eb4457a53b86b2fd546f5f.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/f8f019d77f4f496f9410d1eddcbf3bfe.mp3
   - order_index: 3
     name: Introducing Yourself
     exercises:
@@ -321,7 +322,7 @@ units:
       - नाम
       - मैक्स
       - हो
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/60381d19ecd74fe3a9033e853efd33f3.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/4e54c7f169444794a2fc091171cafd7c.mp3
     - order_index: 2
       type: multiple_choice
       english_prompt: How do you ask 'What is your name?'
@@ -340,7 +341,7 @@ units:
       - तपाईंलाई कस्तो छ?
       nepali_answer:
       - तपाईंको नाम के हो?
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/7dbd5f35fcde40e9b74f72f8442d6628.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/55c1ce94ac9a41f1b5f8d254c682a34c.mp3
     - order_index: 3
       type: multiple_choice
       english_prompt: Which sentence means 'I am from Nepal'?
@@ -359,7 +360,7 @@ units:
       - म नेपाल घुम्न चाहन्छु
       nepali_answer:
       - म नेपालबाट हुँ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/c69f3080b4b549b0a8a1ba43f18cd23e.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/e8904dbd1bb84d9ca6a3c24e428f65b8.mp3
     - order_index: 4
       type: word_bank
       english_prompt: 'Arrange: ''I am a student'''
@@ -384,7 +385,7 @@ units:
       - एक
       - विद्यार्थी
       - हुँ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/f1cab6db1b39484e9723d7b53f088186.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/50b401f6b72e4a61b322778451ef424a.mp3
     - order_index: 5
       type: multiple_choice
       english_prompt: Which phrase means 'Nice to meet you'?
@@ -403,7 +404,7 @@ units:
       - मलाई भोक लागेको छ
       nepali_answer:
       - तपाईंलाई भेटेर खुशी लाग्यो
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/c74d8c4b25d741598aa391096da01253.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/3b43b0a22e864af084c3804947f818fe.mp3
     - order_index: 6
       type: multiple_choice
       english_prompt: 'Fill in: ''I am 25 years old'''
@@ -422,7 +423,7 @@ units:
       - माफ गर्नुहोस्
       nepali_answer:
       - म २५ वर्षको छु
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/60c457b1bbeb4c008d9191025bbfe2bb.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/4d9013e7597f41e398aa3c1cae578adf.mp3
     - order_index: 7
       type: word_bank
       english_prompt: 'Arrange: ''Where are you from?'''
@@ -447,9 +448,10 @@ units:
       - कहाँ
       - बाट
       - हुनुहुन्छ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/4f2a3ef2bb4e471b86a7b8faa120cd1a.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/ba68aebb759a4e519571fc100f6e4a20.mp3
 - order_index: 2
   name: Numbers & Shopping
+  color_theme: '#FFD700'
   lessons:
   - order_index: 1
     name: Numbers 1-10
@@ -472,7 +474,7 @@ units:
       - तीन
       nepali_answer:
       - पाँच
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/85eced98a4f4427e9bb6925263c01969.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/43a3733b9de945d28b9fdb02134062c8.mp3
     - order_index: 2
       type: multiple_choice
       english_prompt: '''one''?'
@@ -491,7 +493,7 @@ units:
       - चार
       nepali_answer:
       - एक
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/9c8a4b96d2cf4931ac38e51daf9462b4.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/a945ef1721dd48918d14669ec45fd191.mp3
     - order_index: 3
       type: multiple_choice
       english_prompt: '''two''?'
@@ -510,7 +512,7 @@ units:
       - दस
       nepali_answer:
       - दुई
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/a65616e185dc4d65b2934c786437a5ff.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/7a83ff4cc5b24df9aec5e6c43d2e4661.mp3
     - order_index: 4
       type: multiple_choice
       english_prompt: '''three''?'
@@ -529,7 +531,7 @@ units:
       - नौ
       nepali_answer:
       - तीन
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/fba1d7d733c1484b949420b99e7681c5.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/d90e6ac14a614ee68f8abf5487bfe5e8.mp3
     - order_index: 5
       type: multiple_choice
       english_prompt: '''six''?'
@@ -548,7 +550,7 @@ units:
       - एक
       nepali_answer:
       - छ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/7c20506f45944385baba79b98df70651.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/9566c42d927740c38be7fceceb5f1275.mp3
     - order_index: 6
       type: multiple_choice
       english_prompt: '''ten''?'
@@ -567,7 +569,7 @@ units:
       - दुई
       nepali_answer:
       - दस
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/c431eb1eb0004627aa15822bcb25c3ad.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/5de8d8f7e7fa47499e0baaeef8e9b268.mp3
     - order_index: 7
       type: word_bank
       english_prompt: 'Arrange: ''one, two, three'''
@@ -588,7 +590,7 @@ units:
       - एक
       - दुई
       - तीन
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/b79b04aebd074fcbb53e3b91dd680f1d.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/288e7e939d8f43409f7f6ce3f315b440.mp3
   - order_index: 2
     name: Asking Prices
     exercises:
@@ -616,7 +618,7 @@ units:
       - मूल्य
       - कति
       - हो
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/d449fe45f7bd4acc954f4c5c12b48be8.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/a5e7bc66cbce4aeaa5586aa231553bce.mp3
     - order_index: 2
       type: multiple_choice
       english_prompt: Which phrase means 'How much?'
@@ -635,7 +637,7 @@ units:
       - मलाई माफ गर्नुहोस्
       nepali_answer:
       - कति पर्छ?
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/2103f2b31d9840278de456d727f068e8.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/f7a37aa33e4448bf8b4794f3c45c4f98.mp3
     - order_index: 3
       type: multiple_choice
       english_prompt: Which word means 'this one'?
@@ -654,7 +656,7 @@ units:
       - ती
       nepali_answer:
       - यो
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/d7b601b61db346c68ee3dcc58e1418ab.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/c13920cdbb244bb3b63ffc15f36ba727.mp3
     - order_index: 4
       type: multiple_choice
       english_prompt: Which word means 'cheap'?
@@ -673,7 +675,7 @@ units:
       - सानो
       nepali_answer:
       - सस्तो
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/30d799b3af8045a3b5db8364dc811b9a.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/e34c2af0902d4c2f84bd44538fc438a8.mp3
     - order_index: 5
       type: word_bank
       english_prompt: 'Arrange: ''Please give a discount'''
@@ -698,7 +700,7 @@ units:
       - केही
       - छुट
       - दिनुहोस्
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/f0f494aa2bf74258957b8f8dc853f211.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/5e717b29da49408eb9c85856fff975f5.mp3
     - order_index: 6
       type: multiple_choice
       english_prompt: Which word means 'money'?
@@ -717,7 +719,7 @@ units:
       - सडक
       nepali_answer:
       - पैसा
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/7eaa7940f61f43d09b5a18d6bfdfa7ff.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/485a4f136ac2405598f927ba75a154ab.mp3
     - order_index: 7
       type: word_bank
       english_prompt: 'Arrange: ''What is the price of this?'''
@@ -748,7 +750,7 @@ units:
       - मूल्य
       - कति
       - हो
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/ee785cb84d0b47178c2d02980425f8b6.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/b5084b6db3d149f39d2996e4b6e2f376.mp3
   - order_index: 3
     name: Bargaining Basics
     exercises:
@@ -770,7 +772,7 @@ units:
       - ठूलो
       nepali_answer:
       - धेरै महँगो
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/e9bac3e8e168456ca20dced0f722b2ac.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/34e9d7e955a6494c8273c91ff2bfa056.mp3
     - order_index: 2
       type: multiple_choice
       english_prompt: Which word means 'cheap'?
@@ -789,7 +791,7 @@ units:
       - ठूलो
       nepali_answer:
       - सस्तो
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/b76bbc29a7f546989a3a016a9d382dcd.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/cc263b7a9b7b4b8fb187d7d9044b1330.mp3
     - order_index: 3
       type: multiple_choice
       english_prompt: Which phrase means 'a little less'?
@@ -808,7 +810,7 @@ units:
       - कति बज्यो
       nepali_answer:
       - अलि कम
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/a11fc1933bec4c5994117f4749e7210c.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/273048029faf4b10905bcb49dfcb75dc.mp3
     - order_index: 4
       type: multiple_choice
       english_prompt: Which phrase means 'final price'?
@@ -827,7 +829,7 @@ units:
       - पुरानो मूल्य
       nepali_answer:
       - अन्तिम मूल्य
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/f0edd36b5d8344658447b3b1946fc61f.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/594b6980d1244b048634ae0d4ee52573.mp3
     - order_index: 5
       type: word_bank
       english_prompt: 'Arrange: ''Can you reduce the price?'''
@@ -856,7 +858,7 @@ units:
       - मूल्य
       - घटाउन
       - सक्नुहुन्छ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/fe59571ad7d94cf1ad21aeec20de93a0.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/0c3ff1f274e844f0a859f552a7a001a1.mp3
     - order_index: 6
       type: multiple_choice
       english_prompt: Which phrase means 'I will buy it'?
@@ -875,7 +877,7 @@ units:
       - म जान्छु
       nepali_answer:
       - म किन्छु
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/6ef6cd3ff1874113b894c49441a9df71.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/7eb2210ebbf74a30ba8bdd3ae8fdf7c5.mp3
     - order_index: 7
       type: word_bank
       english_prompt: 'Arrange: ''It is too expensive'''
@@ -900,9 +902,10 @@ units:
       - धेरै
       - महँगो
       - छ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/6a5b8971325a456b888612054702f1e0.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/ee7f56ef20e9485d963527b3cfe9669d.mp3
 - order_index: 3
   name: Food & Directions
+  color_theme: '#046A38'
   lessons:
   - order_index: 1
     name: Ordering Food
@@ -925,7 +928,7 @@ units:
       - धन्यवाद
       nepali_answer:
       - कृपया पानी दिनुहोस्
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/69cf61014c874c09865b021721ac0424.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/b5b18e8732cf4954bdd97844c1b0d47b.mp3
     - order_index: 2
       type: multiple_choice
       english_prompt: Which word means 'rice'?
@@ -944,7 +947,7 @@ units:
       - चिया
       nepali_answer:
       - भात
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/f8731826f82443f294f59e6f60b79909.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/6492e87ecdf64187a6e9568234505744.mp3
     - order_index: 3
       type: multiple_choice
       english_prompt: Which word means 'delicious'?
@@ -963,7 +966,7 @@ units:
       - तातो
       nepali_answer:
       - स्वादिष्ट
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/993305dbdd1e4f61b48197a7f95b0a05.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/26ae0eef0642410fb56af45008513f9b.mp3
     - order_index: 4
       type: word_bank
       english_prompt: 'Arrange: ''I want tea'''
@@ -984,7 +987,7 @@ units:
       - मलाई
       - चिया
       - चाहिन्छ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/db70e06f4a0740acb898f4c38ebbf5d4.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/4d3e811a75f946d185ee3c8b6d242d50.mp3
     - order_index: 5
       type: multiple_choice
       english_prompt: Which sentence means 'I am hungry'?
@@ -1003,7 +1006,7 @@ units:
       - मलाई निद्रा लागेको छ
       nepali_answer:
       - मलाई भोक लागेको छ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/7688dcd6159a4c70acc184346dd9ba2d.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/d43ac951680f4fe09591ba5c9268cef7.mp3
     - order_index: 6
       type: multiple_choice
       english_prompt: Which word means 'menu'?
@@ -1022,7 +1025,7 @@ units:
       - चम्चा
       nepali_answer:
       - मेनु
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/91506b68513b488790f5a9b1c5d7eeb0.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/5ad6744e6c564aaaac99c81a2eb3d0b2.mp3
     - order_index: 7
       type: word_bank
       english_prompt: 'Arrange: ''Give me the bill please'''
@@ -1049,7 +1052,7 @@ units:
       - मलाई
       - बिल
       - दिनुहोस्
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/ced3684d825d4c5c810f36033de25113.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/5a8a4f0290ee4cf9b5ca5d203bac1994.mp3
   - order_index: 2
     name: Asking for Directions
     exercises:
@@ -1073,7 +1076,7 @@ units:
       - होटल
       - कहाँ
       - छ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/6cc11fe3bb124eaa9a601e34f4412600.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/580c5581ace746a9a65135bcb5a381b3.mp3
     - order_index: 2
       type: multiple_choice
       english_prompt: Which word means 'left'?
@@ -1092,7 +1095,7 @@ units:
       - पछाडि
       nepali_answer:
       - बायाँ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/ef33c1137dd14232a7fdf458a91c6f45.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/2515432e60b24b23aea671ffd89884fe.mp3
     - order_index: 3
       type: multiple_choice
       english_prompt: Which word means 'right'?
@@ -1111,7 +1114,7 @@ units:
       - टाढा
       nepali_answer:
       - दायाँ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/5deed7bf0012465da8aeea043a01e266.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/227f5c688b36468d911d167b71f1a07e.mp3
     - order_index: 4
       type: multiple_choice
       english_prompt: Which word means 'straight'?
@@ -1130,7 +1133,7 @@ units:
       - नजिकै
       nepali_answer:
       - सीधा
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/4b329b01bba04fa4b5ba27327be684e5.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/9b68acc256cc43849aab39675c3eb19c.mp3
     - order_index: 5
       type: word_bank
       english_prompt: 'Arrange: ''Where is the bus station?'''
@@ -1157,7 +1160,7 @@ units:
       - स्टेशन
       - कहाँ
       - छ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/79f4532aa9834ad49a313d026250ce4c.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/9499636990f2467b82a9a45f11a96a04.mp3
     - order_index: 6
       type: multiple_choice
       english_prompt: Which word means 'near'?
@@ -1176,7 +1179,7 @@ units:
       - दायाँ
       nepali_answer:
       - नजिकै
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/f46594669d3c4cd2aa7931f304ec8271.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/378d8efbe50a4994a840701598660024.mp3
     - order_index: 7
       type: word_bank
       english_prompt: 'Arrange: ''Turn left from here'''
@@ -1201,7 +1204,7 @@ units:
       - बाट
       - बायाँ
       - घुम्नुहोस्
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/1629cc294b794c7f9e4e3ae565e58136.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/bd41118e94ed4455ad3eac0c89dcd921.mp3
   - order_index: 3
     name: Common Phrases for Trekking
     exercises:
@@ -1223,7 +1226,7 @@ units:
       - के गर्ने?
       nepali_answer:
       - कति टाढा छ?
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/6c40ff4e89634b60a9931b9ba64d82d6.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/a613122cde3848799492114a4d8995f5.mp3
     - order_index: 2
       type: multiple_choice
       english_prompt: Which word means 'mountain'?
@@ -1242,7 +1245,7 @@ units:
       - वन
       nepali_answer:
       - पहाड
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/88b3101c4eeb4ea58add2751e0d76dab.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/cdf0f8b20e33471080312e8bef1f0644.mp3
     - order_index: 3
       type: multiple_choice
       english_prompt: Which word means 'trail / path'?
@@ -1261,7 +1264,7 @@ units:
       - आकाश
       nepali_answer:
       - बाटो
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/dc51c62441be4614bfefc7b9f114831f.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/bca9ec124964483ba37f0409287ce2ff.mp3
     - order_index: 4
       type: word_bank
       english_prompt: 'Arrange: ''How many hours to the top?'''
@@ -1292,7 +1295,7 @@ units:
       - कति
       - घण्टा
       - लाग्छ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/02d68b4ebc534da6ba483207863ecebd.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/97203184761c412a91306a434b76d4b1.mp3
     - order_index: 5
       type: multiple_choice
       english_prompt: Which word means 'tired'?
@@ -1311,7 +1314,7 @@ units:
       - चिसो
       nepali_answer:
       - थकित
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/bb6faa9bff7a44928d495a3cdbcf95ec.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/d183fe579b47430094eee68950e653ba.mp3
     - order_index: 6
       type: multiple_choice
       english_prompt: Which phrase means 'Be careful'?
@@ -1330,7 +1333,7 @@ units:
       - बस्नुहोस्
       nepali_answer:
       - सावधान रहनुहोस्
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/e56a7f9b43b842cfaf3bf26333e2f99f.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/91fc5073b09f4843bd94dfabd992b8ef.mp3
     - order_index: 7
       type: word_bank
       english_prompt: 'Arrange: ''The view is beautiful'''
@@ -1355,4 +1358,4 @@ units:
       - दृश्य
       - सुन्दर
       - छ
-      audio_url: https://jkwpvxbcwrtgyxacerhh.supabase.co/storage/v1/object/public/audio/9b28b18b20314b2d996145f26dc89783.mp3
+      audio_url: https://zwpnwvinfqjhjhtvutsu.supabase.co/storage/v1/object/public/audio/654a1d5ba474446bb3e9bebcb88f3f60.mp3

@@ -29,9 +29,9 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-BINDU_PRIMARY = "#C2703D"   # warm terracotta — the app's one accent color
+BINDU_PRIMARY = "#C2703D"  
 BINDU_PRIMARY_DARK = "#AD5F30"
-# Kept for the few spots that still reference the old flag-red/blue names.
+
 NEPAL_CRIMSON = BINDU_PRIMARY
 NEPAL_BLUE = "#E0A458"
 UNIT_COLORS = ["#C2703D", "#2F6F73", "#A14E68", "#B08968", "#3D6B8C"]
