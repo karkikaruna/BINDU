@@ -1,24 +1,4 @@
-"""
-Rebuilds curriculum content from content/units.final.yaml with the
-corrected English prompts, so exercises show:
-    English prompt  ->  Nepali answer choices / tokens
 
-Fixes stale data created before the seed_supabase.py bug (it was reading
-a non-existent "prompt" key, which silently fell back to Nepali-only
-content).
-
-This script:
-  1. Always rewrites the local SQLite cache (bindu_local.db) directly,
-     so `streamlit run app.py` shows correct prompts immediately, even
-     offline.
-  2. If SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY are set (via .env or
-     the environment), it also clears and re-seeds the Supabase tables,
-     so the fix survives the next "Sync with Supabase".
-
-Usage:
-    pip install -r requirements.txt
-    python content/rebuild_content.py
-"""
 from __future__ import annotations
 
 import json

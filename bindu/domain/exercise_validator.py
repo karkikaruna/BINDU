@@ -5,8 +5,7 @@ import math
 
 
 def check_multiple_choice(selected: str, answer: list[str]) -> bool:
-    """Multiple choice: user selected one option string; compare against the
-    single correct answer (case-insensitive, whitespace-trimmed)."""
+
     if not answer:
         return False
     correct = answer[0]
@@ -14,8 +13,7 @@ def check_multiple_choice(selected: str, answer: list[str]) -> bool:
 
 
 def check_word_bank(ordered_tokens: list[str], answer: list[str]) -> bool:
-    """Word bank: user has arranged tokens in some order; compare the full
-    ordered sequence (case-insensitive, whitespace-trimmed per token)."""
+   
     if len(ordered_tokens) != len(answer):
         return False
     return all(
@@ -29,13 +27,7 @@ def fuzzy_check(
     reference_vector: list[float],
     threshold: float = 0.82,
 ) -> bool:
-    """v2 fuzzy free-text scoring.
 
-    Reference embeddings are precomputed offline (via the
-    sentence-transformers pipeline in scripts/); here we just do a
-    lightweight cosine-similarity comparison against a precomputed reference
-    vector, given a threshold.
-    """
     if len(user_vector) != len(reference_vector):
         raise ValueError("Vector dimension mismatch")
 

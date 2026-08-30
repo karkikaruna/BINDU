@@ -49,5 +49,5 @@ class UserStats:
     hearts: int
     xp: int
     streak: int
-    last_active: str | None        # ISO date string ("YYYY-MM-DD"), or None
-    hearts_last_refill: str        # ISO datetime string
+    last_active: str | None        
+    hearts_last_refill: str      

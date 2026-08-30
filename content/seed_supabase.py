@@ -1,11 +1,3 @@
-"""
-Pushes the finalized, human-reviewed curriculum (content/units.final.yaml)
-into Supabase's units / lessons / exercises tables.
-
-Usage:
-    pip install -r requirements.txt
-    python content/seed_supabase.py
-"""
 
 import os
 from pathlib import Path

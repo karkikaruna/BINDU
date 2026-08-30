@@ -1,6 +1,4 @@
-# App-like chrome: hides the "Deploy" button and most of the browser-y
-# menu clutter so BINDU feels like an installed app instead of a website
-# wrapped around a Streamlit script.
+
 [client]
 toolbarMode = "minimal"
 showErrorDetails = false

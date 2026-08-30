@@ -42,8 +42,6 @@ create table if not exists user_stats (
     hearts_last_refill timestamptz default now()
 );
 
--- Row Level Security: users can only read/write their own progress & stats.
--- Curriculum tables (units/lessons/exercises) are readable by any authenticated user.
 
 alter table units enable row level security;
 alter table lessons enable row level security;
@@ -63,7 +61,6 @@ create policy "users manage their own progress" on user_progress
 create policy "users manage their own stats" on user_stats
     for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
--- Auto-create a user_stats row whenever a new auth user signs up.
 create or replace function public.handle_new_user()
 returns trigger as $$
 begin

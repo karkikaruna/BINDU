@@ -13,7 +13,7 @@ class ProgressRepository:
     def __init__(self, cache: LocalCache):
         self.cache = cache
 
-    # -- stats ----------------------------------------------------------
+
 
     def get_or_create_stats(self, user_id: str) -> UserStats:
         row = self.cache.get_stats(user_id)
@@ -50,21 +50,7 @@ class ProgressRepository:
         new_hearts, new_refill = gamification.refill_hearts_if_due(
             current.hearts, datetime.fromisoformat(current.hearts_last_refill)
         )
-        # This runs on every single app rerun (render_top_bar calls it on
-        # every screen), which in a Streamlit app means every button click,
-        # tab switch, and word-bank tap. Previously it unconditionally
-        # called _persist_stats() here, which pushes a synchronous network
-        # write to Supabase — so *every* interaction in the app paid a full
-        # round-trip to the database even when no heart had actually
-        # refilled (the common case, since a refill only happens once every
-        # 4 hours). That's the main source of the app feeling slow.
-        #
-        # Only the heart count is checked here (not new_refill/timestamp):
-        # when hearts are already full, gamification.refill_hearts_if_due
-        # always returns `now` as the "new" refill instant rather than the
-        # original one, so comparing timestamps would still look "changed"
-        # on every call even though nothing meaningful happened — and we'd
-        # be right back to pushing on every rerun.
+
         if new_hearts == current.hearts:
             return current
         updated = _replace(current, hearts=new_hearts, hearts_last_refill=new_refill.isoformat())
@@ -124,7 +110,7 @@ class ProgressRepository:
                 stats.last_active, stats.hearts_last_refill, pending_sync=False,
             )
         except Exception:
-            pass  # stays pending_sync = True; retried later
+            pass  
 
     def _push_progress(self, user_id: str, lesson_id: int, completed: bool, stars: int) -> None:
         try:
@@ -136,7 +122,7 @@ class ProgressRepository:
             }).execute()
             self.cache.upsert_progress(user_id, lesson_id, completed, stars, pending_sync=False)
         except Exception:
-            pass  # stays pending_sync = True; retried later
+            pass 
 
 
 def _row_to_stats(row) -> UserStats:

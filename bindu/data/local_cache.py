@@ -125,7 +125,7 @@ class LocalCache:
             "select * from exercises where lesson_id = ? order by order_index", (lesson_id,)
         ).fetchall()
 
-    # -- progress / stats -----------------------------------------------------
+    
 
     def get_stats(self, user_id: str) -> sqlite3.Row | None:
         return self._conn.execute(
@@ -170,7 +170,7 @@ class LocalCache:
     def get_pending_progress(self) -> list[sqlite3.Row]:
         return self._conn.execute("select * from user_progress where pending_sync = 1").fetchall()
 
-    # -- users / auth ---------------------------------------------------------
+  
 
     def create_user(
         self, username: str, password_hash: str, salt: str,
