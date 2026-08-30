@@ -250,7 +250,6 @@ DARK_THEME_CSS = f"""
     --primary-color: {NEPAL_CRIMSON};
 }}
 
-/* Base app surface */
 .stApp, [data-testid="stAppViewContainer"], body {{
     background-color: {DARK_BG} !important;
 }}
@@ -296,11 +295,11 @@ input, textarea,
 }}
 input::placeholder, textarea::placeholder {{ color: #8a8f9c !important; }}
 
-/* Alerts: success / error / warning / info boxes */
+
 [data-testid="stAlert"] {{ background: {DARK_SURFACE} !important; }}
 [data-testid="stAlert"] * {{ color: {DARK_TEXT} !important; }}
 
-/* Dialog / expander / tab panels */
+
 [data-testid="stDialog"], [data-testid="stExpander"] {{
     background: {DARK_SURFACE} !important;
     color: {DARK_TEXT} !important;
@@ -1209,8 +1208,6 @@ def render_profile() -> None:
     completed = sum(1 for p in progress.values() if p["completed"])
     st.write(f"**Lessons completed:** {completed}")
     st.write(f"**Last active:** {stats.last_active or 'never'}")
-
-
 
 
 def main() -> None:

@@ -1,4 +1,3 @@
-
 import json
 import time
 from pathlib import Path
@@ -6,8 +5,8 @@ from pathlib import Path
 import yaml
 from deep_translator import GoogleTranslator
 
-SRC_LANG = "en"  # deep_translator language code for English
-TGT_LANG = "ne"  # deep_translator language code for Nepali
+SRC_LANG = "en"  
+TGT_LANG = "ne" 
 
 CONTENT_DIR = Path(__file__).resolve().parent.parent / "content"
 INPUT_PATH = CONTENT_DIR / "units.yaml"
@@ -16,10 +15,6 @@ CACHE_PATH = CONTENT_DIR / ".translation_cache.json"
 
 translator = GoogleTranslator(source=SRC_LANG, target=TGT_LANG)
 
-# Reuse one translation per unique English string -- avoids re-hitting the
-# API for repeated words/phrases (e.g. "Namaste", "Thank you") and keeps
-# identical phrases translated identically everywhere. Persisted to disk
-# so a crash doesn't lose progress; rerunning picks up where it left off.
 _cache: dict[str, str] = {}
 if CACHE_PATH.exists():
     try:
@@ -53,12 +48,10 @@ def collect_all_strings(data) -> list[str]:
     return seen
 
 
-MAX_RETRIES = 4          # attempts per string before giving up
-RETRY_BACKOFF = 2.0      # seconds; doubles after each failed attempt
-REQUEST_DELAY = 0.4      # pause between successful calls, to avoid tripping rate limits
+MAX_RETRIES = 4        
+RETRY_BACKOFF = 2.0      
+REQUEST_DELAY = 0.4      
 
-# Strings that failed on every retry, so we can flag them at the end instead
-# of silently shipping English text as if it were reviewed Nepali.
 _failed: list[str] = []
 
 
@@ -96,11 +89,8 @@ def translate_missing(strings: list[str]):
             _cache[text] = translated
             _save_cache()
         else:
-            # Don't cache the English fallback as a "translation" -- that
-            # would make future reruns think this string is done. Leaving
-            # it out of the cache means the next run retries it.
+
             _failed.append(text)
-        # Be polite to the free endpoint and avoid getting rate-limited.
         time.sleep(REQUEST_DELAY)
 
 

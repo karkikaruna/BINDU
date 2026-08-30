@@ -15,20 +15,7 @@ CONTENT_PATH = Path(__file__).resolve().parent / "units.final.yaml"
 
 
 def wipe_existing(supabase) -> None:
-    """Deletes every row from the curriculum tables before reseeding.
 
-    Previously this script only ever inserted, so every rerun (e.g. after
-    fixing a bad translation) left the old, wrong rows in place alongside
-    the new ones — the app would keep showing whichever copy it happened
-    to read first. Deleting child tables before parents avoids foreign-key
-    errors (exercises -> lessons -> units).
-
-    Note: this does not touch user_progress. If any users have already
-    completed lessons against the old lesson ids, those progress rows will
-    point at ids that no longer exist after this wipe. Fine for
-    pre-launch/content-authoring use; worth revisiting before real users
-    have progress to preserve.
-    """
     supabase.table("exercises").delete().neq("id", 0).execute()
     supabase.table("lessons").delete().neq("id", 0).execute()
     supabase.table("units").delete().neq("id", 0).execute()
@@ -65,11 +52,7 @@ def main():
                 options = exercise.get("nepali_options") or exercise.get("nepali_options_draft")
                 tokens = exercise.get("nepali_tokens") or exercise.get("nepali_tokens_draft")
                 answer = exercise.get("nepali_answer") or exercise.get("nepali_answer_draft")
-                # The prompt shown to the learner is the English question
-                # ("How do you say 'Hello' in Nepali?") — the Nepali fields
-                # above are the answer choices, not the prompt. Using the
-                # (non-existent) "prompt" key here previously fell through
-                # to Nepali-only content because the KeyError was masked.
+
                 prompt = exercise["english_prompt"]
 
                 supabase.table("exercises").insert({

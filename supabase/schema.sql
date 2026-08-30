@@ -1,9 +1,9 @@
 
 create table if not exists units (
     id serial primary key,
-    name text not null,          -- Greetings / Numbers & Shopping / Food & Directions
+    name text not null,          
     order_index int not null,
-    color_theme text             -- prayer-flag color code
+    color_theme text           
 );
 
 create table if not exists lessons (
@@ -18,8 +18,8 @@ create table if not exists exercises (
     lesson_id int references lessons(id) on delete cascade,
     type text not null check (type in ('multiple_choice', 'word_bank')),
     prompt text not null,
-    options jsonb,               -- for multiple_choice
-    tokens jsonb,                -- for word_bank
+    options jsonb,              
+    tokens jsonb,               
     answer jsonb not null,
     audio_url text,
     order_index int not null

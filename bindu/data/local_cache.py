@@ -74,7 +74,7 @@ class LocalCache:
         self._conn.executescript(_SCHEMA)
         self._conn.commit()
 
-    # -- curriculum ---------------------------------------------------------
+
 
     def replace_units(self, units: list[dict]) -> None:
         cur = self._conn.cursor()
