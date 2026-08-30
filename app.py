@@ -502,7 +502,7 @@ def _escape_html_text(text: str) -> str:
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def render_question(prompt: str, audio_url: str | None, key: str) -> None:
+def render_question(prompt: str, audio_url: str | None, key: str, autoplay: bool = True) -> None:
    
     safe_prompt = _escape_html_text(prompt)
     card_style = (
@@ -519,6 +519,7 @@ def render_question(prompt: str, audio_url: str | None, key: str) -> None:
         return
     safe_url = audio_url.replace('"', "&quot;")
     speaker_icon = _speaker_img_tag(22)
+    autoplay_attr = "autoplay" if autoplay else ""
     components.html(
         f"""
         <div style="{card_style}">
@@ -528,7 +529,7 @@ def render_question(prompt: str, audio_url: str | None, key: str) -> None:
                     line-height:1;padding:0;margin-left:auto;flex-shrink:0;
                     display:flex;align-items:center;">{speaker_icon}</button>
         </div>
-        <audio id="audio-{key}" src="{safe_url}" autoplay></audio>
+        <audio id="audio-{key}" src="{safe_url}" {autoplay_attr}></audio>
         <script>
         (function() {{
             const audio = document.getElementById('audio-{key}');
@@ -816,7 +817,7 @@ def render_path_map() -> None:
     )
     
     for u_idx, unit in enumerate(units):
-        color = unit.color_theme or UNIT_COLORS[u_idx % len(UNIT_COLORS)]
+        color = UNIT_COLORS[u_idx % len(UNIT_COLORS)]
         unit_done = sum(1 for l in unit.lessons if progress.get(l.id, {}).get("completed"))
         st.markdown(
             f"""<div class="unit-banner" style="background:{color}">
@@ -972,8 +973,8 @@ def render_lesson(lesson_id: int) -> None:
         accuracy = round(100 * first_try_count / total)
         if passed_on_hearts_out:
             st.info(
-                f"You ran out of hearts, but {correct_so_far}/{total} correct "
-                f"was enough to pass this lesson!"
+                f"You ran out of hearts, {correct_so_far}/{total} correct "
+                
             )
         st.balloons()
 
@@ -1036,7 +1037,11 @@ def render_lesson(lesson_id: int) -> None:
     if not locked and st.session_state[attempts_key].get(exercise_idx, 0) > 0:
         st.caption("🔁 Let's try that one again")
     st.progress(len(st.session_state[correct_set_key]) / total)
-    render_question(exercise.prompt, exercise.audio_url, key=f"{lesson_id}_{exercise_idx}_{pos}")
+    render_question(
+        exercise.prompt, exercise.audio_url,
+        key=f"{lesson_id}_{exercise_idx}_{pos}",
+        autoplay=not locked,
+    )
 
     correct = False
     submitted = False
@@ -1257,4 +1262,4 @@ if __name__ == "__main__":
     except Exception:
 
         logging.getLogger("bindu").exception("Unhandled error in BINDU")
-        render_fatal_error()
+        render_fatal_error()       

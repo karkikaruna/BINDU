@@ -119,4 +119,15 @@ bindu/
 6. **Keep your streak**: practicing daily keeps your streak counter climbing.
 7. **Check your profile**: the Profile page shows your XP, level, hearts, and streak at a glance.
 
+## Some snippets from the project
+ 
+| | |
+|---|---|
+| ![Login](assets/snippets/login.png) Login | ![Home](assets/snippets/home.png) Home path |
+| ![Home (dark mode)](assets/snippets/homedark.png) Home path (dark mode) | ![Lesson](assets/snippets/lessonwhite.png) Lesson in progress |
+| ![Lesson (dark mode)](assets/snippets/lessondark.png) Lesson in progress (dark mode) | ![Lesson complete](assets/snippets/lessoncomplete.png) Lesson complete |
+
+
+
+
 ### Happy Learning with BINDU
