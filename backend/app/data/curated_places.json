@@ -1,0 +1,58 @@
+{
+  "places": [
+    {
+      "id": "patan-durbar-square",
+      "name": "Patan Durbar Square",
+      "aliases": ["patan", "lalitpur durbar", "patan durbar"],
+      "area": "Lalitpur",
+      "notes": "Historic royal square in Lalitpur (Patan) with Newar palace buildings, temples and courtyards. It is one of the monument zones of the UNESCO World Heritage property 'Kathmandu Valley'. Newar architecture is known for carved wooden windows, struts and doorways.",
+      "source_name": "UNESCO World Heritage Centre: Kathmandu Valley",
+      "source_url": "https://whc.unesco.org/en/list/121"
+    },
+    {
+      "id": "bhaktapur-durbar-square",
+      "name": "Bhaktapur Durbar Square",
+      "aliases": ["bhaktapur", "bhadgaon"],
+      "area": "Bhaktapur",
+      "notes": "Historic royal square in Bhaktapur, a monument zone of the UNESCO World Heritage property 'Kathmandu Valley'. Surrounding streets preserve traditional Newar brick-and-timber architecture.",
+      "source_name": "UNESCO World Heritage Centre: Kathmandu Valley",
+      "source_url": "https://whc.unesco.org/en/list/121"
+    },
+    {
+      "id": "kathmandu-durbar-square",
+      "name": "Kathmandu Durbar Square (Hanuman Dhoka)",
+      "aliases": ["kathmandu durbar", "hanuman dhoka", "basantapur"],
+      "area": "Kathmandu",
+      "notes": "Historic royal palace square in central Kathmandu, a monument zone of the UNESCO World Heritage property 'Kathmandu Valley'.",
+      "source_name": "UNESCO World Heritage Centre: Kathmandu Valley",
+      "source_url": "https://whc.unesco.org/en/list/121"
+    },
+    {
+      "id": "swayambhunath",
+      "name": "Swayambhunath",
+      "aliases": ["swayambhu", "monkey temple"],
+      "area": "Kathmandu",
+      "notes": "Stupa complex on a hill west of central Kathmandu; a monument zone of the UNESCO World Heritage property 'Kathmandu Valley'. A Buddhist pilgrimage site also visited by Hindus.",
+      "source_name": "UNESCO World Heritage Centre: Kathmandu Valley",
+      "source_url": "https://whc.unesco.org/en/list/121"
+    },
+    {
+      "id": "boudhanath",
+      "name": "Boudhanath (Bauddhanath) Stupa",
+      "aliases": ["boudha", "bouddhanath", "bauddhanath", "boudhanath"],
+      "area": "Kathmandu",
+      "notes": "Large stupa in eastern Kathmandu and a centre of Tibetan Buddhism; a monument zone of the UNESCO World Heritage property 'Kathmandu Valley'. Visitors traditionally walk clockwise around the stupa.",
+      "source_name": "UNESCO World Heritage Centre: Kathmandu Valley",
+      "source_url": "https://whc.unesco.org/en/list/121"
+    },
+    {
+      "id": "pashupatinath",
+      "name": "Pashupatinath",
+      "aliases": ["pashupati"],
+      "area": "Kathmandu",
+      "notes": "Hindu temple complex on the Bagmati River dedicated to Shiva; a monument zone of the UNESCO World Heritage property 'Kathmandu Valley'. Parts of the main temple are open only to Hindus; be respectful, especially near the riverside cremation ghats.",
+      "source_name": "UNESCO World Heritage Centre: Kathmandu Valley",
+      "source_url": "https://whc.unesco.org/en/list/121"
+    }
+  ]
+}
