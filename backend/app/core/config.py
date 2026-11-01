@@ -24,6 +24,16 @@ class Settings(BaseSettings):
     gemini_model_name: str = "gemini-2.5-flash"
     ai_request_timeout_seconds: float = Field(default=60, gt=0, le=300)
 
+    # Swar: Nepali-focused text-to-speech (Naamche-Labs/swar), served by the FastAPI wrapper from voice.ipynb.
+    # Leave swar_base_url empty to disable server-side TTS (the app then falls back to the pre-recorded audio_url).
+    swar_base_url: str = ""
+    swar_api_key: str = ""
+    swar_voice_id: str = ""  # a preset (e.g. "maya") or an id returned by POST /voices on the Swar server
+    swar_quality: Literal["fast", "best"] = "fast"
+    swar_timeout_seconds: float = Field(default=120, gt=0, le=900)  # first call loads the models, so be generous
+    tts_max_chars: int = Field(default=300, ge=1, le=600)  # Swar itself rejects > 600
+    tts_cache_dir: str = "/tmp/bindu_tts_cache"
+
     auth_mode: Literal["supabase", "dev"] = "supabase"
     supabase_url: str = ""
     supabase_jwt_secret: str = ""

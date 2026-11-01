@@ -7,7 +7,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from app.api.v1 import account, assistant, cards, explore, lessons, places, practice, trips
+from app.api.v1 import account, assistant, cards, explore, lessons, places, practice, trips, tts
 from app.core.config import get_settings
 from app.services.ai.base import AIError
 
@@ -57,7 +57,7 @@ def create_app() -> FastAPI:
 
     app.include_router(explore.router, prefix=settings.api_v1_prefix)
     app.include_router(lessons.router, prefix=settings.api_v1_prefix)
-    for r in (trips.router, places.router, practice.router, assistant.router, cards.router, account.router):
+    for r in (trips.router, places.router, practice.router, assistant.router, cards.router, account.router, tts.router):
         app.include_router(r, prefix=settings.api_v1_prefix)
     return app
 
