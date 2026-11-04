@@ -6,35 +6,31 @@ import { Card, Screen, SectionTitle } from "@/components/common/ui";
 import { nextLesson, unitOfLesson } from "@/lib/curriculum";
 import { levelForXp } from "@/lib/gamification";
 import { useT } from "@/lib/i18n";
-import { useProfile } from "@/stores/profile";
 import { useProgress } from "@/stores/progress";
 import { useDiscoveries } from "@/stores/discoveries";
 
 export default function Home() {
   const t = useT();
-  const name = useProfile((s) => s.displayName);
   const { xp, streak, completed } = useProgress();
   const saved = useDiscoveries((s) => s.items);
   const next = nextLesson(completed);
 
   return (
     <Screen padded={false}>
-      <View className="bg-forest px-4 pb-6 pt-4 rounded-b-[32px]">
-        <View className="flex-row items-center justify-between">
-          <View className="flex-1 pr-3">
-            <Text className="text-sm text-white/70">नमस्ते 🙏</Text>
-            <Text className="text-2xl font-extrabold text-white" numberOfLines={1}>
-              {name ? t("home.welcome", { name }) : t("home.welcomeGuest")}
-            </Text>
+      <View className="flex-row items-center justify-between border-b border-line bg-white px-4 py-3">
+        <View className="flex-row items-center">
+          <View accessible accessibilityLabel={t("home.streak", { n: streak })} className="mr-5 flex-row items-center">
+            <Text className="text-xl">🔥</Text>
+            <Text className="ml-1.5 text-lg font-extrabold text-terracotta">{streak}</Text>
           </View>
-          <Pressable testID="open-profile" accessibilityRole="button" accessibilityLabel={t("home.profile")} onPress={() => router.push("/profile")} className="h-11 w-11 items-center justify-center rounded-full bg-white/15">
-            <Ionicons name="person-outline" size={22} color="#fff" />
-          </Pressable>
+          <View accessible accessibilityLabel={t("home.xpLevel", { xp, level: levelForXp(xp) })} className="flex-row items-center">
+            <Text className="text-xl">⭐</Text>
+            <Text className="ml-1.5 text-lg font-extrabold text-marigold">{xp}</Text>
+          </View>
         </View>
-        <View className="mt-4 flex-row">
-          <Text className="text-white/90 mr-4">🔥 {t("home.streak", { n: streak })}</Text>
-          <Text className="text-white/90">⭐ {t("home.xpLevel", { xp, level: levelForXp(xp) })}</Text>
-        </View>
+        <Pressable testID="open-profile" accessibilityRole="button" accessibilityLabel={t("home.profile")} onPress={() => router.push("/profile")} className="h-10 w-10 items-center justify-center rounded-full border border-line bg-cream">
+          <Ionicons name="person-outline" size={20} color="#174C3C" />
+        </Pressable>
       </View>
 
       <View className="px-4">

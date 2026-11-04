@@ -1,21 +1,18 @@
 import { router } from "expo-router";
-import { useEffect } from "react";
 import { Pressable, Text, View } from "react-native";
 import { Card, Screen } from "@/components/common/ui";
 import { isUnlocked, units, nextLesson } from "@/lib/curriculum";
-import { levelForXp, hoursUntilNextHeart, MAX_HEARTS } from "@/lib/gamification";
+import { levelForXp } from "@/lib/gamification";
 import { useT } from "@/lib/i18n";
 import { useProfile } from "@/stores/profile";
 import { useProgress } from "@/stores/progress";
 
-// Zig-zag offsets (in px from centre) for the winding path, as in the original lesson map.
 const OFFSETS = [0, -56, -84, -56, 0, 56, 84, 56];
 
 export default function Learn() {
   const t = useT();
   const level = useProfile((s) => s.nepaliLevel);
-  const { hearts, heartsLastRefill, xp, completed, refreshHearts } = useProgress();
-  useEffect(() => refreshHearts(), [refreshHearts]);
+  const { xp, completed } = useProgress();
   const next = nextLesson(completed);
   const total = units.reduce((n, u) => n + u.lessons.length, 0);
   const done = Object.keys(completed).length;
@@ -27,9 +24,7 @@ export default function Learn() {
           <Text className="text-3xl font-extrabold text-forest">{t("learn.title")}</Text>
           <Text className="text-sm text-muted">{t.opt(level)} · {t("home.xpLevel", { xp, level: levelForXp(xp) })}</Text>
         </View>
-        <Text accessibilityLabel={`${hearts} of ${MAX_HEARTS} hearts`} className="text-lg">{"❤️".repeat(hearts)}{"🤍".repeat(MAX_HEARTS - hearts)}</Text>
       </View>
-      {hearts < MAX_HEARTS ? <Text className="text-xs text-muted mt-1">{t("learn.nextHeart", { h: hoursUntilNextHeart(hearts, heartsLastRefill) })}</Text> : null}
 
       <Card className="mt-4">
         <Text className="text-sm font-semibold text-charcoal">{t("learn.cleared", { done, total })}</Text>

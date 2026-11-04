@@ -19,9 +19,8 @@ const toPicked = (a: ImagePicker.ImagePickerAsset): PickedImage => ({
   base64: a.base64 ?? undefined,
 });
 
-const MAX_SIDE = 1568; // the server downsizes to this anyway, so sending more only risks a failed upload
+const MAX_SIDE = 1568; 
 
-/** Phone cameras produce 5-20 MB photos. Shrink on the device so the upload is small and fast; fall back to the original if that fails. */
 async function shrink(a: ImagePicker.ImagePickerAsset): Promise<PickedImage> {
   try {
     const resize = a.width >= a.height ? { width: Math.min(a.width, MAX_SIDE) } : { height: Math.min(a.height, MAX_SIDE) };
@@ -91,7 +90,6 @@ export default function Explore() {
           <Button testID="take-photo" label={t("explore.takePhoto")} onPress={() => pick("camera")} />
           <Button testID="pick-photo" label={t("explore.gallery")} variant="secondary" onPress={() => pick("gallery")} className="mt-3" />
           {permissionNote ? <Text accessibilityRole="alert" className="mt-3 text-sm text-danger">{permissionNote}</Text> : null}
-          <Card className="mt-5"><Text className="text-sm text-muted">Your photo is sent to the BINDU server and an AI provider to generate the answer. It isn't stored by BINDU. Location data embedded in the photo is removed before it leaves the server.</Text></Card>
         </View>
       ) : (
         <View className="mt-4">

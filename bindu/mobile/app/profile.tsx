@@ -119,8 +119,6 @@ export default function Profile() {
       <View className="flex-row flex-wrap">{LANGUAGES.map((l) => <Chip key={l} label={l} selected={p.language === l} onPress={() => p.update({ language: l })} />)}</View>
       <SectionTitle title={t("profile.nepaliLevel")} />
       <View className="flex-row flex-wrap">{LEVELS.map((l) => <Chip key={l} label={t.opt(l)} selected={p.nepaliLevel === l} onPress={() => p.update({ nepaliLevel: l })} />)}</View>
-      <SectionTitle title={t("profile.privacy")} />
-      <Text className="text-sm text-muted">{t("profile.privacyBody")}</Text>
       <Button label={t("profile.reset")} variant="secondary" onPress={resetAll} className="mt-6" />
     </Screen>
   );

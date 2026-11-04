@@ -4,11 +4,7 @@ import { supabaseConfigured } from "@/lib/supabase";
 import { useProfile } from "@/stores/profile";
 import { useSession } from "@/stores/session";
 
-/**
- * Entry gate: wait for the saved profile and sign-in to load, then route:
- * not signed in -> welcome (sign in / create account); signed in -> onboarding the first time, otherwise the tabs.
- * When accounts aren't configured on this build (no Supabase project), the app stays usable as a guest.
- */
+
 export default function Index() {
   const hydrated = useProfile((s) => s.hydrated);
   const onboarded = useProfile((s) => s.onboarded);

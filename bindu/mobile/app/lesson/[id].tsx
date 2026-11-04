@@ -6,7 +6,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Button } from "@/components/common/ui";
 import { findLesson } from "@/lib/curriculum";
 import { checkMultipleChoice, checkWordBank, shuffled } from "@/lib/exercise";
-import { hoursUntilNextHeart } from "@/lib/gamification";
 import { useT } from "@/lib/i18n";
 import { scoreLesson } from "@/lib/scoring";
 import { speakNepali, stopSpeech } from "@/lib/speech";
@@ -15,26 +14,42 @@ import type { Exercise } from "@/types/lessons";
 
 type Feedback = { correct: boolean; answer: string } | null;
 
+/** Plates of dal bhat per lesson attempt. Lives belong to the lesson, not the account, and refill on every try. */
+const MAX_LIVES = 5;
+
 export default function LessonPlayer() {
   const t = useT();
   const { id } = useLocalSearchParams<{ id: string }>();
   const lesson = findLesson(Number(id));
-  const { hearts, heartsLastRefill, loseHeart, completeLesson } = useProgress();
+  const { completeLesson } = useProgress();
 
   const [queue, setQueue] = useState<Exercise[]>(() => lesson?.exercises ?? []);
   const [pos, setPos] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
   const [placed, setPlaced] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<Feedback>(null);
-  const [result, setResult] = useState<{ stars: number; xp: number } | null>(null);
-  const firstTry = useRef(new Set<number>());
+  const [result, setResult] = useState<{ stars: number; xp: number; corrected: number } | null>(null);
+  const [lives, setLives] = useState(MAX_LIVES);
+  // "main" is the normal run. Once it ends, every exercise answered wrongly comes back in "review" so it can be corrected (for less XP). Wrong answers cost a plate in both phases.
+  const [phase, setPhase] = useState<"main" | "review">("main");
   const missed = useRef(new Set<number>());
 
   const total = lesson?.exercises.length ?? 0;
   const current = queue[pos];
 
-  // Audio. Everything is spoken in Nepali: the question is read aloud when it appears and can be replayed with the speaker icon;
-  // every option, each word tile and the finished sentence has its own speaker or speaks when tapped.
+  const restart = () => {
+    stopSpeech();
+    missed.current = new Set();
+    setQueue(lesson?.exercises ?? []);
+    setPos(0);
+    setPhase("main");
+    setLives(MAX_LIVES);
+    setSelected(null);
+    setPlaced([]);
+    setFeedback(null);
+    setResult(null);
+  };
+
   const [audioFailed, setAudioFailed] = useState(false);
   const hear = async (text: string) => {
     setAudioFailed(false);
@@ -43,12 +58,12 @@ export default function LessonPlayer() {
   const readQuestion = () => { if (current?.prompt_ne) void hear(current.prompt_ne); };
   useEffect(() => {
     setAudioFailed(false);
-    if (!current || hearts <= 0) return;
+    if (!current || lives <= 0) return;
     const id = setTimeout(() => { if (current.prompt_ne) void hear(current.prompt_ne); }, 350); // a beat after the screen settles
     return () => clearTimeout(id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [current?.id, pos]);
-  useEffect(() => { if (result || hearts <= 0) stopSpeech(); }, [result, hearts]);
+  useEffect(() => { if (result || lives <= 0) stopSpeech(); }, [result, lives]);
   useEffect(() => () => stopSpeech(), []);
   const tiles = useMemo(() => (current ? shuffled(current.tokens, current.id) : []), [current]);
 
@@ -56,13 +71,14 @@ export default function LessonPlayer() {
     return <SafeAreaView className="flex-1 items-center justify-center bg-cream"><Text>{t("lesson.notFound")}</Text><Button label={t("common.close")} onPress={() => router.back()} className="mt-4" /></SafeAreaView>;
   }
 
-  if (hearts <= 0 && !feedback && !result) {
+  if (lives <= 0 && !feedback && !result) {
     return (
       <SafeAreaView className="flex-1 items-center justify-center bg-cream px-6">
-        <Text className="text-5xl">💔</Text>
-        <Text className="mt-3 text-2xl font-extrabold text-charcoal">{t("lesson.noHearts")}</Text>
-        <Text className="mt-1 text-center text-muted">{t("lesson.noHeartsBody", { h: hoursUntilNextHeart(hearts, heartsLastRefill) })}</Text>
-        <Button label={t("lesson.backToLessons")} onPress={() => router.back()} className="mt-6 self-stretch" />
+        <Text className="text-5xl">🍽️</Text>
+        <Text className="mt-3 text-2xl font-extrabold text-charcoal">{t("lesson.noLives")}</Text>
+        <Text className="mt-1 text-center text-muted">{t("lesson.noLivesBody")}</Text>
+        <Button testID="retry-lesson" label={t("lesson.tryAgain")} onPress={restart} className="mt-6 self-stretch" />
+        <Button label={t("lesson.backToLessons")} variant="secondary" onPress={() => router.back()} className="mt-3 self-stretch" />
       </SafeAreaView>
     );
   }
@@ -70,10 +86,11 @@ export default function LessonPlayer() {
   if (result) {
     return (
       <SafeAreaView className="flex-1 items-center justify-center bg-cream px-6">
-        <Text className="text-5xl">🎉</Text>
+        <Text className="text-5xl">🌼</Text>
         <Text className="mt-3 text-2xl font-extrabold text-forest">{t("lesson.complete")}</Text>
         <Text className="mt-2 text-3xl">{"⭐".repeat(result.stars)}{"☆".repeat(3 - result.stars)}</Text>
         <Text className="mt-2 text-base text-charcoal">+{result.xp} XP</Text>
+        
         <Button testID="finish-lesson" label={t("lesson.continue")} onPress={() => router.back()} className="mt-6 self-stretch" />
       </SafeAreaView>
     );
@@ -83,11 +100,10 @@ export default function LessonPlayer() {
 
   const check = () => {
     const ok = current.type === "multiple_choice" ? checkMultipleChoice(selected ?? "", current.answer) : checkWordBank(placed, current.answer);
-    if (ok) {
-      if (!missed.current.has(current.id)) firstTry.current.add(current.id);
-    } else {
+    if (!ok) {
+     
       missed.current.add(current.id);
-      loseHeart();
+      setLives((n) => Math.max(0, n - 1));
     }
     setFeedback({ correct: ok, answer: current.type === "multiple_choice" ? current.answer[0] : current.answer.join(" ") });
   };
@@ -97,16 +113,25 @@ export default function LessonPlayer() {
     setFeedback(null);
     setSelected(null);
     setPlaced([]);
-    // Wrong answers are re-queued at the end, as in the original app.
-    const nextQueue = wasCorrect ? queue : [...queue, current];
-    if (pos + 1 >= nextQueue.length) {
-      const score = scoreLesson(firstTry.current.size, total);
-      completeLesson(lesson.id, score.stars, score.xp);
-      setResult(score);
+   
+    if (lives <= 0) return;
+    // In the review, a wrong answer goes to the back of the line until it is corrected. It costs a plate too, so the run can still end here.
+    const nextQueue = phase === "review" && !wasCorrect ? [...queue, current] : queue;
+    if (pos + 1 < nextQueue.length) {
+      setQueue(nextQueue);
+      setPos(pos + 1);
       return;
     }
-    setQueue(nextQueue);
-    setPos(pos + 1);
+    // Main run finished with mistakes: go back over them.
+    if (phase === "main" && missed.current.size > 0) {
+      setQueue((lesson.exercises).filter((e) => missed.current.has(e.id)));
+      setPos(0);
+      setPhase("review");
+      return;
+    }
+    const score = scoreLesson(total - missed.current.size, total);
+    completeLesson(lesson.id, score.stars, score.xp);
+    setResult({ ...score, corrected: missed.current.size });
   };
 
   const progress = Math.min(1, pos / queue.length);
@@ -117,10 +142,10 @@ export default function LessonPlayer() {
         <View className="flex-row items-center">
           <Pressable accessibilityRole="button" accessibilityLabel="Close lesson" onPress={() => router.back()} className="h-11 w-11 items-center justify-center rounded-xl bg-white"><Ionicons name="close" size={22} color="#B3261E" /></Pressable>
           <Text className="ml-3 flex-1 text-base font-bold text-charcoal" numberOfLines={1}>{lesson.name}</Text>
-          <Text accessibilityLabel={`${hearts} hearts left`}>❤️ {hearts}</Text>
+          <Text accessibilityLabel={t("lesson.livesLeft", { n: lives, max: MAX_LIVES })} className="text-base">{"🍛".repeat(lives)}{"🍽️".repeat(MAX_LIVES - lives)}</Text>
         </View>
         <View className="mt-3 h-2.5 overflow-hidden rounded-full bg-line"><View className="h-2.5 rounded-full bg-forest" style={{ width: `${progress * 100}%` }} /></View>
-        <Text className="mt-4 text-sm text-muted">{t("lesson.question", { n: Math.min(pos + 1, queue.length), total: queue.length })}</Text>
+        <Text className="mt-4 text-sm text-muted">{t(phase === "review" ? "lesson.reviewTitle" : "lesson.question", { n: Math.min(pos + 1, queue.length), total: queue.length })}</Text>
         <View className="mt-2 flex-row items-center rounded-2xl bg-forest px-4 py-4">
           <Text className="flex-1 text-lg font-bold text-white">{current.prompt}</Text>
           <Pressable testID="play-question" accessibilityRole="button" accessibilityLabel={t("lesson.hearQuestion")} onPress={readQuestion} className="ml-3 h-11 w-11 items-center justify-center rounded-full bg-white">
@@ -136,11 +161,8 @@ export default function LessonPlayer() {
             const chosen = selected === o;
             return (
               <View key={o} className="mb-3 flex-row items-stretch">
-                <Pressable testID={`option-${i}`} disabled={!!feedback} onPress={() => setSelected(o)} accessibilityRole="radio" accessibilityState={{ selected: chosen }} className={`min-h-[56px] flex-1 items-center justify-center rounded-2xl border-2 px-4 ${chosen ? "border-forest bg-forest-50" : "border-line bg-white"}`}>
+                <Pressable testID={`option-${i}`} disabled={!!feedback} onPress={() => { setSelected(o); void hear(o); }} accessibilityRole="radio" accessibilityState={{ selected: chosen }} className={`min-h-[56px] flex-1 items-center justify-center rounded-2xl border-2 px-4 ${chosen ? "border-forest bg-forest-50" : "border-line bg-white"}`}>
                   <Text className="text-lg text-charcoal">{o}</Text>
-                </Pressable>
-                <Pressable testID={`hear-option-${i}`} accessibilityRole="button" accessibilityLabel={t("lesson.hearOption", { option: o })} onPress={() => hear(o)} className="ml-2 w-14 items-center justify-center rounded-2xl border-2 border-line bg-white active:bg-forest-50">
-                  <Ionicons name="volume-high" size={24} color="#174C3C" />
                 </Pressable>
               </View>
             );
@@ -153,9 +175,6 @@ export default function LessonPlayer() {
                   <Pressable key={`${w}-${i}`} disabled={!!feedback} onPress={() => setPlaced(placed.filter((_, j) => j !== i))} className="m-1 rounded-xl bg-forest px-3 py-2"><Text className="text-base text-white">{w}</Text></Pressable>
                 ))}
               </View>
-              <Pressable testID="hear-sentence" disabled={placed.length === 0} accessibilityRole="button" accessibilityLabel={t("lesson.hearSentence")} onPress={() => hear(placed.join(" "))} className={`ml-2 w-14 items-center justify-center rounded-2xl border-2 border-line bg-white ${placed.length === 0 ? "opacity-40" : "active:bg-forest-50"}`}>
-                <Ionicons name="volume-high" size={24} color="#174C3C" />
-              </Pressable>
             </View>
             <Text className="mt-2 text-xs text-muted">{t("lesson.tapToHear")}</Text>
             <View className="mt-4 flex-row flex-wrap">
@@ -180,9 +199,6 @@ export default function LessonPlayer() {
             <Text accessibilityRole="alert" className={`flex-1 text-base font-bold ${feedback.correct ? "text-forest" : "text-danger"}`}>
               {feedback.correct ? t("lesson.correct") : t("lesson.wrong", { answer: feedback.answer })}
             </Text>
-            <Pressable testID="hear-answer" accessibilityRole="button" accessibilityLabel={t("lesson.hearAnswer")} onPress={() => hear(feedback.answer)} className="ml-3 h-11 w-11 items-center justify-center rounded-full bg-white">
-              <Ionicons name="volume-high" size={22} color="#174C3C" />
-            </Pressable>
           </View>
         ) : null}
         {feedback ? <Button testID="continue-btn" label={t("lesson.continue")} onPress={advance} /> : <Button testID="check-btn" label={t("lesson.check")} disabled={!answerOk()} onPress={check} />}

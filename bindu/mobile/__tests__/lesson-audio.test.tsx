@@ -46,30 +46,30 @@ describe("lesson player audio", () => {
     expect(speakNe).toHaveBeenLastCalledWith(first.prompt_ne);
   });
 
-  it("every answer option has its own speaker that says that option without selecting it", async () => {
+  it("tapping an answer option says it aloud and selects it, with no speaker icon on the options", async () => {
     await render(<LessonPlayer />);
     for (const [i, option] of first.options.entries()) {
-      await act(async () => { await fireEvent.press(screen.getByTestId(`hear-option-${i}`)); });
+      expect(screen.queryByTestId(`hear-option-${i}`)).toBeNull();
+      await act(async () => { await fireEvent.press(screen.getByTestId(`option-${i}`)); });
       expect(speakNe).toHaveBeenLastCalledWith(option);
     }
     expect(speakNe).toHaveBeenCalledTimes(first.options.length);
-    expect(screen.getByTestId("check-btn").props.accessibilityState.disabled).toBe(true); // nothing got selected by listening
+    expect(screen.getByTestId("check-btn").props.accessibilityState.disabled).toBe(false);
   });
 
-  it("the learner still picks and checks an answer, and can hear the right one afterwards", async () => {
+  it("the learner picks and checks an answer; no speaker icon appears on the feedback bar", async () => {
     await render(<LessonPlayer />);
     const right = first.options.indexOf(first.answer[0]);
     await fireEvent.press(screen.getByTestId(`option-${right}`));
     await fireEvent.press(screen.getByTestId("check-btn"));
     expect(screen.getByText("Correct!")).toBeTruthy();
-    await act(async () => { await fireEvent.press(screen.getByTestId("hear-answer")); });
-    expect(speakNe).toHaveBeenLastCalledWith(first.answer[0]);
+    expect(screen.queryByTestId("hear-answer")).toBeNull();
   });
 
   it("shows a message when Nepali audio can't be produced", async () => {
     speakNe.mockResolvedValueOnce("unavailable");
     await render(<LessonPlayer />);
-    await act(async () => { await fireEvent.press(screen.getByTestId("hear-option-0")); });
+    await act(async () => { await fireEvent.press(screen.getByTestId("option-0")); });
     expect(screen.getByText(/Nepali audio isn't available/)).toBeTruthy();
   });
 
@@ -90,7 +90,7 @@ describe("lesson player audio", () => {
     expect(speakNe).toHaveBeenLastCalledWith(lesson.exercises[1].prompt_ne);
   });
 
-  it("word-ordering: tapping a tile says that word, and the speaker says the sentence built so far", async () => {
+  it("word-ordering: tapping a tile says that word, and there is no sentence speaker", async () => {
     const target = allLessons.find((l) => l.exercises.some((e) => e.type === "word_bank"))!;
     const at = target.exercises.findIndex((e) => e.type === "word_bank");
     mockLessonId = String(target.id);
@@ -108,7 +108,6 @@ describe("lesson player audio", () => {
     await tapTile(ex.answer[0]);
     expect(speakNe).toHaveBeenLastCalledWith(ex.answer[0]);
     await tapTile(ex.answer[1]);
-    await act(async () => { await fireEvent.press(screen.getByTestId("hear-sentence")); });
-    expect(speakNe).toHaveBeenLastCalledWith(`${ex.answer[0]} ${ex.answer[1]}`);
+    expect(screen.queryByTestId("hear-sentence")).toBeNull();
   });
 });
