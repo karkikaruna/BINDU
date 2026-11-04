@@ -1,27 +1,14 @@
 <div align="center">
-
-<img src="mobile/assets/brand/bindu_logo_full.png" alt="BINDU logo" width="220" />
-
-# BINDU 🇳🇵
+           
+# BINDU 
 
 ### Explore Nepal. Understand its culture. Learn its language.
 
-An AI-powered mobile companion for travelers, built on **Meta Muse Spark**.
-
-[![CI](https://github.com/YOUR_USERNAME/bindu/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/bindu/actions/workflows/ci.yml)
-![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
-![Expo](https://img.shields.io/badge/Expo-React_Native-000020?logo=expo&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white)
-![Meta](https://img.shields.io/badge/Powered_by-Meta_Muse_Spark-0081FB?logo=meta&logoColor=white)
-
-[Demo Video](#) · [Features](#-features) · [Architecture](#-architecture) · [Quick Start](#-quick-start) · [API](#-api)
-
-</div>
+</div>                                                                                                                                                                                             
 
 ---
 
-## 💡 The Problem
+## The Problem
 
 Millions of people visit Nepal each year. They stand in front of centuries-old temples they can't identify, read signs they can't understand, and talk to locals they can't speak with. They go home with photos, but little understanding.
 
@@ -29,7 +16,7 @@ Millions of people visit Nepal each year. They stand in front of centuries-old t
 
 ---
 
-## ✨ Features
+## Features
 
 | | Feature | What it does |
 |---|---|---|
@@ -39,32 +26,7 @@ Millions of people visit Nepal each year. They stand in front of centuries-old t
 | 🗺️ | **My Journey** | Your saved discoveries and learning progress, synced across devices. |
 
 
-## 🏗 Architecture
-
-```
-┌──────────────────────┐        ┌──────────────────────────────────────┐
-│   Expo / React Native│  HTTPS │            FastAPI backend            │
-│   (iOS · Android·Web)│◄──────►│                                      │
-│                      │        │  /explore  /assistant  /cards  /tts  │
-│  • expo-router       │        │        │                  │          │
-│  • Zustand stores    │        │   ┌────▼─────┐      ┌─────▼─────┐    │
-│  • NativeWind        │        │   │ AI layer │      │ TTS client│    │
-│  • TanStack Query    │        │   └────┬─────┘      └─────┬─────┘    │
-└──────────┬───────────┘        └────────┼──────────────────┼──────────┘
-           │                             │                  │
-           │ auth + sync (RLS)           ▼                  ▼
-           │                   ┌──────────────────┐  ┌─────────────┐
-           ▼                   │ Meta Model API   │  │ Swar Nepali │
-   ┌───────────────┐           │ (Muse Spark)     │  │ TTS         │
-   │   Supabase    │           └──────────────────┘  └─────────────┘
-   │ Auth · Postgres│
-   │ Storage (audio)│
-   └───────────────┘
-```
-
-
-
-## 🛠 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -77,7 +39,7 @@ Millions of people visit Nepal each year. They stand in front of centuries-old t
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -105,7 +67,6 @@ python -m pytest -q         # run the tests
 python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-Interactive API docs are at **http://localhost:8000/docs**.
 
 Verify your Meta connection with a live smoke test. It makes three small real calls (chat, follow-up and photo analysis) and never prints your key:
 
@@ -180,7 +141,7 @@ Errors always have the same shape: `{"error": {"code": 429, "message": "..."}}`.
 
 ---
 
-## 🧪 Testing & CI
+## Testing & CI
 
 ```bash
 # Backend
@@ -196,7 +157,7 @@ GitHub Actions (`.github/workflows/ci.yml`) runs backend tests, the TypeScript t
 
 ---
 
-## 📦 Deploy
+## Deploy
 
 **Backend (Docker)**
 
