@@ -1,0 +1,1042 @@
+{
+ "तपाईं नेपालीमा 'हेलो' कसरी भन्नुहुन्छ?": {
+  "file": "5bb48d0096091346c42d.mp3",
+  "kind": "question"
+ },
+ "नमस्ते": {
+  "file": "689420daa39af1d29a5f.mp3",
+  "kind": "option"
+ },
+ "धन्यवाद": {
+  "file": "c5e08d247934d20401ee.mp3",
+  "kind": "option"
+ },
+ "माफ गर्नुहोस्": {
+  "file": "033fe936c6f8841d3b4d.mp3",
+  "kind": "option"
+ },
+ "तपाईंलाई कस्तो छ?": {
+  "file": "9082d0175df5c5786111.mp3",
+  "kind": "option"
+ },
+ "तपाईंलाई": {
+  "file": "95c8a90868763ae3215a.mp3",
+  "kind": "word"
+ },
+ "कस्तो": {
+  "file": "f04751202814eaa011b4.mp3",
+  "kind": "word"
+ },
+ "छ": {
+  "file": "c2792c904b0189454091.mp3",
+  "kind": "word"
+ },
+ "तपाईंलाई कस्तो छ": {
+  "file": "de2ea8d48e31f02cbb4b.mp3",
+  "kind": "answer"
+ },
+ "तपाईंलाई कस्तो": {
+  "file": "be62268133fd1c22e5c2.mp3",
+  "kind": "partial"
+ },
+ "कुन शब्दको अर्थ 'अलविदा' (फेरि भेटौँला) हो?": {
+  "file": "da07264709f1635b4372.mp3",
+  "kind": "question"
+ },
+ "अलविदा": {
+  "file": "9c433248199353902262.mp3",
+  "kind": "option"
+ },
+ "कृपया": {
+  "file": "2aef1c538d670817841b.mp3",
+  "kind": "option"
+ },
+ "'शुभ प्रभात' को अर्थ कुन हो?": {
+  "file": "2ab634276533439ba5a0.mp3",
+  "kind": "question"
+ },
+ "शुभ प्रभात": {
+  "file": "438fb4f8f040fb096989.mp3",
+  "kind": "option"
+ },
+ "शुभ रात्री": {
+  "file": "6d39ea5402219f9cf8da.mp3",
+  "kind": "option"
+ },
+ "'नमस्ते' दुबैका लागि प्रयोग गर्न सकिन्छ ___": {
+  "file": "897932bd5a5931b4bda2.mp3",
+  "kind": "question"
+ },
+ "नमस्ते र अलविदा": {
+  "file": "9e6fc21bc06b1be7e8b8.mp3",
+  "kind": "option"
+ },
+ "हो र होइन": {
+  "file": "e0e92e7230f87790c82c.mp3",
+  "kind": "option"
+ },
+ "कृपया र माफ गर्नुहोस्": {
+  "file": "2876cbb66ec0adc9dfc6.mp3",
+  "kind": "option"
+ },
+ "ठूलो र सानो": {
+  "file": "74b3383f25678f893337.mp3",
+  "kind": "option"
+ },
+ "मिलाउनुहोस्: 'तपाईंलाई भेटेर खुशी लाग्यो'": {
+  "file": "e9b032426d99211e2cea.mp3",
+  "kind": "question"
+ },
+ "भेटेर": {
+  "file": "23fd6a37f1621006fb95.mp3",
+  "kind": "word"
+ },
+ "खुशी": {
+  "file": "83b645ccb76715dfee66.mp3",
+  "kind": "word"
+ },
+ "लाग्यो": {
+  "file": "e93053a0aed278527dbb.mp3",
+  "kind": "word"
+ },
+ "तपाईंलाई भेटेर खुशी लाग्यो": {
+  "file": "134bfa7d8ef7c9a80d53.mp3",
+  "kind": "answer"
+ },
+ "तपाईंलाई भेटेर": {
+  "file": "2eff2417fc876c1cf184.mp3",
+  "kind": "partial"
+ },
+ "तपाईंलाई भेटेर खुशी": {
+  "file": "0a5978dfe4585d169ebe.mp3",
+  "kind": "partial"
+ },
+ "कसरी अनौपचारिक रूपमा साथीलाई 'तिमी कस्तो छौ' भनेर सोध्ने?": {
+  "file": "35ca1b455ab17192f4c1.mp3",
+  "kind": "question"
+ },
+ "तिमीलाई कस्तो छ?": {
+  "file": "b57732f852e3a06a0301.mp3",
+  "kind": "option"
+ },
+ "कुन शब्दको अर्थ 'धन्यवाद' हो?": {
+  "file": "30779e39c0fb8a10a5a0.mp3",
+  "kind": "question"
+ },
+ "राम्रो": {
+  "file": "e73033cc8fefc61a1667.mp3",
+  "kind": "option"
+ },
+ "कुन शब्दको अर्थ 'कृपया' हो?": {
+  "file": "f6030abceb4e23d4bbce.mp3",
+  "kind": "question"
+ },
+ "स्वागत छ": {
+  "file": "4e4f001310e6016bf215.mp3",
+  "kind": "option"
+ },
+ "तपाईं कसरी भन्नुहुन्छ 'तपाईंलाई स्वागत छ'?": {
+  "file": "b2ebd11ea8deae49a3f9.mp3",
+  "kind": "question"
+ },
+ "तपाईंलाई स्वागत छ": {
+  "file": "63850f96aab8bd60ea27.mp3",
+  "kind": "option"
+ },
+ "कुन वाक्यांशको अर्थ 'माफ गर्नुहोस्' हो?": {
+  "file": "7058fe2a830613ab2792.mp3",
+  "kind": "question"
+ },
+ "मिलाउनुहोस्: 'कृपया मलाई पानी दिनुहोस्'": {
+  "file": "5ff474d63a8706aff26e.mp3",
+  "kind": "question"
+ },
+ "मलाई": {
+  "file": "bbb237c0bfabf81841e9.mp3",
+  "kind": "word"
+ },
+ "पानी": {
+  "file": "8898b404f60aa6813191.mp3",
+  "kind": "word"
+ },
+ "दिनुहोस्": {
+  "file": "d11639ed7cfa0e6ae8fd.mp3",
+  "kind": "word"
+ },
+ "कृपया मलाई पानी दिनुहोस्": {
+  "file": "a0fd313fc97f4e05d0d3.mp3",
+  "kind": "answer"
+ },
+ "कृपया मलाई": {
+  "file": "716320c2b82ce0cb2800.mp3",
+  "kind": "partial"
+ },
+ "कृपया मलाई पानी": {
+  "file": "3f5ad34c4989c2cbe751.mp3",
+  "kind": "partial"
+ },
+ "कुन वाक्यांशको अर्थ 'होइन, धन्यवाद' हो?": {
+  "file": "b9cb4a151bbed69b2427.mp3",
+  "kind": "question"
+ },
+ "होइन, धन्यवाद": {
+  "file": "49d5d07217500fc4fac7.mp3",
+  "kind": "option"
+ },
+ "हुन्छ, कृपया": {
+  "file": "bd1e06e6bde41c61c3c8.mp3",
+  "kind": "option"
+ },
+ "धेरै धेरै धन्यवाद": {
+  "file": "f2b9d3f7d4e6bef1f6e1.mp3",
+  "kind": "option"
+ },
+ "व्यवस्थित गर्नुहोस्: 'तपाईंलाई धेरै धेरै धन्यवाद'": {
+  "file": "23400924bc92180107b2.mp3",
+  "kind": "question"
+ },
+ "धेरै": {
+  "file": "b1020e65d587d4099e1e.mp3",
+  "kind": "word"
+ },
+ "तपाईंलाई धेरै धेरै धन्यवाद": {
+  "file": "c2b3cadb85c652ce843b.mp3",
+  "kind": "answer"
+ },
+ "तपाईंलाई धेरै": {
+  "file": "a077e6f86cc368f71218.mp3",
+  "kind": "partial"
+ },
+ "तपाईंलाई धेरै धेरै": {
+  "file": "19da22619afc3691ff19.mp3",
+  "kind": "partial"
+ },
+ "व्यवस्थित गर्नुहोस्: 'मेरो नाम मैक्स हो'": {
+  "file": "9f219cab3920cc727955.mp3",
+  "kind": "question"
+ },
+ "मेरो": {
+  "file": "19f02a7278d4af772143.mp3",
+  "kind": "word"
+ },
+ "नाम": {
+  "file": "c06618467b7833dac368.mp3",
+  "kind": "word"
+ },
+ "मैक्स": {
+  "file": "4b0a93ad6363fde49e4d.mp3",
+  "kind": "word"
+ },
+ "हो": {
+  "file": "84c94bfc1a6353abdce4.mp3",
+  "kind": "word"
+ },
+ "मेरो नाम मैक्स हो": {
+  "file": "aa04572b358ad4d8a3d2.mp3",
+  "kind": "answer"
+ },
+ "मेरो नाम": {
+  "file": "0d13d177b832e5647f4d.mp3",
+  "kind": "partial"
+ },
+ "मेरो नाम मैक्स": {
+  "file": "64974a9cdcb151741c07.mp3",
+  "kind": "partial"
+ },
+ "तपाईंको नाम के हो?": {
+  "file": "bd9a52e2d6a20df240c7.mp3",
+  "kind": "option"
+ },
+ "मलाई तपाईंको उमेर भन्नुहोस्": {
+  "file": "d4cd70d59978dfe8aea8.mp3",
+  "kind": "option"
+ },
+ "तपाईं कहाँबाट हुनुहुन्छ?": {
+  "file": "dfed8711fbcdf3016fe2.mp3",
+  "kind": "option"
+ },
+ "'म नेपालबाट हुँ' भन्ने वाक्य कुन हो?": {
+  "file": "bfdf27e5b2a289f735a6.mp3",
+  "kind": "question"
+ },
+ "म नेपालमा बस्छु": {
+  "file": "55b59fdf09f3e61e49a9.mp3",
+  "kind": "option"
+ },
+ "म नेपालबाट हुँ": {
+  "file": "ec9e395755b3893ab6c9.mp3",
+  "kind": "option"
+ },
+ "मैले नेपाल भ्रमण गरेको छु": {
+  "file": "55ca162920072d05dbae.mp3",
+  "kind": "option"
+ },
+ "म नेपाल घुम्न चाहन्छु": {
+  "file": "c10b5aaf9addcb977a23.mp3",
+  "kind": "option"
+ },
+ "व्यवस्थित गर्नुहोस्: 'म एक विद्यार्थी हुँ'": {
+  "file": "e6673a6457f6a5fead45.mp3",
+  "kind": "question"
+ },
+ "म": {
+  "file": "6d602213969d0cd2a096.mp3",
+  "kind": "word"
+ },
+ "एक": {
+  "file": "20fe3320be29bb26834b.mp3",
+  "kind": "word"
+ },
+ "विद्यार्थी": {
+  "file": "c4ceada89c37e5fb3855.mp3",
+  "kind": "word"
+ },
+ "हुँ": {
+  "file": "f90839e4f8802a0ac8f8.mp3",
+  "kind": "word"
+ },
+ "म एक विद्यार्थी हुँ": {
+  "file": "e4f55c4f226b7529c1a5.mp3",
+  "kind": "answer"
+ },
+ "म एक": {
+  "file": "255d52b102addc4f3bfd.mp3",
+  "kind": "partial"
+ },
+ "म एक विद्यार्थी": {
+  "file": "1bcfa8518d359eca628f.mp3",
+  "kind": "partial"
+ },
+ "कुन वाक्यांशको अर्थ 'तपाईंलाई भेटेर खुशी लाग्यो' हो?": {
+  "file": "1ca45479670583f8aefb.mp3",
+  "kind": "question"
+ },
+ "भोलि भेटौंला": {
+  "file": "f145c61feaa6ba37dee3.mp3",
+  "kind": "option"
+ },
+ "यो कति हो": {
+  "file": "001d0e52d950f9e70f8a.mp3",
+  "kind": "option"
+ },
+ "मलाई भोक लागेको छ": {
+  "file": "be09cd06e62145a0cce3.mp3",
+  "kind": "option"
+ },
+ "भर्नुहोस्: 'म २५ वर्षको छु'": {
+  "file": "63c56aa0544d5ce917b5.mp3",
+  "kind": "question"
+ },
+ "मलाई थकाइ लागेको छ": {
+  "file": "0fdd2e0d0ba9984fd142.mp3",
+  "kind": "option"
+ },
+ "म २५ वर्षको छु": {
+  "file": "5659d49d4244b025f44d.mp3",
+  "kind": "option"
+ },
+ "तपाईं": {
+  "file": "af0f1585d9b6669e8357.mp3",
+  "kind": "word"
+ },
+ "कहाँ": {
+  "file": "3dfb27b3a77755192823.mp3",
+  "kind": "word"
+ },
+ "बाट": {
+  "file": "36eec3cabc74b0b5eb2d.mp3",
+  "kind": "word"
+ },
+ "हुनुहुन्छ": {
+  "file": "c440c2365869008ec28b.mp3",
+  "kind": "word"
+ },
+ "तपाईं कहाँ बाट हुनुहुन्छ": {
+  "file": "585b4213630ef614621a.mp3",
+  "kind": "answer"
+ },
+ "तपाईं कहाँ": {
+  "file": "491653cd58abf2437744.mp3",
+  "kind": "partial"
+ },
+ "तपाईं कहाँ बाट": {
+  "file": "b2ee75b763f60b73e7dd.mp3",
+  "kind": "partial"
+ },
+ "'पाँच'?": {
+  "file": "09f7901521352d502dd8.mp3",
+  "kind": "question"
+ },
+ "पाँच": {
+  "file": "e82ed17f83cefae5dde8.mp3",
+  "kind": "option"
+ },
+ "चार": {
+  "file": "fd931a16d4938133f945.mp3",
+  "kind": "option"
+ },
+ "तीन": {
+  "file": "ffde268a4ae7b32f8bdb.mp3",
+  "kind": "option"
+ },
+ "'एक'?": {
+  "file": "756605e7c06c1a22dfc5.mp3",
+  "kind": "question"
+ },
+ "दुई": {
+  "file": "4b4d6c8d743574278d74.mp3",
+  "kind": "option"
+ },
+ "'दुई'?": {
+  "file": "c7fda3348e300a44e6d9.mp3",
+  "kind": "question"
+ },
+ "दस": {
+  "file": "10f8d21ac019ce4f0a0f.mp3",
+  "kind": "option"
+ },
+ "'तीन'?": {
+  "file": "f84ced82c7f5b85384e2.mp3",
+  "kind": "question"
+ },
+ "सात": {
+  "file": "215b22f418b21ccdaefd.mp3",
+  "kind": "option"
+ },
+ "नौ": {
+  "file": "99eff1d3cc9557613e37.mp3",
+  "kind": "option"
+ },
+ "'छ'?": {
+  "file": "78b791af82d3e85cf565.mp3",
+  "kind": "question"
+ },
+ "आठ": {
+  "file": "1b8ebd3eb3692e7e8294.mp3",
+  "kind": "option"
+ },
+ "'दस'?": {
+  "file": "31205e4e18cf044d08e8.mp3",
+  "kind": "question"
+ },
+ "व्यवस्थित गर्नुहोस्: 'एक, दुई, तीन'": {
+  "file": "8848d6d05e7ac2c2d1cd.mp3",
+  "kind": "question"
+ },
+ "एक दुई तीन": {
+  "file": "5cfc0fb5fd1bf434259e.mp3",
+  "kind": "answer"
+ },
+ "एक दुई": {
+  "file": "c4397f363906d605a4bc.mp3",
+  "kind": "partial"
+ },
+ "यसको": {
+  "file": "eee42ed342796726f0b1.mp3",
+  "kind": "word"
+ },
+ "मूल्य": {
+  "file": "df84ad05025c5af7487d.mp3",
+  "kind": "word"
+ },
+ "कति": {
+  "file": "258f998dd992531d25cb.mp3",
+  "kind": "word"
+ },
+ "यसको मूल्य कति हो": {
+  "file": "7da3231eed9a7cc87d4c.mp3",
+  "kind": "answer"
+ },
+ "यसको मूल्य": {
+  "file": "8a1695ae640d9bcbb621.mp3",
+  "kind": "partial"
+ },
+ "यसको मूल्य कति": {
+  "file": "8066361e4aa93e0e5931.mp3",
+  "kind": "partial"
+ },
+ "कुन वाक्यांशको अर्थ 'कति पर्छ?' हो?": {
+  "file": "2fc80cbd5a97722245ad.mp3",
+  "kind": "question"
+ },
+ "कति पर्छ?": {
+  "file": "97909e8d53731ef944b9.mp3",
+  "kind": "option"
+ },
+ "मलाई माफ गर्नुहोस्": {
+  "file": "5f3bfcf7618461350536.mp3",
+  "kind": "option"
+ },
+ "कुन शब्दको अर्थ 'यो' हो?": {
+  "file": "9655caa2d250fa8fbba5.mp3",
+  "kind": "question"
+ },
+ "यो": {
+  "file": "451e0c1e599aec95c1b5.mp3",
+  "kind": "option"
+ },
+ "कुन": {
+  "file": "3e79b00ee421cd4cf98b.mp3",
+  "kind": "option"
+ },
+ "त्यो": {
+  "file": "22c35b91c2017c28e428.mp3",
+  "kind": "option"
+ },
+ "ती": {
+  "file": "9b57f83a7878cce769bc.mp3",
+  "kind": "option"
+ },
+ "'सस्तो' भनेको कुन शब्द हो?": {
+  "file": "49a5258e72b9e44673a1.mp3",
+  "kind": "question"
+ },
+ "सस्तो": {
+  "file": "8a374c29b7b5da135155.mp3",
+  "kind": "option"
+ },
+ "महँगो": {
+  "file": "14b0ced1cf3a891ddbd8.mp3",
+  "kind": "option"
+ },
+ "ठूलो": {
+  "file": "b2b2a2eff062b74e6f3d.mp3",
+  "kind": "option"
+ },
+ "सानो": {
+  "file": "278fbf07fb1cb493b7c6.mp3",
+  "kind": "option"
+ },
+ "व्यवस्थित गर्नुहोस्: 'कृपया केही छुट दिनुहोस्'": {
+  "file": "0292c0ffc6abe1fb2c3f.mp3",
+  "kind": "question"
+ },
+ "केही": {
+  "file": "6e7d6a4dea6870e1cece.mp3",
+  "kind": "word"
+ },
+ "छुट": {
+  "file": "a00c5d4cff8282b2f945.mp3",
+  "kind": "word"
+ },
+ "कृपया केही छुट दिनुहोस्": {
+  "file": "a6ff408bc9784b5c9614.mp3",
+  "kind": "answer"
+ },
+ "कृपया केही": {
+  "file": "3c6bc762947e6747ebbb.mp3",
+  "kind": "partial"
+ },
+ "कृपया केही छुट": {
+  "file": "ea93d96297523e02df25.mp3",
+  "kind": "partial"
+ },
+ "'पैसा' भनेको कुन शब्द हो?": {
+  "file": "a3d6b6e440288c719f11.mp3",
+  "kind": "question"
+ },
+ "पैसा": {
+  "file": "bcfc15fb1f81d16f1a8f.mp3",
+  "kind": "option"
+ },
+ "खाना": {
+  "file": "35e8e0f436f05eeb4349.mp3",
+  "kind": "option"
+ },
+ "सडक": {
+  "file": "be84c7d906b7b4d32d47.mp3",
+  "kind": "option"
+ },
+ "यस": {
+  "file": "ce4f86f028c4bfaab7b5.mp3",
+  "kind": "word"
+ },
+ "को": {
+  "file": "8774b3e339d6f114eeaa.mp3",
+  "kind": "word"
+ },
+ "यस को मूल्य कति हो": {
+  "file": "1c9470c7f65eac34f85f.mp3",
+  "kind": "answer"
+ },
+ "यस को": {
+  "file": "634177f9466ae4daa0e9.mp3",
+  "kind": "partial"
+ },
+ "यस को मूल्य": {
+  "file": "d8244ff914ce942db87a.mp3",
+  "kind": "partial"
+ },
+ "यस को मूल्य कति": {
+  "file": "06662e4a3db929297447.mp3",
+  "kind": "partial"
+ },
+ "कुन वाक्यांशको अर्थ 'धेरै महँगो' हो?": {
+  "file": "23f7ab7921d998bdc88b.mp3",
+  "kind": "question"
+ },
+ "धेरै महँगो": {
+  "file": "9e143ededeb78130c9a6.mp3",
+  "kind": "option"
+ },
+ "कुन वाक्यांशको अर्थ 'अलि कम' हो?": {
+  "file": "fb71b3b149d86580b810.mp3",
+  "kind": "question"
+ },
+ "अलि कम": {
+  "file": "3fdb97339bc46cea9d3c.mp3",
+  "kind": "option"
+ },
+ "कति बज्यो": {
+  "file": "c75887c75364f6578d7d.mp3",
+  "kind": "option"
+ },
+ "कुन वाक्यांशको अर्थ 'अन्तिम मूल्य' हो?": {
+  "file": "faab5cef9ebee7f2388e.mp3",
+  "kind": "question"
+ },
+ "अन्तिम मूल्य": {
+  "file": "7c6fd3ccef1a95f2ee33.mp3",
+  "kind": "option"
+ },
+ "राम्रो मूल्य": {
+  "file": "e0a22be8affe5e1ec314.mp3",
+  "kind": "option"
+ },
+ "मूल्य छैन": {
+  "file": "bdd686a4def7084461e1.mp3",
+  "kind": "option"
+ },
+ "पुरानो मूल्य": {
+  "file": "237824d7a3884cdc3547.mp3",
+  "kind": "option"
+ },
+ "के": {
+  "file": "36d395a56bc7a2ef09c7.mp3",
+  "kind": "word"
+ },
+ "घटाउन": {
+  "file": "21a7fd78e64d624337db.mp3",
+  "kind": "word"
+ },
+ "सक्नुहुन्छ": {
+  "file": "15577e5d4b9520e69e24.mp3",
+  "kind": "word"
+ },
+ "के तपाईं मूल्य घटाउन सक्नुहुन्छ": {
+  "file": "58b2f5ef64091d2ca098.mp3",
+  "kind": "answer"
+ },
+ "के तपाईं": {
+  "file": "1bacf11d15efcb7b3165.mp3",
+  "kind": "partial"
+ },
+ "के तपाईं मूल्य": {
+  "file": "fac6c8c962c5d6d4b376.mp3",
+  "kind": "partial"
+ },
+ "के तपाईं मूल्य घटाउन": {
+  "file": "a0b19da67d09a2dbf23c.mp3",
+  "kind": "partial"
+ },
+ "कुन वाक्यांशको अर्थ 'म किन्छु' हो?": {
+  "file": "deff37e5e504208ad498.mp3",
+  "kind": "question"
+ },
+ "म किन्छु": {
+  "file": "8ed6649c1c9ef836b638.mp3",
+  "kind": "option"
+ },
+ "म खान्छु": {
+  "file": "2494ca6768254ca5044d.mp3",
+  "kind": "option"
+ },
+ "म सुत्छु": {
+  "file": "a33bd98ec0ccfd1f0e48.mp3",
+  "kind": "option"
+ },
+ "म जान्छु": {
+  "file": "d982259b1647894bd4f2.mp3",
+  "kind": "option"
+ },
+ "व्यवस्थित गर्नुहोस्: 'यो धेरै महँगो छ'": {
+  "file": "4e8f128fbda7185a6dab.mp3",
+  "kind": "question"
+ },
+ "यो धेरै महँगो छ": {
+  "file": "b4651e7716dd59f773d8.mp3",
+  "kind": "answer"
+ },
+ "यो धेरै": {
+  "file": "68839d1858c8c09febdc.mp3",
+  "kind": "partial"
+ },
+ "यो धेरै महँगो": {
+  "file": "234aeebc2a4d9cae3404.mp3",
+  "kind": "partial"
+ },
+ "पानी कसरी माग्ने?": {
+  "file": "0caca8c02f22bc087e0b.mp3",
+  "kind": "question"
+ },
+ "कृपया पानी दिनुहोस्": {
+  "file": "95b46865728d55a8f4b9.mp3",
+  "kind": "option"
+ },
+ "भात खानुहोस्": {
+  "file": "cd5c1b101ae39faeb2dc.mp3",
+  "kind": "option"
+ },
+ "घर कहाँ छ": {
+  "file": "11ab0184f9be6dfda6dd.mp3",
+  "kind": "option"
+ },
+ "कुन शब्दको अर्थ 'भात' हो?": {
+  "file": "ba14e03b085e3f6e7258.mp3",
+  "kind": "question"
+ },
+ "भात": {
+  "file": "685b26b4271dd5d1b029.mp3",
+  "kind": "option"
+ },
+ "रोटी": {
+  "file": "36132b3abd3e36d22120.mp3",
+  "kind": "option"
+ },
+ "चिया": {
+  "file": "f85eda36ef93c364fc6a.mp3",
+  "kind": "option"
+ },
+ "'स्वादिष्ट' को अर्थ कुन हो?": {
+  "file": "874e40e91d06ad5aa2b3.mp3",
+  "kind": "question"
+ },
+ "स्वादिष्ट": {
+  "file": "9ffbdcf1145179370896.mp3",
+  "kind": "option"
+ },
+ "मसलेदार": {
+  "file": "36abab8c2ec44ffa8c37.mp3",
+  "kind": "option"
+ },
+ "चिसो": {
+  "file": "be3860d0d865f67db37d.mp3",
+  "kind": "option"
+ },
+ "तातो": {
+  "file": "9c7b0a59d991adc31256.mp3",
+  "kind": "option"
+ },
+ "मिलाउनुहोस्: 'मलाई चिया चाहिन्छ'": {
+  "file": "b4058c2efe727a16b632.mp3",
+  "kind": "question"
+ },
+ "चाहिन्छ": {
+  "file": "48a7dd92e074053795ba.mp3",
+  "kind": "word"
+ },
+ "मलाई चिया चाहिन्छ": {
+  "file": "97fd5d0e3b459a3edf3d.mp3",
+  "kind": "answer"
+ },
+ "मलाई चिया": {
+  "file": "ab844fd6693695e29b4e.mp3",
+  "kind": "partial"
+ },
+ "'मलाई भोक लागेको छ' भन्ने वाक्य कुन हो?": {
+  "file": "8df2987415c7c126ab35.mp3",
+  "kind": "question"
+ },
+ "मलाई तिर्खा लागेको छ": {
+  "file": "fa73de4cbd6b6e3fcbfa.mp3",
+  "kind": "option"
+ },
+ "म थाकेको छु": {
+  "file": "49048f922b543b707f67.mp3",
+  "kind": "option"
+ },
+ "मलाई निद्रा लागेको छ": {
+  "file": "5e75ca801f8fb0ff913e.mp3",
+  "kind": "option"
+ },
+ "कुन शब्दको अर्थ 'मेनु' हो?": {
+  "file": "7b24cd0bed3f13393570.mp3",
+  "kind": "question"
+ },
+ "मेनु": {
+  "file": "65454565e7198a49a82d.mp3",
+  "kind": "option"
+ },
+ "बिल": {
+  "file": "ca5e76843d57e3337dc5.mp3",
+  "kind": "option"
+ },
+ "टेबल": {
+  "file": "3bc5b7bd878e137e7444.mp3",
+  "kind": "option"
+ },
+ "चम्चा": {
+  "file": "ef172b459c44fa26ed91.mp3",
+  "kind": "option"
+ },
+ "मिलाउनुहोस्: 'कृपया मलाई बिल दिनुहोस्'": {
+  "file": "ca1aba96e72fdbca2aa3.mp3",
+  "kind": "question"
+ },
+ "कृपया मलाई बिल दिनुहोस्": {
+  "file": "9feba13e767e6a586ca2.mp3",
+  "kind": "answer"
+ },
+ "कृपया मलाई बिल": {
+  "file": "31ace7a13c4a8a10c388.mp3",
+  "kind": "partial"
+ },
+ "होटल": {
+  "file": "720ed70fc6708ccc497d.mp3",
+  "kind": "word"
+ },
+ "होटल कहाँ छ": {
+  "file": "c9306914cd6b61b00097.mp3",
+  "kind": "answer"
+ },
+ "होटल कहाँ": {
+  "file": "794d78c485a5c13c55e8.mp3",
+  "kind": "partial"
+ },
+ "'बायाँ' को अर्थ कुन हो?": {
+  "file": "b7de00d73ed685a298cb.mp3",
+  "kind": "question"
+ },
+ "बायाँ": {
+  "file": "09b503deaf5e622d3a45.mp3",
+  "kind": "option"
+ },
+ "दायाँ": {
+  "file": "814f3a7595b6b3250035.mp3",
+  "kind": "option"
+ },
+ "सीधा": {
+  "file": "4be9926b0df8a302dc95.mp3",
+  "kind": "option"
+ },
+ "पछाडि": {
+  "file": "ee3a5ceb8e4d125c13e6.mp3",
+  "kind": "option"
+ },
+ "कुन शब्दको अर्थ 'दायाँ' हो?": {
+  "file": "25f7e889d820d44bd24e.mp3",
+  "kind": "question"
+ },
+ "नजिकै": {
+  "file": "6bf508e0fdc210acc756.mp3",
+  "kind": "option"
+ },
+ "टाढा": {
+  "file": "44f34800b62d7b67547a.mp3",
+  "kind": "option"
+ },
+ "कुन शब्दको अर्थ 'सीधा' हो?": {
+  "file": "e6bec519cf8be1e20e62.mp3",
+  "kind": "question"
+ },
+ "बस": {
+  "file": "e986e046a1143cc0b3a5.mp3",
+  "kind": "word"
+ },
+ "स्टेशन": {
+  "file": "e7a9d4669b6804b75fb5.mp3",
+  "kind": "word"
+ },
+ "बस स्टेशन कहाँ छ": {
+  "file": "61a11215d21bdaf1be6f.mp3",
+  "kind": "answer"
+ },
+ "बस स्टेशन": {
+  "file": "1b2cc9c1449441b5e3af.mp3",
+  "kind": "partial"
+ },
+ "बस स्टेशन कहाँ": {
+  "file": "7406ada0b5603c9085d5.mp3",
+  "kind": "partial"
+ },
+ "कुन शब्दको अर्थ 'नजिक' हो?": {
+  "file": "fe53817bcf2d685b536a.mp3",
+  "kind": "question"
+ },
+ "व्यवस्थित गर्नुहोस्: 'यहाँबाट बायाँ घुम्नुहोस्'": {
+  "file": "9b8884c3a6d1649151ca.mp3",
+  "kind": "question"
+ },
+ "यहाँ": {
+  "file": "9c70fadba5cbf199b166.mp3",
+  "kind": "word"
+ },
+ "घुम्नुहोस्": {
+  "file": "f6730fe3b914e48b5c5a.mp3",
+  "kind": "word"
+ },
+ "यहाँ बाट बायाँ घुम्नुहोस्": {
+  "file": "097d665991ffd657cd3b.mp3",
+  "kind": "answer"
+ },
+ "यहाँ बाट": {
+  "file": "fce811df810169d2980f.mp3",
+  "kind": "partial"
+ },
+ "यहाँ बाट बायाँ": {
+  "file": "64388fcd0ea7bd2b5945.mp3",
+  "kind": "partial"
+ },
+ "कुन वाक्यांशको अर्थ 'कति टाढा छ?' हो?": {
+  "file": "d4354545761c4bb8abce.mp3",
+  "kind": "question"
+ },
+ "कति टाढा छ?": {
+  "file": "5315051bcc29d3771dbe.mp3",
+  "kind": "option"
+ },
+ "कति बज्यो?": {
+  "file": "25df2786db71fa809756.mp3",
+  "kind": "option"
+ },
+ "कहाँ जाने?": {
+  "file": "56c1e36af5f93da27bb1.mp3",
+  "kind": "option"
+ },
+ "के गर्ने?": {
+  "file": "6ce006a23a7cbe8e0398.mp3",
+  "kind": "option"
+ },
+ "'पहाड' भनेको कुन शब्द हो?": {
+  "file": "3acafb93d19b314fa4bd.mp3",
+  "kind": "question"
+ },
+ "पहाड": {
+  "file": "b8c002cc8f4fad5ea0e7.mp3",
+  "kind": "option"
+ },
+ "नदी": {
+  "file": "624c0c2c23199ee1196b.mp3",
+  "kind": "option"
+ },
+ "गाउँ": {
+  "file": "5fba6c6715be47080272.mp3",
+  "kind": "option"
+ },
+ "वन": {
+  "file": "4eba53eaa95b18c29ac7.mp3",
+  "kind": "option"
+ },
+ "कुन शब्दको अर्थ 'बाटो' हो?": {
+  "file": "752ff429666c7db6e56f.mp3",
+  "kind": "question"
+ },
+ "बाटो": {
+  "file": "f5fc6ef8a04a41d37d50.mp3",
+  "kind": "option"
+ },
+ "पुल": {
+  "file": "36e54065fdd8b1f304f0.mp3",
+  "kind": "option"
+ },
+ "घर": {
+  "file": "751ca5c099b988be60c8.mp3",
+  "kind": "option"
+ },
+ "आकाश": {
+  "file": "51071bb608506eef60b0.mp3",
+  "kind": "option"
+ },
+ "टुप्पो": {
+  "file": "b6af93e1009c8bb82844.mp3",
+  "kind": "word"
+ },
+ "सम्म": {
+  "file": "c893dafaba3fce768da2.mp3",
+  "kind": "word"
+ },
+ "घण्टा": {
+  "file": "f5ef87ca3b47d21c3223.mp3",
+  "kind": "word"
+ },
+ "लाग्छ": {
+  "file": "e48ead0ba09f2c739925.mp3",
+  "kind": "word"
+ },
+ "टुप्पो सम्म कति घण्टा लाग्छ": {
+  "file": "88dce837eed0e3aa3ef9.mp3",
+  "kind": "answer"
+ },
+ "टुप्पो सम्म": {
+  "file": "fe8e592e6036e08f6e77.mp3",
+  "kind": "partial"
+ },
+ "टुप्पो सम्म कति": {
+  "file": "c5df80c20dfe068c63c9.mp3",
+  "kind": "partial"
+ },
+ "टुप्पो सम्म कति घण्टा": {
+  "file": "796a6bafebbf7ff2f29a.mp3",
+  "kind": "partial"
+ },
+ "'थकित' भनेको कुन शब्द हो?": {
+  "file": "f10006e5753d714c954f.mp3",
+  "kind": "question"
+ },
+ "थकित": {
+  "file": "b4552d1051198fe865bd.mp3",
+  "kind": "option"
+ },
+ "खुसी": {
+  "file": "f3bccfecdae91446724c.mp3",
+  "kind": "option"
+ },
+ "भोको": {
+  "file": "c3f1d9c827174ebf5551.mp3",
+  "kind": "option"
+ },
+ "'सावधान रहनुहोस्' भन्ने वाक्यांश कुन हो?": {
+  "file": "8b38d95d737721ca6e9e.mp3",
+  "kind": "question"
+ },
+ "सावधान रहनुहोस्": {
+  "file": "3b3ebf0c3c28833c023f.mp3",
+  "kind": "option"
+ },
+ "सीधा जानुहोस्": {
+  "file": "9fffc286ec6d96c72054.mp3",
+  "kind": "option"
+ },
+ "यहाँ आउनुहोस्": {
+  "file": "6d1caa4494a65ea96f98.mp3",
+  "kind": "option"
+ },
+ "बस्नुहोस्": {
+  "file": "ac26493970cfa0f65938.mp3",
+  "kind": "option"
+ },
+ "व्यवस्थित गर्नुहोस्: 'यो दृश्य सुन्दर छ'": {
+  "file": "64f1d3c3a34ec331e73c.mp3",
+  "kind": "question"
+ },
+ "दृश्य": {
+  "file": "ca6e4bd44034e3b888b5.mp3",
+  "kind": "word"
+ },
+ "सुन्दर": {
+  "file": "46570c9d66d217ff2674.mp3",
+  "kind": "word"
+ },
+ "यो दृश्य सुन्दर छ": {
+  "file": "bd99af063500cc9610f5.mp3",
+  "kind": "answer"
+ },
+ "यो दृश्य": {
+  "file": "3ad1eb46452a5d606208.mp3",
+  "kind": "partial"
+ },
+ "यो दृश्य सुन्दर": {
+  "file": "e4ec9c34c68e98c1a48f.mp3",
+  "kind": "partial"
+ }
+}

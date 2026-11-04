@@ -1,0 +1,1283 @@
+{
+ "units": [
+  {
+   "id": 1,
+   "name": "Greetings",
+   "order_index": 1,
+   "color_theme": "#0038A8",
+   "lessons": [
+    {
+     "id": 1,
+     "name": "Hello & Goodbye",
+     "order_index": 1,
+     "exercises": [
+      {
+       "id": 1,
+       "type": "multiple_choice",
+       "prompt": "How do you say 'Hello' in Nepali?",
+       "prompt_ne": "तपाईं नेपालीमा 'हेलो' कसरी भन्नुहुन्छ?",
+       "options": [
+        "नमस्ते",
+        "धन्यवाद",
+        "माफ गर्नुहोस्",
+        "तपाईंलाई कस्तो छ?"
+       ],
+       "tokens": [],
+       "answer": [
+        "नमस्ते"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/689420daa39af1d29a5ff419f3713a48.mp3",
+       "order_index": 1
+      },
+      {
+       "id": 2,
+       "type": "word_bank",
+       "prompt": "Arrange the words: 'How are you?'",
+       "prompt_ne": "शब्दहरू मिलाउनुहोस्: 'तपाईंलाई कस्तो छ?'",
+       "options": [],
+       "tokens": [
+        "तपाईंलाई",
+        "कस्तो",
+        "छ"
+       ],
+       "answer": [
+        "तपाईंलाई",
+        "कस्तो",
+        "छ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/de2ea8d48e31f02cbb4bfa7dae723064.mp3",
+       "order_index": 2
+      },
+      {
+       "id": 3,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'Goodbye' (see you again)?",
+       "prompt_ne": "कुन शब्दको अर्थ 'अलविदा' (फेरि भेटौँला) हो?",
+       "options": [
+        "अलविदा",
+        "नमस्ते",
+        "धन्यवाद",
+        "कृपया"
+       ],
+       "tokens": [],
+       "answer": [
+        "अलविदा"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/9c4332481993539022622a3aaa37a3ef.mp3",
+       "order_index": 3
+      },
+      {
+       "id": 4,
+       "type": "multiple_choice",
+       "prompt": "Which greeting means 'Good morning'?",
+       "prompt_ne": "'शुभ प्रभात' को अर्थ कुन हो?",
+       "options": [
+        "शुभ प्रभात",
+        "शुभ रात्री",
+        "अलविदा",
+        "माफ गर्नुहोस्"
+       ],
+       "tokens": [],
+       "answer": [
+        "शुभ प्रभात"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/438fb4f8f040fb09698978e9cb812159.mp3",
+       "order_index": 4
+      },
+      {
+       "id": 5,
+       "type": "multiple_choice",
+       "prompt": "'Namaste' can be used for both ___",
+       "prompt_ne": "'नमस्ते' दुबैका लागि प्रयोग गर्न सकिन्छ ___",
+       "options": [
+        "नमस्ते र अलविदा",
+        "हो र होइन",
+        "कृपया र माफ गर्नुहोस्",
+        "ठूलो र सानो"
+       ],
+       "tokens": [],
+       "answer": [
+        "नमस्ते र अलविदा"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/9e6fc21bc06b1be7e8b8fcce5b5eb7b5.mp3",
+       "order_index": 5
+      },
+      {
+       "id": 6,
+       "type": "word_bank",
+       "prompt": "Arrange: 'Nice to meet you'",
+       "prompt_ne": "मिलाउनुहोस्: 'तपाईंलाई भेटेर खुशी लाग्यो'",
+       "options": [],
+       "tokens": [
+        "तपाईंलाई",
+        "भेटेर",
+        "खुशी",
+        "लाग्यो"
+       ],
+       "answer": [
+        "तपाईंलाई",
+        "भेटेर",
+        "खुशी",
+        "लाग्यो"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/134bfa7d8ef7c9a80d5309a9c3b55857.mp3",
+       "order_index": 6
+      },
+      {
+       "id": 7,
+       "type": "multiple_choice",
+       "prompt": "How do you informally ask a friend 'how are you'?",
+       "prompt_ne": "कसरी अनौपचारिक रूपमा साथीलाई 'तिमी कस्तो छौ' भनेर सोध्ने?",
+       "options": [
+        "तिमीलाई कस्तो छ?",
+        "तपाईंलाई कस्तो छ?",
+        "धन्यवाद",
+        "नमस्ते"
+       ],
+       "tokens": [],
+       "answer": [
+        "तिमीलाई कस्तो छ?"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/b57732f852e3a06a0301d1ba12ca7a9f.mp3",
+       "order_index": 7
+      }
+     ]
+    },
+    {
+     "id": 2,
+     "name": "Please & Thank You",
+     "order_index": 2,
+     "exercises": [
+      {
+       "id": 8,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'Thank you'?",
+       "prompt_ne": "कुन शब्दको अर्थ 'धन्यवाद' हो?",
+       "options": [
+        "धन्यवाद",
+        "नमस्ते",
+        "माफ गर्नुहोस्",
+        "राम्रो"
+       ],
+       "tokens": [],
+       "answer": [
+        "धन्यवाद"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/c5e08d247934d20401ee54818bf3897c.mp3",
+       "order_index": 1
+      },
+      {
+       "id": 9,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'Please'?",
+       "prompt_ne": "कुन शब्दको अर्थ 'कृपया' हो?",
+       "options": [
+        "कृपया",
+        "माफ गर्नुहोस्",
+        "स्वागत छ",
+        "अलविदा"
+       ],
+       "tokens": [],
+       "answer": [
+        "कृपया"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/2aef1c538d670817841b4cf17657d031.mp3",
+       "order_index": 2
+      },
+      {
+       "id": 10,
+       "type": "multiple_choice",
+       "prompt": "How do you say 'You're welcome'?",
+       "prompt_ne": "तपाईं कसरी भन्नुहुन्छ 'तपाईंलाई स्वागत छ'?",
+       "options": [
+        "तपाईंलाई स्वागत छ",
+        "धन्यवाद",
+        "कृपया",
+        "माफ गर्नुहोस्"
+       ],
+       "tokens": [],
+       "answer": [
+        "तपाईंलाई स्वागत छ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/63850f96aab8bd60ea27b6c1a5a1f75b.mp3",
+       "order_index": 3
+      },
+      {
+       "id": 11,
+       "type": "multiple_choice",
+       "prompt": "Which phrase means 'Excuse me / Sorry'?",
+       "prompt_ne": "कुन वाक्यांशको अर्थ 'माफ गर्नुहोस्' हो?",
+       "options": [
+        "माफ गर्नुहोस्",
+        "धन्यवाद",
+        "कृपया",
+        "स्वागत छ"
+       ],
+       "tokens": [],
+       "answer": [
+        "माफ गर्नुहोस्"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/033fe936c6f8841d3b4d95d7472c9886.mp3",
+       "order_index": 4
+      },
+      {
+       "id": 12,
+       "type": "word_bank",
+       "prompt": "Arrange: 'Please give me water'",
+       "prompt_ne": "मिलाउनुहोस्: 'कृपया मलाई पानी दिनुहोस्'",
+       "options": [],
+       "tokens": [
+        "कृपया",
+        "मलाई",
+        "पानी",
+        "दिनुहोस्"
+       ],
+       "answer": [
+        "कृपया",
+        "मलाई",
+        "पानी",
+        "दिनुहोस्"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/a0fd313fc97f4e05d0d301d05417bfb7.mp3",
+       "order_index": 5
+      },
+      {
+       "id": 13,
+       "type": "multiple_choice",
+       "prompt": "Which phrase means 'No, thank you'?",
+       "prompt_ne": "कुन वाक्यांशको अर्थ 'होइन, धन्यवाद' हो?",
+       "options": [
+        "होइन, धन्यवाद",
+        "हुन्छ, कृपया",
+        "धेरै धेरै धन्यवाद",
+        "माफ गर्नुहोस्"
+       ],
+       "tokens": [],
+       "answer": [
+        "होइन, धन्यवाद"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/49d5d07217500fc4fac748fa5440c0ef.mp3",
+       "order_index": 6
+      },
+      {
+       "id": 14,
+       "type": "word_bank",
+       "prompt": "Arrange: 'Thank you very much'",
+       "prompt_ne": "व्यवस्थित गर्नुहोस्: 'तपाईंलाई धेरै धेरै धन्यवाद'",
+       "options": [],
+       "tokens": [
+        "तपाईंलाई",
+        "धेरै",
+        "धेरै",
+        "धन्यवाद"
+       ],
+       "answer": [
+        "तपाईंलाई",
+        "धेरै",
+        "धेरै",
+        "धन्यवाद"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/c2b3cadb85c652ce843b2ed37f964bbd.mp3",
+       "order_index": 7
+      }
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Introducing Yourself",
+     "order_index": 3,
+     "exercises": [
+      {
+       "id": 15,
+       "type": "word_bank",
+       "prompt": "Arrange: 'My name is Max'",
+       "prompt_ne": "व्यवस्थित गर्नुहोस्: 'मेरो नाम मैक्स हो'",
+       "options": [],
+       "tokens": [
+        "मेरो",
+        "नाम",
+        "मैक्स",
+        "हो"
+       ],
+       "answer": [
+        "मेरो",
+        "नाम",
+        "मैक्स",
+        "हो"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/aa04572b358ad4d8a3d2f87b5c0ec230.mp3",
+       "order_index": 1
+      },
+      {
+       "id": 16,
+       "type": "multiple_choice",
+       "prompt": "How do you ask 'What is your name?'",
+       "prompt_ne": "कसरी सोध्ने 'तपाईंको नाम के हो?'",
+       "options": [
+        "तपाईंको नाम के हो?",
+        "मलाई तपाईंको उमेर भन्नुहोस्",
+        "तपाईं कहाँबाट हुनुहुन्छ?",
+        "तपाईंलाई कस्तो छ?"
+       ],
+       "tokens": [],
+       "answer": [
+        "तपाईंको नाम के हो?"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/bd9a52e2d6a20df240c7ef2c551541b5.mp3",
+       "order_index": 2
+      },
+      {
+       "id": 17,
+       "type": "multiple_choice",
+       "prompt": "Which sentence means 'I am from Nepal'?",
+       "prompt_ne": "'म नेपालबाट हुँ' भन्ने वाक्य कुन हो?",
+       "options": [
+        "म नेपालमा बस्छु",
+        "म नेपालबाट हुँ",
+        "मैले नेपाल भ्रमण गरेको छु",
+        "म नेपाल घुम्न चाहन्छु"
+       ],
+       "tokens": [],
+       "answer": [
+        "म नेपालबाट हुँ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/ec9e395755b3893ab6c9e83c1f2d96bd.mp3",
+       "order_index": 3
+      },
+      {
+       "id": 18,
+       "type": "word_bank",
+       "prompt": "Arrange: 'I am a student'",
+       "prompt_ne": "व्यवस्थित गर्नुहोस्: 'म एक विद्यार्थी हुँ'",
+       "options": [],
+       "tokens": [
+        "म",
+        "एक",
+        "विद्यार्थी",
+        "हुँ"
+       ],
+       "answer": [
+        "म",
+        "एक",
+        "विद्यार्थी",
+        "हुँ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/e4f55c4f226b7529c1a51983c99c390f.mp3",
+       "order_index": 4
+      },
+      {
+       "id": 19,
+       "type": "multiple_choice",
+       "prompt": "Which phrase means 'Nice to meet you'?",
+       "prompt_ne": "कुन वाक्यांशको अर्थ 'तपाईंलाई भेटेर खुशी लाग्यो' हो?",
+       "options": [
+        "तपाईंलाई भेटेर खुशी लाग्यो",
+        "भोलि भेटौंला",
+        "यो कति हो",
+        "मलाई भोक लागेको छ"
+       ],
+       "tokens": [],
+       "answer": [
+        "तपाईंलाई भेटेर खुशी लाग्यो"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/134bfa7d8ef7c9a80d5309a9c3b55857.mp3",
+       "order_index": 5
+      },
+      {
+       "id": 20,
+       "type": "multiple_choice",
+       "prompt": "Fill in: 'I am 25 years old'",
+       "prompt_ne": "भर्नुहोस्: 'म २५ वर्षको छु'",
+       "options": [
+        "मलाई थकाइ लागेको छ",
+        "म २५ वर्षको छु",
+        "नमस्ते",
+        "माफ गर्नुहोस्"
+       ],
+       "tokens": [],
+       "answer": [
+        "म २५ वर्षको छु"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/5659d49d4244b025f44decfa11746a95.mp3",
+       "order_index": 6
+      },
+      {
+       "id": 21,
+       "type": "word_bank",
+       "prompt": "Arrange: 'Where are you from?'",
+       "prompt_ne": "व्यवस्थित गर्नुहोस्: 'तपाईं कहाँबाट हुनुहुन्छ?'",
+       "options": [],
+       "tokens": [
+        "तपाईं",
+        "कहाँ",
+        "बाट",
+        "हुनुहुन्छ"
+       ],
+       "answer": [
+        "तपाईं",
+        "कहाँ",
+        "बाट",
+        "हुनुहुन्छ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/585b4213630ef614621add0bea907682.mp3",
+       "order_index": 7
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Numbers & Shopping",
+   "order_index": 2,
+   "color_theme": "#FFD700",
+   "lessons": [
+    {
+     "id": 4,
+     "name": "Numbers 1-10",
+     "order_index": 1,
+     "exercises": [
+      {
+       "id": 22,
+       "type": "multiple_choice",
+       "prompt": "'five'?",
+       "prompt_ne": "'पाँच'?",
+       "options": [
+        "पाँच",
+        "चार",
+        "छ",
+        "तीन"
+       ],
+       "tokens": [],
+       "answer": [
+        "पाँच"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/e82ed17f83cefae5dde8c03ac923b5b7.mp3",
+       "order_index": 1
+      },
+      {
+       "id": 23,
+       "type": "multiple_choice",
+       "prompt": "'one'?",
+       "prompt_ne": "'एक'?",
+       "options": [
+        "एक",
+        "दुई",
+        "तीन",
+        "चार"
+       ],
+       "tokens": [],
+       "answer": [
+        "एक"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/20fe3320be29bb26834ba925ede00632.mp3",
+       "order_index": 2
+      },
+      {
+       "id": 24,
+       "type": "multiple_choice",
+       "prompt": "'two'?",
+       "prompt_ne": "'दुई'?",
+       "options": [
+        "दुई",
+        "एक",
+        "छ",
+        "दस"
+       ],
+       "tokens": [],
+       "answer": [
+        "दुई"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/4b4d6c8d743574278d7449777c8779d1.mp3",
+       "order_index": 3
+      },
+      {
+       "id": 25,
+       "type": "multiple_choice",
+       "prompt": "'three'?",
+       "prompt_ne": "'तीन'?",
+       "options": [
+        "तीन",
+        "दुई",
+        "सात",
+        "नौ"
+       ],
+       "tokens": [],
+       "answer": [
+        "तीन"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/ffde268a4ae7b32f8bdb6f73e069c38a.mp3",
+       "order_index": 4
+      },
+      {
+       "id": 26,
+       "type": "multiple_choice",
+       "prompt": "'six'?",
+       "prompt_ne": "'छ'?",
+       "options": [
+        "छ",
+        "पाँच",
+        "आठ",
+        "एक"
+       ],
+       "tokens": [],
+       "answer": [
+        "छ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/c2792c904b0189454091215eceec23c4.mp3",
+       "order_index": 5
+      },
+      {
+       "id": 27,
+       "type": "multiple_choice",
+       "prompt": "'ten'?",
+       "prompt_ne": "'दस'?",
+       "options": [
+        "दस",
+        "नौ",
+        "चार",
+        "दुई"
+       ],
+       "tokens": [],
+       "answer": [
+        "दस"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/10f8d21ac019ce4f0a0f2f4b061e2772.mp3",
+       "order_index": 6
+      },
+      {
+       "id": 28,
+       "type": "word_bank",
+       "prompt": "Arrange: 'one, two, three'",
+       "prompt_ne": "व्यवस्थित गर्नुहोस्: 'एक, दुई, तीन'",
+       "options": [],
+       "tokens": [
+        "एक",
+        "दुई",
+        "तीन"
+       ],
+       "answer": [
+        "एक",
+        "दुई",
+        "तीन"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/5cfc0fb5fd1bf434259e11c4b6bb1395.mp3",
+       "order_index": 7
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "Asking Prices",
+     "order_index": 2,
+     "exercises": [
+      {
+       "id": 29,
+       "type": "word_bank",
+       "prompt": "Arrange: 'How much does it cost?'",
+       "prompt_ne": "व्यवस्थित गर्नुहोस्: 'यसको मूल्य कति हो?'",
+       "options": [],
+       "tokens": [
+        "यसको",
+        "मूल्य",
+        "कति",
+        "हो"
+       ],
+       "answer": [
+        "यसको",
+        "मूल्य",
+        "कति",
+        "हो"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/7da3231eed9a7cc87d4c60ce3846b62a.mp3",
+       "order_index": 1
+      },
+      {
+       "id": 30,
+       "type": "multiple_choice",
+       "prompt": "Which phrase means 'How much?'",
+       "prompt_ne": "कुन वाक्यांशको अर्थ 'कति पर्छ?' हो?",
+       "options": [
+        "धन्यवाद",
+        "कति पर्छ?",
+        "माफ गर्नुहोस्",
+        "मलाई माफ गर्नुहोस्"
+       ],
+       "tokens": [],
+       "answer": [
+        "कति पर्छ?"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/97909e8d53731ef944b934bb2cf6e758.mp3",
+       "order_index": 2
+      },
+      {
+       "id": 31,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'this one'?",
+       "prompt_ne": "कुन शब्दको अर्थ 'यो' हो?",
+       "options": [
+        "यो",
+        "कुन",
+        "त्यो",
+        "ती"
+       ],
+       "tokens": [],
+       "answer": [
+        "यो"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/451e0c1e599aec95c1b582fd235b9022.mp3",
+       "order_index": 3
+      },
+      {
+       "id": 32,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'cheap'?",
+       "prompt_ne": "'सस्तो' भनेको कुन शब्द हो?",
+       "options": [
+        "सस्तो",
+        "महँगो",
+        "ठूलो",
+        "सानो"
+       ],
+       "tokens": [],
+       "answer": [
+        "सस्तो"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/8a374c29b7b5da135155c73ef10e78e6.mp3",
+       "order_index": 4
+      },
+      {
+       "id": 33,
+       "type": "word_bank",
+       "prompt": "Arrange: 'Please give a discount'",
+       "prompt_ne": "व्यवस्थित गर्नुहोस्: 'कृपया केही छुट दिनुहोस्'",
+       "options": [],
+       "tokens": [
+        "कृपया",
+        "केही",
+        "छुट",
+        "दिनुहोस्"
+       ],
+       "answer": [
+        "कृपया",
+        "केही",
+        "छुट",
+        "दिनुहोस्"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/a6ff408bc9784b5c9614de7bc0d3d426.mp3",
+       "order_index": 5
+      },
+      {
+       "id": 34,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'money'?",
+       "prompt_ne": "'पैसा' भनेको कुन शब्द हो?",
+       "options": [
+        "पैसा",
+        "खाना",
+        "पानी",
+        "सडक"
+       ],
+       "tokens": [],
+       "answer": [
+        "पैसा"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/bcfc15fb1f81d16f1a8f609708015862.mp3",
+       "order_index": 6
+      },
+      {
+       "id": 35,
+       "type": "word_bank",
+       "prompt": "Arrange: 'What is the price of this?'",
+       "prompt_ne": "व्यवस्थित गर्नुहोस्: 'यसको मूल्य कति हो?'",
+       "options": [],
+       "tokens": [
+        "यस",
+        "को",
+        "मूल्य",
+        "कति",
+        "हो"
+       ],
+       "answer": [
+        "यस",
+        "को",
+        "मूल्य",
+        "कति",
+        "हो"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/1c9470c7f65eac34f85f994b98332f9e.mp3",
+       "order_index": 7
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "Bargaining Basics",
+     "order_index": 3,
+     "exercises": [
+      {
+       "id": 36,
+       "type": "multiple_choice",
+       "prompt": "Which phrase means 'too expensive'?",
+       "prompt_ne": "कुन वाक्यांशको अर्थ 'धेरै महँगो' हो?",
+       "options": [
+        "धेरै महँगो",
+        "सस्तो",
+        "राम्रो",
+        "ठूलो"
+       ],
+       "tokens": [],
+       "answer": [
+        "धेरै महँगो"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/9e143ededeb78130c9a6cabeee50cd40.mp3",
+       "order_index": 1
+      },
+      {
+       "id": 37,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'cheap'?",
+       "prompt_ne": "'सस्तो' भनेको कुन शब्द हो?",
+       "options": [
+        "सस्तो",
+        "महँगो",
+        "राम्रो",
+        "ठूलो"
+       ],
+       "tokens": [],
+       "answer": [
+        "सस्तो"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/8a374c29b7b5da135155c73ef10e78e6.mp3",
+       "order_index": 2
+      },
+      {
+       "id": 38,
+       "type": "multiple_choice",
+       "prompt": "Which phrase means 'a little less'?",
+       "prompt_ne": "कुन वाक्यांशको अर्थ 'अलि कम' हो?",
+       "options": [
+        "अलि कम",
+        "धन्यवाद",
+        "माफ गर्नुहोस्",
+        "कति बज्यो"
+       ],
+       "tokens": [],
+       "answer": [
+        "अलि कम"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/3fdb97339bc46cea9d3c35fc51573a42.mp3",
+       "order_index": 3
+      },
+      {
+       "id": 39,
+       "type": "multiple_choice",
+       "prompt": "Which phrase means 'final price'?",
+       "prompt_ne": "कुन वाक्यांशको अर्थ 'अन्तिम मूल्य' हो?",
+       "options": [
+        "अन्तिम मूल्य",
+        "राम्रो मूल्य",
+        "मूल्य छैन",
+        "पुरानो मूल्य"
+       ],
+       "tokens": [],
+       "answer": [
+        "अन्तिम मूल्य"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/7c6fd3ccef1a95f2ee33662a04cf8f4d.mp3",
+       "order_index": 4
+      },
+      {
+       "id": 40,
+       "type": "word_bank",
+       "prompt": "Arrange: 'Can you reduce the price?'",
+       "prompt_ne": "व्यवस्थित गर्नुहोस्: 'के तपाईं मूल्य घटाउन सक्नुहुन्छ?'",
+       "options": [],
+       "tokens": [
+        "के",
+        "तपाईं",
+        "मूल्य",
+        "घटाउन",
+        "सक्नुहुन्छ"
+       ],
+       "answer": [
+        "के",
+        "तपाईं",
+        "मूल्य",
+        "घटाउन",
+        "सक्नुहुन्छ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/58b2f5ef64091d2ca09814e39258dcbd.mp3",
+       "order_index": 5
+      },
+      {
+       "id": 41,
+       "type": "multiple_choice",
+       "prompt": "Which phrase means 'I will buy it'?",
+       "prompt_ne": "कुन वाक्यांशको अर्थ 'म किन्छु' हो?",
+       "options": [
+        "म किन्छु",
+        "म खान्छु",
+        "म सुत्छु",
+        "म जान्छु"
+       ],
+       "tokens": [],
+       "answer": [
+        "म किन्छु"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/8ed6649c1c9ef836b6387f92c32881fa.mp3",
+       "order_index": 6
+      },
+      {
+       "id": 42,
+       "type": "word_bank",
+       "prompt": "Arrange: 'It is too expensive'",
+       "prompt_ne": "व्यवस्थित गर्नुहोस्: 'यो धेरै महँगो छ'",
+       "options": [],
+       "tokens": [
+        "यो",
+        "धेरै",
+        "महँगो",
+        "छ"
+       ],
+       "answer": [
+        "यो",
+        "धेरै",
+        "महँगो",
+        "छ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/b4651e7716dd59f773d8fe9a4585fb07.mp3",
+       "order_index": 7
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Food & Directions",
+   "order_index": 3,
+   "color_theme": "#046A38",
+   "lessons": [
+    {
+     "id": 7,
+     "name": "Ordering Food",
+     "order_index": 1,
+     "exercises": [
+      {
+       "id": 43,
+       "type": "multiple_choice",
+       "prompt": "How do you ask for water?",
+       "prompt_ne": "पानी कसरी माग्ने?",
+       "options": [
+        "कृपया पानी दिनुहोस्",
+        "भात खानुहोस्",
+        "घर कहाँ छ",
+        "धन्यवाद"
+       ],
+       "tokens": [],
+       "answer": [
+        "कृपया पानी दिनुहोस्"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/95b46865728d55a8f4b92fc455c10f22.mp3",
+       "order_index": 1
+      },
+      {
+       "id": 44,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'rice'?",
+       "prompt_ne": "कुन शब्दको अर्थ 'भात' हो?",
+       "options": [
+        "भात",
+        "पानी",
+        "रोटी",
+        "चिया"
+       ],
+       "tokens": [],
+       "answer": [
+        "भात"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/685b26b4271dd5d1b0292a96731b8c16.mp3",
+       "order_index": 2
+      },
+      {
+       "id": 45,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'delicious'?",
+       "prompt_ne": "'स्वादिष्ट' को अर्थ कुन हो?",
+       "options": [
+        "स्वादिष्ट",
+        "मसलेदार",
+        "चिसो",
+        "तातो"
+       ],
+       "tokens": [],
+       "answer": [
+        "स्वादिष्ट"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/9ffbdcf1145179370896b7b9683d8c92.mp3",
+       "order_index": 3
+      },
+      {
+       "id": 46,
+       "type": "word_bank",
+       "prompt": "Arrange: 'I want tea'",
+       "prompt_ne": "मिलाउनुहोस्: 'मलाई चिया चाहिन्छ'",
+       "options": [],
+       "tokens": [
+        "मलाई",
+        "चिया",
+        "चाहिन्छ"
+       ],
+       "answer": [
+        "मलाई",
+        "चिया",
+        "चाहिन्छ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/97fd5d0e3b459a3edf3de104aa5f5874.mp3",
+       "order_index": 4
+      },
+      {
+       "id": 47,
+       "type": "multiple_choice",
+       "prompt": "Which sentence means 'I am hungry'?",
+       "prompt_ne": "'मलाई भोक लागेको छ' भन्ने वाक्य कुन हो?",
+       "options": [
+        "मलाई भोक लागेको छ",
+        "मलाई तिर्खा लागेको छ",
+        "म थाकेको छु",
+        "मलाई निद्रा लागेको छ"
+       ],
+       "tokens": [],
+       "answer": [
+        "मलाई भोक लागेको छ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/be09cd06e62145a0cce3eae50c0ac0d7.mp3",
+       "order_index": 5
+      },
+      {
+       "id": 48,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'menu'?",
+       "prompt_ne": "कुन शब्दको अर्थ 'मेनु' हो?",
+       "options": [
+        "मेनु",
+        "बिल",
+        "टेबल",
+        "चम्चा"
+       ],
+       "tokens": [],
+       "answer": [
+        "मेनु"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/65454565e7198a49a82df7b6e9a77bf7.mp3",
+       "order_index": 6
+      },
+      {
+       "id": 49,
+       "type": "word_bank",
+       "prompt": "Arrange: 'Give me the bill please'",
+       "prompt_ne": "मिलाउनुहोस्: 'कृपया मलाई बिल दिनुहोस्'",
+       "options": [],
+       "tokens": [
+        "कृपया",
+        "मलाई",
+        "बिल",
+        "दिनुहोस्"
+       ],
+       "answer": [
+        "कृपया",
+        "मलाई",
+        "बिल",
+        "दिनुहोस्"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/9feba13e767e6a586ca21db6bd50fccc.mp3",
+       "order_index": 7
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Asking for Directions",
+     "order_index": 2,
+     "exercises": [
+      {
+       "id": 50,
+       "type": "word_bank",
+       "prompt": "Arrange: 'Where is the hotel?'",
+       "prompt_ne": "मिलाउनुहोस्: 'होटल कहाँ छ?'",
+       "options": [],
+       "tokens": [
+        "होटल",
+        "कहाँ",
+        "छ"
+       ],
+       "answer": [
+        "होटल",
+        "कहाँ",
+        "छ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/c9306914cd6b61b00097deb87de30549.mp3",
+       "order_index": 1
+      },
+      {
+       "id": 51,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'left'?",
+       "prompt_ne": "'बायाँ' को अर्थ कुन हो?",
+       "options": [
+        "बायाँ",
+        "दायाँ",
+        "सीधा",
+        "पछाडि"
+       ],
+       "tokens": [],
+       "answer": [
+        "बायाँ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/09b503deaf5e622d3a45e78b0f881f95.mp3",
+       "order_index": 2
+      },
+      {
+       "id": 52,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'right'?",
+       "prompt_ne": "कुन शब्दको अर्थ 'दायाँ' हो?",
+       "options": [
+        "दायाँ",
+        "बायाँ",
+        "नजिकै",
+        "टाढा"
+       ],
+       "tokens": [],
+       "answer": [
+        "दायाँ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/814f3a7595b6b3250035dec82b462fa8.mp3",
+       "order_index": 3
+      },
+      {
+       "id": 53,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'straight'?",
+       "prompt_ne": "कुन शब्दको अर्थ 'सीधा' हो?",
+       "options": [
+        "सीधा",
+        "बायाँ",
+        "दायाँ",
+        "नजिकै"
+       ],
+       "tokens": [],
+       "answer": [
+        "सीधा"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/4be9926b0df8a302dc95ee507b9993cb.mp3",
+       "order_index": 4
+      },
+      {
+       "id": 54,
+       "type": "word_bank",
+       "prompt": "Arrange: 'Where is the bus station?'",
+       "prompt_ne": "व्यवस्थित गर्नुहोस्: 'बस स्टेशन कहाँ छ?'",
+       "options": [],
+       "tokens": [
+        "बस",
+        "स्टेशन",
+        "कहाँ",
+        "छ"
+       ],
+       "answer": [
+        "बस",
+        "स्टेशन",
+        "कहाँ",
+        "छ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/61a11215d21bdaf1be6f3d7c4e5db4cd.mp3",
+       "order_index": 5
+      },
+      {
+       "id": 55,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'near'?",
+       "prompt_ne": "कुन शब्दको अर्थ 'नजिक' हो?",
+       "options": [
+        "नजिकै",
+        "टाढा",
+        "बायाँ",
+        "दायाँ"
+       ],
+       "tokens": [],
+       "answer": [
+        "नजिकै"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/6bf508e0fdc210acc75672a94f8b845b.mp3",
+       "order_index": 6
+      },
+      {
+       "id": 56,
+       "type": "word_bank",
+       "prompt": "Arrange: 'Turn left from here'",
+       "prompt_ne": "व्यवस्थित गर्नुहोस्: 'यहाँबाट बायाँ घुम्नुहोस्'",
+       "options": [],
+       "tokens": [
+        "यहाँ",
+        "बाट",
+        "बायाँ",
+        "घुम्नुहोस्"
+       ],
+       "answer": [
+        "यहाँ",
+        "बाट",
+        "बायाँ",
+        "घुम्नुहोस्"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/097d665991ffd657cd3b7241eca3d199.mp3",
+       "order_index": 7
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "name": "Common Phrases for Trekking",
+     "order_index": 3,
+     "exercises": [
+      {
+       "id": 57,
+       "type": "multiple_choice",
+       "prompt": "Which phrase means 'How far is it?'",
+       "prompt_ne": "कुन वाक्यांशको अर्थ 'कति टाढा छ?' हो?",
+       "options": [
+        "कति टाढा छ?",
+        "कति बज्यो?",
+        "कहाँ जाने?",
+        "के गर्ने?"
+       ],
+       "tokens": [],
+       "answer": [
+        "कति टाढा छ?"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/5315051bcc29d3771dbef6ca3459c556.mp3",
+       "order_index": 1
+      },
+      {
+       "id": 58,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'mountain'?",
+       "prompt_ne": "'पहाड' भनेको कुन शब्द हो?",
+       "options": [
+        "पहाड",
+        "नदी",
+        "गाउँ",
+        "वन"
+       ],
+       "tokens": [],
+       "answer": [
+        "पहाड"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/b8c002cc8f4fad5ea0e7b9b16747d0fa.mp3",
+       "order_index": 2
+      },
+      {
+       "id": 59,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'trail / path'?",
+       "prompt_ne": "कुन शब्दको अर्थ 'बाटो' हो?",
+       "options": [
+        "बाटो",
+        "पुल",
+        "घर",
+        "आकाश"
+       ],
+       "tokens": [],
+       "answer": [
+        "बाटो"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/f5fc6ef8a04a41d37d50ed90d2876fce.mp3",
+       "order_index": 3
+      },
+      {
+       "id": 60,
+       "type": "word_bank",
+       "prompt": "Arrange: 'How many hours to the top?'",
+       "prompt_ne": "व्यवस्थित गर्नुहोस्: 'टुप्पोसम्म कति घण्टा लाग्छ?'",
+       "options": [],
+       "tokens": [
+        "टुप्पो",
+        "सम्म",
+        "कति",
+        "घण्टा",
+        "लाग्छ"
+       ],
+       "answer": [
+        "टुप्पो",
+        "सम्म",
+        "कति",
+        "घण्टा",
+        "लाग्छ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/88dce837eed0e3aa3ef906cb45f410ce.mp3",
+       "order_index": 4
+      },
+      {
+       "id": 61,
+       "type": "multiple_choice",
+       "prompt": "Which word means 'tired'?",
+       "prompt_ne": "'थकित' भनेको कुन शब्द हो?",
+       "options": [
+        "थकित",
+        "खुसी",
+        "भोको",
+        "चिसो"
+       ],
+       "tokens": [],
+       "answer": [
+        "थकित"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/b4552d1051198fe865bd179aa95db5c4.mp3",
+       "order_index": 5
+      },
+      {
+       "id": 62,
+       "type": "multiple_choice",
+       "prompt": "Which phrase means 'Be careful'?",
+       "prompt_ne": "'सावधान रहनुहोस्' भन्ने वाक्यांश कुन हो?",
+       "options": [
+        "सावधान रहनुहोस्",
+        "सीधा जानुहोस्",
+        "यहाँ आउनुहोस्",
+        "बस्नुहोस्"
+       ],
+       "tokens": [],
+       "answer": [
+        "सावधान रहनुहोस्"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/3b3ebf0c3c28833c023fc84578568eaf.mp3",
+       "order_index": 6
+      },
+      {
+       "id": 63,
+       "type": "word_bank",
+       "prompt": "Arrange: 'The view is beautiful'",
+       "prompt_ne": "व्यवस्थित गर्नुहोस्: 'यो दृश्य सुन्दर छ'",
+       "options": [],
+       "tokens": [
+        "यो",
+        "दृश्य",
+        "सुन्दर",
+        "छ"
+       ],
+       "answer": [
+        "यो",
+        "दृश्य",
+        "सुन्दर",
+        "छ"
+       ],
+       "audio_url": "https://fbaogelkfunfsqytwztx.supabase.co/storage/v1/object/public/audio/bd99af063500cc9610f55b037426278f.mp3",
+       "order_index": 7
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+{
+  "_comment": "Latin-script words that appear inside Nepali prompts, and how Swar should say them. Applied to the spoken/displayed prompt_ne text so the audio, the lookup key and the live fallback all match.",
+  "Hello": "हेलो"
+}

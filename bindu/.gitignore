@@ -1,0 +1,14 @@
+node_modules/
+.expo/
+dist/
+web-build/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.env
+*.local
+.DS_Store
+scripts/audio_out/
+# Nepali clips are hosted in Supabase Storage, never bundled or committed
+mobile/assets/audio/
