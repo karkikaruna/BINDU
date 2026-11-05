@@ -113,7 +113,7 @@ Then press `i` (iOS simulator), `a` (Android emulator), `w` (web), or scan the Q
 | `EXPO_PUBLIC_API_URL` | Backend URL |
 | `EXPO_PUBLIC_SUPABASE_URL` / `EXPO_PUBLIC_SUPABASE_ANON_KEY` | Leave empty to run as a guest |
 
-> ⚠️ Never commit `.env` files, and never put the Supabase service-role key in the mobile app.
+>  Never commit `.env` files, and never put the Supabase service-role key in the mobile app.
 
 ### Database
 
@@ -121,7 +121,7 @@ Apply the migrations in `supabase/migrations/` (`0001_init.sql`, `0002_identity.
 
 ---
 
-## 🔌 API
+##  API
 
 Base path: `/api/v1`. Full reference in [`docs/api.md`](docs/api.md).
 
@@ -155,31 +155,7 @@ The backend suite covers auth, lessons, the Explore API, the assistant and cards
 
 GitHub Actions (`.github/workflows/ci.yml`) runs backend tests, the TypeScript typecheck and the mobile tests on every push and pull request.
 
----
-
-## Deploy
-
-**Backend (Docker)**
-
-```bash
-docker build -t bindu-api backend
-docker run -p 8000:8000 --env-file backend/.env bindu-api
-```
-
-> Run a **single worker**: the rate limiter is in-memory.
-
-**Mobile (EAS Build)**
-
-```bash
-cd mobile
-npx eas build --profile preview --platform android
-```
-
-For store builds, use HTTPS for `EXPO_PUBLIC_API_URL`.
-
----
-
-## 📁 Project Structure
+##  Project Structure
 
 ```
 bindu/
@@ -211,5 +187,5 @@ bindu/
 ---
 
 <div align="center">
-**धन्यवाद** (*dhanyabad*, "thank you") for exploring BINDU.
+ धन्यवाद for exploring BINDU.
 </div>
